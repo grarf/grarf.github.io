@@ -1,61 +1,31 @@
 <!DOCTYPE=html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+    <script>
+        var cat1 = [
+    "http://arborjs.org",
+    "http://cartodb.com",
+    "http://usatoday.com",
+    ];
 
-    <title>Name</title>
+var myFrame = document.getElementById("frame");
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 50px;
-        }
-    </style>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-   
+function getRandomUrl(myFrame) {
+   var index = Math.floor(Math.random()*cat1.length);
+   var url = cat1[index];
+   myFrame.src = url;
+}
+
+btn.addEventListener("click", function() {
     
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+   getRandomUrl(myFrame); 
+    
+});
+    </script>
 </head>
-
 <body>
-    <iframe style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src="http://w3schools.com/"></iframe>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-
-        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-refresh"></span></a>
-    </div>
-    <div class="collapse navbar-collapse">
-    </div>
-    <!--/.nav-collapse -->
-
-
-
-    <div class="container">
-
-
-
-    </div>
-    <!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
-
+    <button id="btn">Click</button>
+<br>
+<iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src="http://www.w3schools.com/"></iframe>
 </body>
 </html>
