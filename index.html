@@ -18,27 +18,6 @@
         }
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script>
-        var cat1 = [
-    "http://arborjs.org",
-    "http://cartodb.com",
-    "http://espn.com",
-    ];
-
-var myFrame = document.getElementById("frame");
-
-function getRandomUrl(myFrame) {
-   var index = Math.floor(Math.random()*cat1.length);
-   var url = cat1[index];
-   myFrame.src = url;
-}
-
-btn.addEventListener("click", function() {
-    
-   getRandomUrl(myFrame); 
-    
-});
-    </script>
    
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -53,7 +32,7 @@ btn.addEventListener("click", function() {
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-        <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-refresh"><button id="btn"></button></span></a>
+        <a class="navbar-brand" href="#"><span id="btn" class="glyphicon glyphicon-refresh"><button id="btn"></button></span></a>
 <a class="navbar-brand" href="#">Title</a>
     </div>
     <div class="collapse navbar-collapse">
@@ -75,6 +54,24 @@ btn.addEventListener("click", function() {
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-
+<script>
+        var cat1 = [
+        "http://arborjs.org",
+        "http://cartodb.com",
+        "http://espn.com",
+        ];
+        var myFrame = document.getElementById("frame");
+        function getRandomUrl(myFrame) {
+           var index = Math.floor(Math.random()*cat1.length);
+           var url = cat1[index];
+           myFrame.src = url;
+        }
+        var refreshBtn = document.getElementById("btn");
+        refreshBtn.addEventListener("click", function() {
+            
+           getRandomUrl(myFrame); 
+            
+        });
+    </script>
 
 </body>
