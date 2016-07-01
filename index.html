@@ -32,59 +32,10 @@
 </head>
 
 <body>
-    <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
-
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-
-        <a class="navbar-brand" href="#"><span id="btn" class="glyphicon glyphicon-refresh"></span></a>
-<a class="navbar-brand" href="#" style="color:#eff0f1">Title</a>
-
-    </div>
-    <div class="collapse navbar-collapse">
-    </div>
-    <!--/.nav-collapse -->
-
-
-
-    <div class="container">
-
-
-
-    </div>
-    <!-- /.container -->
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-<script>
-        var cat1 = [
-        "http://ibm.com",
-        "http://espn.com",
-        "http://cox.com",
-        ];
-        
-        var myFrame = document.getElementById("frame");
-        function getRandomUrl(myFrame) {
-           var index = Math.floor(Math.random()*cat1.length);
-           var url = cat1[index];
-           myFrame.src = url;
-        }
-        var refreshBtn = document.getElementById("btn");
-        refreshBtn.addEventListener("click", function() {
-            
-           getRandomUrl(myFrame); 
-            
-        });
-        
-    window.onload = function(){
-    getRandomUrl(myFrame);
-};
-        
-        
-    </script>
+   <base target="blank">
+<object type="text/html" data="http://www.example.com" style="width:100%; height:100%">
+<p>backup content</p>
+</object>
 
 </body>
 </html>
