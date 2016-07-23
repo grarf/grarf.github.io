@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>GRARF Style</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+       
+    </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+   
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+    
+</head>
+
+<body>
+    <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+   <a class="navbar-brand" data-toggle="tooltip" href="#" title="Refresh to visit a new store and shop directly.  If new store does not load immediately, press Random button again.  To open store in new tab:  Mac users, press COMMAND key and click within store's site; Windows/Chrome users, press CTRL key and click within store's site">
+    <span id="btn" class="glyphicon glyphicon-random"></span>
+    </a>
+    
+
+    </div>
+    <div class="collapse navbar-collapse">
+    </div>
+    <!--/.nav-collapse -->
+
+
+
+    <div class="container">
+
+
+
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+<script>
+        var cat1 = [
+        "http://www.poetryarchive.org/glossary/enjambment",
+        
+        
+        ];
+        
+        var myFrame = document.getElementById("frame");
+        function getRandomUrl(myFrame) {
+           var index = Math.floor(Math.random()*cat1.length);
+           var url = cat1[index];
+           myFrame.src = url;
+        }
+        var refreshBtn = document.getElementById("btn");
+        refreshBtn.addEventListener("click", function() {
+            
+           getRandomUrl(myFrame); 
+            
+        });
+        
+    window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+        
+
+
+</body>
+</html>
