@@ -23,7 +23,6 @@
     max-height: 500px;
     overflow-x: hidden;
 }
-
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
    
@@ -35,8 +34,6 @@
       
       uncooperative links:      "http://www.bloomberg.com/",
                                 "https://news.google.com/",
-
-
     <![endif]-->
    
     
@@ -60,7 +57,7 @@
                     <a class="navbar-brand" data-toggle="tooltip" href="#" title="Press Random button to load new source.  If new source does not load immediately, press Random button again.  To open source in new tab, as you click on the article you wish to open, press CTRL key (for Windows/Chrome) or COMMAND key (for Mac)">
     <span id="btn" class="glyphicon glyphicon-random"></span>
     </a>
-    <a class="navbar-brand" href="#" target="_blank">
+    <a class="navbar-brand" href="#">
     <span id="btn" onclick="randomLink();OpenInNewTab();" style="color:yellow" class="glyphicon glyphicon-new-window"></span>
     </a>
                 </div>
@@ -138,7 +135,6 @@
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script>
-
     var randomLink = function() {
           // first create an array of links
         var links = [
@@ -147,27 +143,21 @@
             "youtube.com",
             "facebook.com"
         ];
-
         // then work out the maximum random number size
         // by counting the number of links in the array
         var max = (links.length)
-
         // now generate a random number
         var randomNumber = Math.floor(Math.random()*max);
-
         // use that random number to retrieve a link from the array
         var link = links[randomNumber];
-
         // change the location of the window object
-        window.location = "blank" + link;
-
+        window.location = "http://" + link;
         // Opens a new tab.
         function OpenInNewTab(url) {
         var win = window.open(url, '_blank');
          win.focus();
 }
     }
-
         var cat1 = [
         "http://www.thetimes.co.uk/",
         "http://www.economist.com/",
