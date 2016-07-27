@@ -61,7 +61,7 @@
     <span id="btn" class="glyphicon glyphicon-random"></span>
     </a>
     <a class="navbar-brand" href="#">
-    <span id="btn" style="color:white" class="glyphicon glyphicon-new-window"></span>
+    <span id="btn" onclick="randomLink();OpenInNewTab();" style="color:white" class="glyphicon glyphicon-new-window"></span>
     </a>
                 </div>
                 <div class="collapse navbar-collapse">
@@ -138,6 +138,36 @@
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script>
+
+    var randomLink = function() {
+          // first create an array of links
+        var links = [
+            "bbc.com",
+            "google.com",
+            "youtube.com",
+            "facebook.com"
+        ];
+
+        // then work out the maximum random number size
+        // by counting the number of links in the array
+        var max = (links.length)
+
+        // now generate a random number
+        var randomNumber = Math.floor(Math.random()*max);
+
+        // use that random number to retrieve a link from the array
+        var link = links[randomNumber];
+
+        // change the location of the window object
+        window.location = "http://" + link;
+
+        // Opens a new tab.
+        function OpenInNewTab(url) {
+        var win = window.open(url, '_blank');
+         win.focus();
+}
+    }
+
         var cat1 = [
         "http://www.thetimes.co.uk/",
         "http://www.economist.com/",
