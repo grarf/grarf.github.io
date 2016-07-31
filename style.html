@@ -40,6 +40,9 @@
    <a class="navbar-brand" data-toggle="tooltip" href="#" title="Refresh to visit a new store and shop directly.  If new store does not load immediately, press Random button again.  To open store in new tab:  Mac users, press COMMAND key and click within store's site; Windows/Chrome users, press CTRL key and click within store's site">
     <span id="btn" class="glyphicon glyphicon-random"></span>
     </a>
+    <a class="navbar-brand" href="#" onclick="openStuff();">
+    <span style="color:pink" class="glyphicon glyphicon-new-window"></span>
+    </a>
     
 
     </div>
@@ -62,7 +65,28 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-<script>
+
+<script type="text/javascript">
+   
+ // the used links
+var links = [
+    "bbc.com",
+    "google.com",
+    "youtube.com",
+    "facebook.com"];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = 'http://' + links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
+
+
         var cat1 = [
         "http://shopriffraff.com/collections/clothing",
         "http://www.journelle.com/new",
