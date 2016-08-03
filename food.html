@@ -66,9 +66,17 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" data-toggle="tooltip" href="#" title="Press Random button to load new source.  If new source does not load immediately, press Random button again.  To open source in new tab, as you click on the article you wish to open, press CTRL key (for Windows/Chrome) or COMMAND key (for Mac)">
-    <span id="btn" class="glyphicon glyphicon-random"></span>
-    </a>
+<a class="navbar-brand" href="/index.html" style="color: #EBEBEB">
+<span style="color:#E8E8E8" class="glyphicon glyphicon-home"></span>
+</a>
+
+<a class="navbar-brand" data-toggle="tooltip" href="#" title="Refresh and open in new tab" onclick="openStuff();">
+<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window"></span>
+</a>
+                    
+<a class="navbar-brand" data-toggle="tooltip" href="#" title="Randomize recipes">
+<span id="btn" class="glyphicon glyphicon-random"></span>
+</a>
 <!--
                 </div>
                 <div class="collapse navbar-collapse">
@@ -144,7 +152,161 @@
     <!-- Placed at the end of the document so the pages load faster -->
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script>
+<script type="text/javascript">
+   
+ // PopOut links
+var links = [
+        ""http://www.countryliving.com/food-drinks/recipes/a36486/sausage-and-tortellini-soup/",
+        "http://www.countryliving.com/food-drinks/recipes/a36484/spiced-sweet-potato-and-peanut-puree/",
+        "http://www.countryliving.com/food-drinks/recipes/a36485/chicken-and-quinoa-minestrone/",
+        "http://www.countryliving.com/food-drinks/recipes/a36491/black-bean-and-chile-soup/",
+        "http://www.countryliving.com/food-drinks/recipes/a36488/red-eye-brisket-stew/",
+        "http://therecipecritic.com/2012/07/slow-cooker-cashew-chicken/",
+        "http://alldayidreamaboutfood.com/2015/05/low-carb-slow-cooker-spaghetti-squash-and-meatballs.html",
+        "http://foxeslovelemons.com/slow-cooker-barley-and-chickpea-risotto/",
+        "http://letthebakingbeginblog.com/2014/10/spicy-slow-cooker-beef-bell-pepper/#comment-36689&_a5y_p=2738548",
+        "http://tastesbetterfromscratch.com/2015/02/slow-cooker-lasagna.html",
+        "http://damndelicious.net/2013/11/24/slow-cooker-creamed-corn/",
+        "http://damndelicious.net/2014/12/17/slow-cooker-cheesy-tortellini/",
+        "http://www.lecremedelacrumb.com/2014/05/slow-cooker-cream-cheese-chicken-taquitos.html",
+        "http://www.countryliving.com/food-drinks/recipes/a33970/white-chili-black-beans-recipe-ghk0313/",
+        "http://www.countryliving.com/food-drinks/recipes/a32864/slow-cooker-pork-ragu-recipe-124666/",
+        "http://www.countryliving.com/food-drinks/recipes/a31174/pulled-pork-sandwiches-with-cabbage-slaw-recipe/",
+        "http://www.countryliving.com/food-drinks/recipes/a34961/indian-spiced-chicken-cauliflower-recipe-wdy1214/",
+        "http://www.countryliving.com/food-drinks/recipes/a5499/cowboy-brisket-recipe-clx0914/",
+        "http://www.countryliving.com/food-drinks/recipes/a5689/herbed-chicken-beets-brussels-recipe-clx1014/",
+        "http://www.countryliving.com/food-drinks/recipes/a34848/slow-cooker-turkey-pumpkin-chili-recipe-wdy0115/",
+        "http://www.countryliving.com/food-drinks/recipes/a32878/balsamic-ginger-chicken-lettuce-cups-recipe/",
+        "http://www.number-2-pencil.com/2012/06/22/crock-pot-mexican-stuffed-bell-peppers/",
+        "http://www.lecremedelacrumb.com/2015/01/slow-cooker-french-onion-soup.html",
+        "http://damndelicious.net/2014/09/27/slow-cooker-cheesy-bacon-ranch-potatoes/",
+        "http://www.lecremedelacrumb.com/2014/10/slow-cooker-mozzarella-stuffed-meatballs.html",
+        "http://www.countryliving.com/food-drinks/recipes/a3265/pulled-pork-biscuits-recipe/",
+        "http://www.number-2-pencil.com/2014/10/01/slow-cooker-chicken-burrito-bowl/",
+        "http://www.countryliving.com/food-drinks/recipes/a14208/lentil-stew-butternut-squash-recipes/",
+        "http://www.cookingclassy.com/2013/11/slow-cooker-broccoli-cheese-soup/",
+        "http://www.bakedbyrachel.com/slow-cooker-chicken-pie-soup/",
+        "http://www.thecookingjar.com/slow-cooker-beef-cheese-pasta/",
+        "http://www.foodnetwork.com/recipes/ellie-krieger/tuscan-vegetable-soup-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/mixed-berries-and-banana-smoothie-recipe.html",
+        "http://www.foodnetwork.com/recipes/alton-brown/granola-bars-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/steak-pizzaiola-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/kale-and-apple-salad-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/pressure-cooker-beef-stroganoff-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/mustard-maple-roasted-salmon-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/poached-ginger-chicken-recipe.html",
+        "http://www.foodnetwork.com/recipes/ina-garten/orange-banana-smoothie-recipe.html",
+        "http://www.foodnetwork.com/recipes/ellie-krieger/energy-bars-recipe.html",
+        "http://www.foodnetwork.com/recipes/ellie-krieger/hummus-and-grilled-vegetable-wrap-recipe.html",
+        "http://www.foodnetwork.com/recipes/food-network-kitchens/vegetable-noodle-soup-recipe.html",
+        "http://www.foodnetwork.com/recipes/giada-de-laurentiis/salmon-with-lemon-capers-and-rosemary-recipe.html",
+        "http://greatist.com/eat/recipes/tropical-beach-granola",
+        "http://greatist.com/eat/recipes/quinoa-breakfast-bake",
+        "http://greatist.com/eat/recipes/whole-wheat-zucchini-muffins",
+        "http://greatist.com/eat/recipes/breakfast-polenta-honey-and-yogurt",
+        "http://greatist.com/eat/recipes/chocolate-banana-breakfast-quinoa",
+        "http://greatist.com/eat/recipes/sunny-green-juice",
+        "http://greatist.com/eat/recipes/fruit-salad-lemon-lavender-syrup",
+        "http://greatist.com/eat/recipes/fruit-and-nut-bars",
+        "http://greatist.com/eat/recipes/crisp-apple-and-almond-cereal",
+        "http://greatist.com/health/low-carb-celery-root-hashbrowns",
+        "http://greatist.com/health/pesto-breakfast-burrito-healthy-recipe",
+        "http://greatist.com/eat/recipes/apple-crumble-muffins",
+        "http://greatist.com/team/my-banana-and-cream-cheese-stuffed-french-toast",
+        "http://greatist.com/team/celebrate-4th-berry-patriotic-parfait",
+        "http://greatist.com/eat/recipes/easy-coconut-granola",
+        "http://greatist.com/eat/recipes/pumpkin-pie-oatmeal",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/hot-ham-and-cheese-sandwiches-with-mushrooms/rcp-20049791",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/chicken-sliders/rcp-20049963",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/chicken-caesar-pitas/rcp-20049754",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/chicken-and-coleslaw-wrap/rcp-20049756",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/buffalo-chicken-salad-wrap/rcp-20049975",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/turkey-breast-burgers-for-2/rcp-20197768",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/tuna-salad-sandwiches/rcp-20049843",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/tuna-pita-pockets/rcp-20049842",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/grilled-salmon-on-sourdough-bread/rcp-20049670",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/smoked-gouda-and-vegetable-poached-egg-sandwich/rcp-20197751",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/philly-steak-sandwich/rcp-20049801",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/turkey-wrap/rcp-20146131",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/turkey-pesto-melt/rcp-20197769",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/turkey-breast-burgers-for-2/rcp-20197768",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/tandoori-chicken-wrap/rcp-20049974",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/smoked-gouda-poblano-turkey-burger/rcp-20197752",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/sloppy-joes/rcp-20049822",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/hot-ham-and-cheese-sandwiches-with-mushrooms/rcp-20049791",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/tomato-basil-sandwich/rcp-20135113",
+        "http://www.mayoclinic.org/healthy-lifestyle/recipes/beet-burgers/rcp-20125133",
+        "http://greatist.com/eat/recipes/brussels-sprout-and-sweet-potato-hash",
+        "http://alldayidreamaboutfood.com/2015/05/low-carb-slow-cooker-spaghetti-squash-and-meatballs.html",
+        "http://www.countryliving.com/food-drinks/recipes/a32878/balsamic-ginger-chicken-lettuce-cups-recipe/",
+        "http://www.countryliving.com/food-drinks/recipes/a14208/lentil-stew-butternut-squash-recipes/",
+        "http://www.eatingwell.com/recipe/252625/cherry-almond-farro-salad/",
+        "http://www.eatingwell.com/recipe/251192/blats-bacon-lettuce-avocado-tomato-sandwiches/",
+        "http://www.eatingwell.com/recipe/250068/mediterranean-wrap/",
+        "http://www.eatingwell.com/recipe/252443/italian-vegetable-hoagies/",
+        "http://www.eatingwell.com/recipe/252458/sweet-potato-peanut-bisque/",
+        "http://www.eatingwell.com/recipe/251898/creamy-tarragon-chicken-salad/",
+        "http://www.eatingwell.com/recipe/248985/curried-tofu-salad/",
+        "http://www.eatingwell.com/recipe/252442/creamy-avocado-white-bean-wrap/",
+        "http://www.eatingwell.com/recipe/252455/ravioli-vegetable-soup/",
+        "http://www.eatingwell.com/recipe/252634/egg-salad/",
+        "http://www.eatingwell.com/recipe/249926/curried-chicken-pitas/",
+        "http://www.eatingwell.com/recipe/249726/tijuana-torta/",
+        "http://www.eatingwell.com/recipe/251928/quinoa-smoked-tofu-salad/",
+        "http://www.eatingwell.com/recipe/249406/wheat-berry-salad-with-red-fruit/",
+        "http://www.eatingwell.com/recipe/251815/tomato-tuna-tarragon-salad/",
+        "http://www.eatingwell.com/recipe/251454/spaghetti-frittata/",
+        "http://www.eatingwell.com/recipe/250292/turkey-corn-sun-dried-tomato-wraps/",
+        "http://www.eatingwell.com/recipe/250282/chicken-waldorf-salad/",
+        "http://www.eatingwell.com/recipe/252415/vegetable-tuna-pasta-salad/",
+        "http://www.eatingwell.com/recipe/250625/veggistrone/",
+        "http://www.eatingwell.com/recipe/250438/veggie-egg-salad/",
+        "http://www.eatingwell.com/recipe/250230/southwestern-salad-with-black-beans/",
+        "http://www.eatingwell.com/recipe/250881/avocado-tomato-chicken-sandwich/",
+        "http://www.eatingwell.com/recipe/249517/bbq-chicken-sandwich/",
+        "http://www.eatingwell.com/recipe/250436/cobb-egg-salad/",
+        "http://www.eatingwell.com/recipe/250900/chopped-ham-apple-salad-with-creamy-parmesan-dressing/",
+        "http://www.eatingwell.com/recipe/250716/peas-ham-pasta-salad/",
+        "http://www.eatingwell.com/recipe/249936/bean-salmon-salad-with-anchovy-arugula-dressing/",
+        "http://www.eatingwell.com/recipe/251346/cauliflower-soup-with-smoked-gouda/",
+        "http://www.eatingwell.com/recipe/251218/edamame-hummus-wrap/",
+        "http://www.eatingwell.com/recipe/251225/maine-blueberry-lobster-salad/",
+        "http://www.eatingwell.com/recipe/250109/tomato-provolone-sandwiches/",
+        "http://www.eatingwell.com/recipe/252736/spinach-salad-with-beets-beans-feta/",
+        "http://www.eatingwell.com/recipe/251153/creamy-asparagus-potato-soup/",
+        "http://www.eatingwell.com/recipe/250475/cherry-wild-rice-quinoa-salad/",
+        "http://www.eatingwell.com/recipe/250246/spicy-tuna-wrap/",
+        "http://www.eatingwell.com/recipe/249872/salmon-salad/",
+        "http://www.eatingwell.com/recipe/249932/turkey-pastrami-sandwich/",
+        "http://www.eatingwell.com/recipe/249927/dolmas-wrap/",
+        "http://www.eatingwell.com/recipe/252721/white-bean-salad-with-cheddar-bacon-walnuts/",
+        "http://www.eatingwell.com/recipe/250075/broccoli-ham-pasta-salad/",
+        "http://www.eatingwell.com/recipe/252626/chicken-club-wraps/",
+        "http://www.eatingwell.com/recipe/249880/indian-spiced-chicken-pitas/",
+        "http://www.eatingwell.com/recipe/249519/peanut-tofu-wrap/",
+        "http://www.eatingwell.com/recipe/249520/shrimp-cobb-salad/",
+        "http://www.eatingwell.com/recipe/250715/melon-chicken-pasta-salad/",
+        "http://www.eatingwell.com/recipe/252763/curried-red-lentil-soup/",
+        "http://greatist.com/eat/recipes/crustless-vegetable-quiche",
+        "http://greatist.com/eat/recipes/brussels-sprout-and-egg-scramble",
+        "http://greatist.com/eat/recipes/crustless-vegetable-quiche",
+        "http://allrecipes.com/recipe/170061/slow-cooker-lime-chicken-with-rice/?internalSource=hn_carousel%2005_Slow%20Cooker%20Lime%20Chicken%20with%20Rice&referringId=84&referringContentType=recipe%20hub&referringPosition=carousel%2005",
+        "http://allrecipes.com/recipe/220123/black-bean-breakfast-bowl/?internalSource=hn_carousel%2004_Black%20Bean%20Breakfast%20Bowl&referringId=84&referringContentType=recipe%20hub&referringPosition=carousel%2004",
+        "http://allrecipes.com/recipe/213211/turkey-and-quinoa-meatloaf/?internalSource=hn_carousel%2003_Turkey%20and%20Quinoa%20Meatloaf&referringId=84&referringContentType=recipe%20hub&referringPosition=carousel%2003",
+        "http://allrecipes.com/recipe/218485/greek-island-chicken-shish-kebabs/?internalSource=hn_carousel%2001_Greek%20Island%20Chicken%20Shish%20Kebabs&referringId=84&referringContentType=recipe%20hub&referringPosition=carousel%2001",
+        ",
+    ];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
         var cat1 = [
         "http://www.countryliving.com/food-drinks/recipes/a36486/sausage-and-tortellini-soup/",
         "http://www.countryliving.com/food-drinks/recipes/a36484/spiced-sweet-potato-and-peanut-puree/",
