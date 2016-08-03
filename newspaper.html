@@ -151,7 +151,24 @@
     <!-- Placed at the end of the document so the pages load faster -->
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script>
+<script type="text/javascript">
+   
+ // the used links
+var links = [
+        "http://www.nytimes.com",
+    ];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
+
         var cat1 = [
         "http://www.thetimes.co.uk/",
         "http://www.economist.com/",
