@@ -33,7 +33,16 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     
-    
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81679041-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 </head>
 
   <!-- Wrap all page content here -->
@@ -50,7 +59,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" data-toggle="tooltip" href="#" title="Press Random button to load new source.  If new source does not load immediately, press Random button again.  To open source in new tab, as you click on the article you wish to open, press CTRL key (for Windows/Chrome) or COMMAND key (for Mac)">
+
+<a class="navbar-brand" href="/index.html" style="color: #EBEBEB">
+<span style="color:#E8E8E8" class="glyphicon glyphicon-home"></span>
+</a>
+
+<a class="navbar-brand" href="#" onclick="openStuff();">
+<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window"></span>
+</a>
+    
+<a class="navbar-brand" data-toggle="tooltip" href="#" title="Press Random button to load new source.  If new source does not load immediately, press Random button again.  To open source in new tab, as you click on the article you wish to open, press CTRL key (for Windows/Chrome) or COMMAND key (for Mac)">
     <span id="btn" class="glyphicon glyphicon-random"></span>
     </a>
                 </div>
@@ -232,7 +250,38 @@
     <!-- Placed at the end of the document so the pages load faster -->
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script>
+<script type="text/javascript">
+   
+ // the used links
+var links = [
+        "https://next.ft.com/world/us",
+        "https://www.theguardian.com/us-news",    
+        "http://www.usatoday.com/news/nation/",
+        "http://www.reuters.com/news/us",
+        "http://www.wsj.com/news/us",
+        "http://observer.com/cl/news-politics/national/",
+        "http://www.csmonitor.com/USA",
+        "http://www.latimes.com/nation/",
+        "http://www.upi.com/Top_News/US/",
+        "https://www.washingtonpost.com/national/?nid=menu_nav_national",
+        "http://www.france24.com/en/americas/",
+        "http://www.npr.org/sections/us/",
+        "http://www.cnn.com/us",
+        "http://www.independent.co.uk/news/world/americas",
+        "http://www.denverpost.com/news/nation-world/",
+    ];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
+
         var cat1 = [
         "http://www.usatoday.com/news/nation/",
         "http://www.reuters.com/news/us",
