@@ -63,10 +63,30 @@
 <body>
 
   <!-- Wrap all page content here -->
-    <div id="wrap">
-        <iframe id="frame1" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
-
-        <!-- Fixed navbar -->
+    <div class="container">
+    <div class="row">
+        <div class="span12">
+            <ul class="nav nav-tabs" id="myTabs">
+              <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+              <li><a href="#dpa" data-toggle="tab">DPA</a></li>
+              <li><a href="#rn" data-toggle="tab">Antwon</a></li>
+            </ul>
+            
+            <div class="tab-content">
+              <div class="tab-pane active" id="home">
+                  <p>test</p>            
+                </div>
+              <div class="tab-pane" id="dpa" data-src="http://www.drugpolicy.org/">
+                  <iframe src=""></iframe>
+                </div>
+              <div class="tab-pane" id="rn" data-src="http://player.vimeo.com/video/37138051?badge=0">
+                  <iframe src="" width="500" height="203" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/37138051">ANTWON ♦ HELICOPTER</a> from <a href="http://vimeo.com/tauszik">Brandon Tauszik</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+                </div>
+            </div>
+        </div>
+   
+    
+    
          <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
