@@ -80,7 +80,7 @@
             <ul class="nav nav-tabs" id="myTabs">
               <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
               <li><a href="#dpa" data-toggle="tab">Style</a></li>
-              <li><a href="#rn" data-toggle="tab">Antwon</a></li>
+              <li><a href="#rn" data-toggle="tab">Links</a></li>
             </ul>
             
             <div class="tab-content">
@@ -90,8 +90,8 @@
               <div class="tab-pane" id="dpa" data-src="">
                   <iframe id="frame1" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
                 </div>
-              <div class="tab-pane" id="rn" data-src="http://player.vimeo.com/video/37138051?badge=0">
-                  <iframe src="" width="500" height="203" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/37138051">ANTWON ♦ HELICOPTER</a> from <a href="http://vimeo.com/tauszik">Brandon Tauszik</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+              <div class="tab-pane" id="links" data-src="">
+              	<iframe id="frame2" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
                 </div>
             </div>
         </div>
@@ -216,6 +216,27 @@ openStuff = function () {
 ];
         
         var myFrame = document.getElementById("frame1");
+        function getRandomUrl(myFrame) {
+           var index = Math.floor(Math.random()*cat1.length);
+           var url = cat1[index];
+           myFrame.src = url;
+        }
+        var refreshBtn = document.getElementById("btn");
+        refreshBtn.addEventListener("click", function() {
+            
+           getRandomUrl(myFrame); 
+            
+        });
+        
+    window.onload = function(){
+    getRandomUrl(myFrame);
+};
+
+var cat1 = [
+"http://www.espn.com",
+];
+        
+        var myFrame = document.getElementById("frame2");
         function getRandomUrl(myFrame) {
            var index = Math.floor(Math.random()*cat1.length);
            var url = cat1[index];
