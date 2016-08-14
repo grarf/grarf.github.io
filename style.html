@@ -59,6 +59,7 @@
 
   ga('create', 'UA-81679041-1', 'auto');
   ga('send', 'pageview');
+ 
 
 </script>
 </head>
@@ -80,7 +81,7 @@
     <span id="btn" class="glyphicon glyphicon-random"></span>
     </a>
     
-    <a class="navbar-brand" href="#"><input type="button" value="Back in the main frame" onclick="window.parent.frames[1].history.back()">
+    <a class="navbar-brand" href="#"><input type="button" VALUE="&lt; &lt; &nbsp; Back &nbsp;"  onClick="myIframe.history.back()">
 </a>
     
 
@@ -784,6 +785,15 @@ openStuff = function () {
     window.onload = function(){
     getRandomUrl(myFrame);
 };
+
+$(function()
+    {
+      $('.frmSubmit').click(function(e)
+      {
+        $('#myIframe').attr('src', $('.frmUrlVal').attr('value'));
+        e.preventDefault();
+      });
+    });
 </script>
         
 
