@@ -81,7 +81,7 @@
     <span id="btn" class="glyphicon glyphicon-random"></span>
     </a>
     
-    <a class="navbar-brand" href="#"><input type="button" VALUE="&lt; &lt; &nbsp; Back &nbsp;"  onClick="myIframe.history.back()">
+    <a class="navbar-brand" href="#"><input type="button" VALUE="&lt; &lt; &nbsp; Back &nbsp;"  onClick="myframe.history.back()"> 
 </a>
     
 
@@ -785,15 +785,6 @@ openStuff = function () {
     window.onload = function(){
     getRandomUrl(myFrame);
 };
-
-$(function()
-    {
-      $('.frmSubmit').click(function(e)
-      {
-        $('#myIframe').attr('src', $('.frmUrlVal').attr('value'));
-        e.preventDefault();
-      });
-    });
 </script>
         
 
