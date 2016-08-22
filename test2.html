@@ -72,10 +72,15 @@
     
 </head>
 <body>
-<div>
-  <!-- Wrap all page content here -->
-    <webview id="foo" src="http://www.google.com/" style="width:640px; height:480px"></webview>
-</div>
+<div class="navbar tooltip-demo">
+            <ul class="nav">
+              <li><a class="top" title="" data-placement="top" data-toggle="tooltip" href="#" data-original-title="Tooltip on top">Tooltip on top</a></li>
+              <li><a class="right" title="" data-placement="right" data-toggle="tooltip" href="#" data-original-title="Tooltip on right">Tooltip on right</a></li>
+              <li><a class="bottom" title="" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Tooltip on bottom">Tooltip on bottom</a></li>
+              <li><a class="left" title="buttholes" data-placement="left" data-toggle="tooltip" href="#" data-original-title="Tooltip on left">Tooltip on left</a></li>
+            </ul>
+          </div>
+
     <!-- /.container -->
 
 
@@ -85,6 +90,9 @@
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <script>
+
+$('a').tooltip();
+
 onload = function() {
         var webview = document.getElementById("foo");
         var indicator = document.querySelector(".indicator");
