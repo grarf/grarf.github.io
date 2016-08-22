@@ -72,10 +72,10 @@
     
 </head>
 <body>
-
+<div>
   <!-- Wrap all page content here -->
     <webview id="foo" src="http://www.google.com/" style="width:640px; height:480px"></webview>
-
+</div>
     <!-- /.container -->
 
 
@@ -84,89 +84,21 @@
     <!-- Placed at the end of the document so the pages load faster -->
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript">
-   
- // the used links
-var links = [
-    "bbc.com",
-    "google.com",
-    "youtube.com",
-    "facebook.com"];
-
-openStuff = function () {
-    // get a random number between 0 and the number of links
-    var randIdx = Math.random() * links.length;
-    // round it, so it can be used as array index
-    randIdx = parseInt(randIdx, 10);
-    // construct the link to be opened
-     var link = 'http://' + links[randIdx];
-    // open it in a new window
-    window.open(link);
-};
-
-
-        var cat1 = [
-"http://www.tiinathestore.com/collections/whats-new",
-];
-        
-        var myFrame = document.getElementById("frame1");
-        function getRandomUrl(myFrame) {
-           var index = Math.floor(Math.random()*cat1.length);
-           var url = cat1[index];
-           myFrame.src = url;
-        }
-        var refreshBtn = document.getElementById("btn");
-        refreshBtn.addEventListener("click", function() {
-            
-           getRandomUrl(myFrame); 
-            
-        });
-        
-    window.onload = function(){
-    getRandomUrl(myFrame);
-};
-
-var cat1 = [
-"http://www.espn.com",
-];
-        
-        var myFrame = document.getElementById("frame2");
-        function getRandomUrl(myFrame) {
-           var index = Math.floor(Math.random()*cat1.length);
-           var url = cat1[index];
-           myFrame.src = url;
-        }
-        var refreshBtn = document.getElementById("btn");
-        refreshBtn.addEventListener("click", function() {
-            
-           getRandomUrl(myFrame); 
-            
-        });
-        
-    window.onload = function(){
-    getRandomUrl(myFrame);
-};
-</script>
 <script>
-	$(function(){
-	$(".dropdown-menu > li > a.trigger").on("click",function(e){
-		var current=$(this).next();
-		var grandparent=$(this).parent().parent();
-		if($(this).hasClass('left-caret')||$(this).hasClass('right-caret'))
-			$(this).toggleClass('right-caret left-caret');
-		grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
-		grandparent.find(".sub-menu:visible").not(current).hide();
-		current.toggle();
-		e.stopPropagation();
-	});
-	$(".dropdown-menu > li > a:not(.trigger)").on("click",function(){
-		var root=$(this).closest('.dropdown');
-		root.find('.left-caret').toggleClass('right-caret left-caret');
-		root.find('.sub-menu:visible').hide();
-	});
-});
+onload = function() {
+        var webview = document.getElementById("foo");
+        var indicator = document.querySelector(".indicator");
+      
+        var loadstart = function() {
+          indicator.innerText = "loading...";
+        }
+        var loadstop = function() {
+          indicator.innerText = "";
+        }
+        webview.addEventListener("loadstart", loadstart);
+        webview.addEventListener("loadstop", loadstop);
+      }
 </script>
-
         
 
 
