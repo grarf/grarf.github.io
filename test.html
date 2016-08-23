@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <script type="text/javascript" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"</script>
     <style>
         body {
             padding-top: 50px;
@@ -71,21 +69,17 @@
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 
-<a class="navbar-brand" href="/index.html" style="color: #EBEBEB">
+<a class="navbar-brand" data-toggle="tooltip" href="/index.html" title="GRARF Home" style="color: #EBEBEB">
 <span style="color:#E8E8E8" class="glyphicon glyphicon-home"></span>
 </a>
 
-<a class="navbar-brand" href="/index.html" style="color: #EBEBEB">
-<span><i style="color:#E8E8E8" class="glyphicon glyphicon-home"></i></span>
+<a class="navbar-brand" data-toggle="tooltip" href="#" title="Click to load new shop in new tab" onclick="openStuff();">
+<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window"></span>
 </a>
 
-<a class="navbar-brand" data-toggle="tooltip" data-placement="bottom" title="Tooltip" id="rando">
-        <span style="font-color:yellow" class="glyphicon glyphicon-random"></span>
-    </a> 
-
-  
-    
-    
+   <a class="navbar-brand" data-toggle="tooltip" href="#" title="Click to load new shop">
+    <span id="btn" class="glyphicon glyphicon-random"></span>
+    </a>
     
     </div>
     <div class="collapse navbar-collapse">
@@ -112,8 +106,9 @@
    
  // the PopOut links
 var links = [
-        "zady.com/women",
+ "zady.com/women",
         "curate.ly/home",
+        "unionandfifth.com/shop?gclid=CMT3867zrc0CFYIBaQodlT4AFQ",
         "shop.edeninlove.com/",
         "kohls.com/catalog/womens-clothing.jsp?CN=4294720878+4294719810",
         "review-australia.com/shop/shop-new-arrivals",
@@ -197,7 +192,6 @@ var links = [
         "drjays.com/shop/G2-R9419/women.html",
         "oska.com/en/products/collection/sale/",
         "victoriabeckham.com/exclusives/",
-        "highfashionhome.com/boutique/women-s-clothing.html",
         "ebay.com/sch/Womens-Clothing/15724/bn_661783/i.html",
         "hansenandgretel.com/shop/",
         "store.vionnet.com/eu/women/apparel",
@@ -232,7 +226,6 @@ var links = [
         "thereformation.com/clothes",
         "usa.frenchconnection.com/category/woman-new-in/new-arrivals.htm",
         "brandymelvilleusa.com/just-in.html",
-        "number-22.co.uk/collections/all",
         "thereformation.com/new",
         "cluburban.com/shop/womens/womens-clothing.html",
         "bandier.com/designers/designer-spotlight/vie-active",
@@ -254,6 +247,7 @@ var links = [
         "shopakira.com/whats-new",
         "balenciaga.com/us/women/subhome",
         "themogan.com/clothing.html",
+        "shop.davidjones.com.au/djs/en/davidjones/women/new-in-womenswear",
         "jcpenney.com/women/new-arrivals/cat.jump?id=cat1005040007&deptId=dept20000013&cmJCP_T=G1&cmJCP_C=D4",
         "intl.pepejeans.com/en_gb/women/new-collection/new-in",
         "fancy.com/shop/category/womens",
@@ -265,7 +259,6 @@ var links = [
         "chicos.com/store/category/New+Arrivals/cat40036/",
         "brandymelvilleusa.com/just-in.html",
         "joefresh.com/us/Categories/Women/New-Arrivals/c/10008?sort=newest",
-
     ];
 
 openStuff = function () {
@@ -281,7 +274,7 @@ openStuff = function () {
 
 
         var cat1 = [
-       "http://www.shoedazzle.com/",
+            "http://www.shoedazzle.com/",
 "http://www.yogaoutlet.com",
 "http://www.teeki.com/shop",
 "http://anotherfeather.com/",
@@ -310,14 +303,13 @@ openStuff = function () {
     window.onload = function(){
     getRandomUrl(myFrame);
 };
-
-$(function () {
-    $('#rando').tooltip();
-});
-
 </script>
         
 
 
 </body>
 </html>
+
+
+       
+       
