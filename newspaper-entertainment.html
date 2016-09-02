@@ -153,22 +153,7 @@
    
  // PopOut links
 var links = [
-        "",
-    ];
-
-openStuff = function () {
-    // get a random number between 0 and the number of links
-    var randIdx = Math.random() * links.length;
-    // round it, so it can be used as array index
-    randIdx = parseInt(randIdx, 10);
-    // construct the link to be opened
-     var link = links[randIdx];
-    // open it in a new window
-    window.open(link);
-};        
-
-var cat1 = [
-        "http://www.ew.com/",
+         "http://www.ew.com/",
         "http://www.eonline.com/",
         "http://www.tmz.com/",
         "http://www.huffingtonpost.com/entertainment/",
@@ -195,6 +180,31 @@ var cat1 = [
         "http://www.huffingtonpost.com/celebrity/",
         "http://www.usmagazine.com/celebrity-news",
         "http://www.mtv.com/news/celebrity/",
+    ];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = links[randIdx];
+    // open it in a new window
+    window.open(link);
+};        
+
+var cat1 = [
+       
+        "http://www.etonline.com/news/",
+        "http://www.cnn.com/entertainment",
+        "http://www.upi.com/Entertainment_News/",
+        "http://www.justjared.com/page/6/",
+        "http://www.bbc.com/news/entertainment_and_arts",
+        "http://perezhilton.com/",
+        "http://thecelebrityauction.co/",
+        "http://www.huffingtonpost.com/news/celebrity-news/",
+        "http://www.huffingtonpost.com/celebrity/",
+        "http://www.usmagazine.com/celebrity-news",
         ];
         
         var myFrame = document.getElementById("frame");
