@@ -150,21 +150,6 @@
    
  // PopOut links
 var links = [
-        "",
-    ];
-
-openStuff = function () {
-    // get a random number between 0 and the number of links
-    var randIdx = Math.random() * links.length;
-    // round it, so it can be used as array index
-    randIdx = parseInt(randIdx, 10);
-    // construct the link to be opened
-     var link = links[randIdx];
-    // open it in a new window
-    window.open(link);
-};
-
-var cat1 = [
         "newsday.com/opinion",
         "http://www.nytimes.com/pages/opinion/index.html",
         "http://www.dallasnews.com/news/columnists/",
@@ -192,6 +177,30 @@ var cat1 = [
         "http://www.realclearpolitics.com/editorials/",
         "http://www.metrowestdailynews.com/opinion",
         "http://bangordailynews.com/opinion/",
+    ];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
+
+var cat1 = [
+        "http://newsday.com/opinion",
+        "http://www.nytimes.com/pages/opinion/index.html",
+        "https://www.washingtonpost.com/opinions/",
+        "http://thehill.com/opinion",
+        "http://www.foxnews.com/opinion.html",
+        "https://www.theguardian.com/us/commentisfree",
+        "http://www.chicagotribune.com/news/opinion/",
+        "http://www.dailynews.com/opinion",
+        "http://www.cbsnews.com/latest/opinion/",
+        "http://www.realclearpolitics.com/editorials/",
         ];
         
         var myFrame = document.getElementById("frame");
