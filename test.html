@@ -103,7 +103,7 @@
 
 <script type="text/javascript">
    
- // the PopOut links
+ // open in New window
 var links = [
     "https://www.facebook.com/",
     ];
@@ -119,12 +119,13 @@ openStuff = function () {
     window.open(link);
 };
 
+ // Open in iFrame
 
         var cat1 = [
 "http://www.espn.com",
 
 ];
-        
+      
         var myFrame = document.getElementById("frame");
         function getRandomUrl(myFrame) {
            var index = Math.floor(Math.random()*cat1.length);
