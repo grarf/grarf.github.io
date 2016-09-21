@@ -132,13 +132,14 @@ function shuffle(array) {
 var windowLinks = shuffle([
     "http://www.espn.com",
     "http://www.usatoday.com",
-    "http://www.shoprog.com",
-    "http://www.latimes.com",
+    "http://www.homedsgn.com",
 ]);
 var windowLinksIndex = 0;
 // maybe this should be equal to windowLinks?
 var iframeLinks = shuffle([
-    "http://www.familycircle.com",
+   "http://www.espn.com",
+    "http://www.usatoday.com",
+    "http://www.homedsgn.com",
 ]);
 var iframeLinksIndex = 0;
 
@@ -161,6 +162,7 @@ if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
 openStuff = function () {
     var link = windowLinks[windowLinksIndex];
     windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
     window.open(link);
 };
 
@@ -170,6 +172,7 @@ var myFrame = document.getElementById("frame");
 function getRandomUrl(myFrame) {
     var url = iframeLinks[iframeLinksIndex];
     iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
     myFrame.src = url;
 }
 var refreshBtn = document.getElementById("btn");
@@ -181,6 +184,7 @@ window.onload = function(){
     getRandomUrl(myFrame);
 };
 </script>
+
         
 
 
