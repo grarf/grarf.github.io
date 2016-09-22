@@ -80,10 +80,34 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-   
- // PopOut links
-var links = [
-        "http://www.thefreedictionary.com/diatribe",
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+
+// Open in new Window
+var windowLinks = shuffle([
+    "http://www.thefreedictionary.com/diatribe",
         "http://www.thefreedictionary.com/demigod",
         "http://www.thefreedictionary.com/demagogue",
         "http://www.thefreedictionary.com/legerdemain",
@@ -321,20 +345,11 @@ var links = [
         "http://www.yourdictionary.com/brazen",
         "http://www.merriam-webster.com/dictionary/anodyne",
         "http://www.dictionary.com/browse/tubercular",
-    ];
-
-openStuff = function () {
-    // get a random number between 0 and the number of links
-    var randIdx = Math.random() * links.length;
-    // round it, so it can be used as array index
-    randIdx = parseInt(randIdx, 10);
-    // construct the link to be opened
-     var link = links[randIdx];
-    // open it in a new window
-    window.open(link);
-};
-        var cat1 = [
-        "http://grammarist.com/literature/apostrophe-poetry/",
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+    "http://grammarist.com/literature/apostrophe-poetry/",
         "http://www.dictionary.com/browse/tubercular",
         "http://www.merriam-webster.com/dictionary/anodyne",
         "http://literarydevices.net/antithesis/",
@@ -554,25 +569,54 @@ openStuff = function () {
         "http://www.dictionary.com/browse/arcane?s=t",
         "http://www.yourdictionary.com/avarice",
         "http://www.yourdictionary.com/brazen",
-        ];
-        
-        var myFrame = document.getElementById("frame");
-        function getRandomUrl(myFrame) {
-           var index = Math.floor(Math.random()*cat1.length);
-           var url = cat1[index];
-           myFrame.src = url;
-        }
-        var refreshBtn = document.getElementById("btn");
-        refreshBtn.addEventListener("click", function() {
-            
-           getRandomUrl(myFrame); 
-            
-        });
-        
-    window.onload = function(){
+
+]);
+var iframeLinksIndex = 0;
+
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+
+
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+
+// Open in iFrame
+
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+
+window.onload = function(){
     getRandomUrl(myFrame);
 };
 </script>
+
+
+
         
 
 
