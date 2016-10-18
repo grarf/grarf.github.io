@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <title>Bootst</title>
+    <title>Bootstrapper</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -20,9 +20,7 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
-
 /* Toggle Styles */
-
 #wrapper {
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
@@ -30,11 +28,9 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 #wrapper.toggled {
     padding-left: 0px;
 }
-
 #sidebar-wrapper {
     position: fixed;
     left: 100px;
@@ -49,90 +45,72 @@
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 #wrapper.toggled #sidebar-wrapper {
     width: 100%;
 }
-
 #page-content-wrapper {
     padding: 0px;
     width: 100%;
 }
-
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
     margin-right: -250px;
 }
-
 /* Sidebar Styles */
-
 .sidebar-nav {
     position: absolute;
     top: 0;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 100px;
     list-style: none;
 }
-
 .sidebar-nav li {
     text-indent: 5px;
     line-height: 30px;
 }
-
 .sidebar-nav li a {
     display: block;
     color: #999999;
     text-decoration: none;
 }
-
 .sidebar-nav li a:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #fff;
     text-decoration: none;
 }
-
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus {
     text-decoration: none;
 }
-
 .sidebar-nav > .sidebar-brand {
     height: 65px;
     font-size: 18px;
     line-height: 60px;
 }
-
 .sidebar-nav > .sidebar-brand a {
     color: #999999;
 }
-
 .sidebar-nav > .sidebar-brand a:hover {
     background: none;
     color: #fff;
 }
-
 @media (min-width: 768px) {
     #wrapper {
         padding-left: 250px;
     }
-
     #wrapper.toggled {
         padding-left: 0;
     }
-
     #sidebar-wrapper {
         width: 250px;
     }
-
     #wrapper.toggled #sidebar-wrapper {
         width: 0;
     }
-
     #page-content-wrapper {
         padding: 0px;
     }
-
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
@@ -146,7 +124,6 @@
     max-height: 500px;
     overflow-x: hidden;
 }
-
 @import url('http://getbootstrap.com/dist/css/bootstrap.css');
 .glyphicon-random {
     fill: #fff;
@@ -155,7 +132,6 @@
     -o-animation: animation-button 20000ms infinite;
     animation: animation-button 20000ms infinite;
 }
-
 @-webkit-keyframes animation-button {
     0%   {color:red; }
     25%  {color:yellow; }
@@ -170,7 +146,6 @@
     75%  {color:green; }
     100% {color:red; }
 }
-
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
    
@@ -182,8 +157,6 @@
       
       uncooperative links:      "http://www.bloomberg.com/",
                                 "https://news.google.com/",
-
-
     <![endif]-->
    
     
@@ -192,10 +165,8 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-81679041-1', 'auto');
   ga('send', 'pageview');
-
 </script>    
 </head>
 <body>
@@ -295,7 +266,6 @@ function readCookie(name) {
     }
     return null;
 }
-
 // Knuth array shuffle
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -308,7 +278,6 @@ function shuffle(array) {
     }
     return array;
 }
-
 // Open in new Window
 var windowLinks = shuffle([
     "https://www.dailyworth.com/",
@@ -395,7 +364,6 @@ var windowLinks = shuffle([
       "http://io9.gizmodo.com/",
       "http://thelodown.com/",
       "https://laurenconrad.com/",
-
 ]);
 var windowLinksIndex = 0;
 // iFrame links
@@ -475,7 +443,6 @@ var iframeLinks = shuffle([
       "http://dianegottsman.com/",
 ]);
 var iframeLinksIndex = 0;
-
 if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
     windowLinks = readCookie('windowlinkscookie').split(',');
     windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
@@ -490,17 +457,13 @@ if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
     document.cookie = 'framelinkscookie=' + windowLinks.join(',');
     document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
 }
-
-
 openStuff = function () {
     var link = windowLinks[windowLinksIndex];
     windowLinksIndex++;
     windowLinksIndex %= windowLinks.length;
     window.open(link);
 };
-
 // Open in iFrame
-
 var myFrame = document.getElementById("frame");
 function getRandomUrl(myFrame) {
     var url = iframeLinks[iframeLinksIndex];
@@ -512,7 +475,6 @@ var refreshBtn = document.getElementById("btn");
 refreshBtn.addEventListener("click", function() {
     getRandomUrl(myFrame); 
 });
-
 window.onload = function(){
     getRandomUrl(myFrame);
 };
