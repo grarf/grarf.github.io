@@ -15,6 +15,129 @@
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
     <style>
+	    /*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    position: fixed;
+    left: 250px;
+    z-index: 1000;
+    overflow-y: auto;
+    margin-left: -250px;
+    width: 0;
+    height: 100%;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    padding: 15px;
+    width: 100%;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    color: #999999;
+    text-decoration: none;
+}
+
+.sidebar-nav li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    background: none;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
         body {
             padding-top: 50px;
         }
@@ -75,223 +198,99 @@
 
 </script>    
 </head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Messages </a></li>
+             	<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Out</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>
+        </div>
+    </div>
+</nav>
 
-  <!-- Wrap all page content here -->
-    <div id="wrap">
-        <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
+<div id="wrapper" class="toggled">
+    <div class="container-fluid">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+              	<li class="sidebar-brand">
+                    <br>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="#" class="navbar-brand">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+                </li>
+                 <li>
+                    <a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>
+                </li>                
+                <li>
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span><font color="#337AB7"> STATISTICS</font>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Reports</a>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Statistic</a>
+                </li>
+                <li>
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span><font color="#337AB7"> ADMINISTRATION</font>
+                </li>
+                <li>
+                    <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users</a>
+                </li>
+              	<li>
+                    <a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
 
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    
-    <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html" style="color: #EBEBEB">
-<span style="color:#E8E8E8" class="glyphicon glyphicon-home"></span>
-</a>
-<!--
-<a class="navbar-brand" data-toggle="tooltip" title="Open new site in another tab" href="#" onclick="openStuff();">
-<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window"></span>
-</a>
-    -->
-    <a class="navbar-brand" data-toggle="tooltip" title="Load new site at random" href="#">
-    <span id="btn" class="glyphicon glyphicon-random"></span>
-    </a>
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                      <br>
+                      <h1>Your Title</h1>
+                    </div>
                 </div>
-               
-               <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sites <b class="caret"></b></a>
-                            <ul class="dropdown-menu scrollable-menu">
-                                
-                                <li><a href="https://www.15minutebeauty.com/" target="_blank">15 Minute Beauty</a>
-                                </li>
-                                <li><a href="https://www.autostraddle.com/" target="_blank">Autostraddle</a>
-                                </li>
-                                <li><a href="https://www.babble.com/" target="_blank">Babble</a>
-                                </li>
-                                <li><a href="https://www.thebloggess.com/" target="_blank">The Bloggess</a>
-                                </li>
-                                <li><a href="https://www.blogher.com/" target="_blank">BlogHer</a>
-                                </li>
-                                <li><a href="https://www.bust.com/" target="_blank">Bust</a>
-                                </li>
-                                <li><a href="https://www.catalyst.org/" target="_blank">Catalyst</a>
-                                </li>
-                                <li><a href="https://www.corporette.com/" target="_blank">Corporette</a>
-                                </li>
-                                <li><a href="https://www.cosmopolitan.com/" target="_blank">Cosmopolitan</a>
-                                </li>
-                                <li><a href="https://www.nymag.com/thecut/" target="_blank">The Cut</a>
-                                </li>
-                                <li><a href="https://www.dailyworth.com/" target="_blank">DailyWorth</a>
-                                </li>
-                                <li><a href="https://www.dealseekingmom.com/" target="_blank">Deal Seeking Mom</a>
-                                </li>
-                                <li><a href="https://www.dianegottsman.com/" target="_blank">Diane Gottsman</a>
-                                </li>
-                                <li><a href="https://www.dissentmagazine.org/" target="_blank">Dissent Magazine</a>
-                                </li>
-                                <li><a href="https://www.dutiee.com/" target="_blank">Dutiee</a>
-                                </li>
-                                <li><a href="https://www.ed2010.com/" target="_blank">Ed2010</a>
-                                </li>
-                                <li><a href="https://www.elle.com/" target="_blank">Elle</a>
-                                </li>
-                                <li><a href="https://www.elleuk.com/" target="_blank">Elle UK</a>
-                                </li>
-                                <li><a href="https://www.emilybennington.com/blog/" target="_blank">Emily Bennington</a>
-                                </li>
-                                <li><a href="https://www.etsy.com/" target="_blank">Etsy</a>
-                                </li>
-                                <li><a href="https://www.theeverygirl.com/" target="_blank">The Every Girl</a>
-                                </li>
-                                <li><a href="https://www.everywhereist.com/" target="_blank">Everywhereist</a>
-                                </li>
-                                <li><a href="https://www.fitbottomedgirls.com/" target="_blank">Fit Bottomed Girls</a>
-                                </li>
-                                <li><a href="https://www.flavorwire.com/" target="_blank">Flavorwire</a>
-                                </li>
-                                <li><a href="https://www.thefootballgirl.com/" target="_blank">The Football Girl</a>
-                                </li>
-                                <li><a href="https://www.thefrisky.com/" target="_blank">The Frisky</a>
-                                </li>
-                                
-                                <li><a href="https://www.furthermore.equinox.com/" target="_blank">Furthermore</a>
-                                </li>
-                                <li><a href="https://www.theglasshammer.com/" target="_blank">The Glass Hammer</a>
-                                </li>
-                                <li><a href="https://www.gomiblog.com/" target="_blank">GOMI</a>
-                                </li>
-                                <li><a href="https://www.goodguide.com/" target="_blank">Good Guide</a>
-                                </li>
-                                <li><a href="https://www.gretchenrubin.com/" target="_blank">Gretchen Rubin</a>
-                                </li>
-                                <li><a href="https://www.thehairpin.com/" target="_blank">The Hairpin</a>
-                                </li>
-                                <li><a href="https://www.hellogiggles.com/" target="_blank">Hello Giggles</a>
-                                </li>
-                                <li><a href="https://www.heragenda.com/" target="_blank">Her Agenda</a>
-                                </li>
-                                <li><a href="https://www.hercampus.com/" target="_blank">Her Campus</a>
-                                </li>
-                                <li><a href="https://www.huffingtonpost.com/section/women" target="_blank">Huff Post Women</a>
-                                </li>
-                                <li><a href="https://www.intothegloss.com/" target="_blank">Into the Gloss</a>
-                                </li>
-                                <li><a href="https://www.io9.gizmodo.com/" target="_blank">io9</a>
-                                </li>
-                                <li><a href="https://www.jezebel.com/" target="_blank">Jezebel</a>
-                                </li>
-                                <li><a href="https://www.journeywoman.com/" target="_blank">Journeywoman</a>
-                                </li>
-                                <li><a href="https://www.laurenconrad.com/" target="_blank">Lauren Conrad</a>
-                                </li>
-                                <li><a href="https://www.thelodown.com/" target="_blank">TheLoDown</a>
-                                </li>
-                                <li><a href="https://www.makers.com/" target="_blank">Makers</a>
-                                </li>
-                                <li><a href="https://www.themarysue.com/" target="_blank">The Mary Sue</a>
-                                </li>
-                                <li><a href="https://www.themiddlefingerproject.org/blog/" target="_blank">The Middle Finger Project</a>
-                                </li>
-                                <li><a href="https://www.mindbodygreen.com/" target="_blank">Mind Body Green</a>
-                                </li>
-                                <li><a href="https://www.msmagazine.com/blog/" target="_blank">Ms. Magazine</a>
-                                </li>
-                                <li><a href="https://www.thenewpotato.com/" target="_blank">The New Potato</a>
-                                </li>
-                                <li><a href="https://www.nytimes.com/section/well" target="_blank">New York Times Well</a>
-                                </li>
-                                <li><a href="https://www.nicolelapin.com/" target="_blank">Nicole Lapin</a>
-                                </li>
-                                <li><a href="https://www.paperdroids.com/" target="_blank">Paper Droids</a>
-                                </li>
-                                <li><a href="https://www.thepioneerwoman.com/" target="_blank">The Pioneer Woman</a>
-                                </li>
-                                <li><a href="https://www.popsugar.com/" target="_blank">POPSUGAR</a>
-                                </li>
-                                <li><a href="https://www.prettyhandygirl.com/" target="_blank">Pretty Handy Girl</a>
-                                </li>
-                                <li><a href="https://www.purewow.com/" target="_blank">PureWow</a>
-                                </li>
-                                <li><a href="https://www.quarterlette.com/" target="_blank">Quarterlette</a>
-                                </li>
-                                <li><a href="https://www.racialicious.tumblr.com/" target="_blank">Racialicious</a>
-                                </li>
-                                <li><a href="https://www.realsimple.com/" target="_blank">Real Simple</a>
-                                </li>
-                                <li><a href="https://www.reductress.com/" target="_blank">Reductress</a>
-                                </li>
-                                <li><a href="https://www.rookiemag.com/" target="_blank">Rookie</a>
-                                </li>
-                                <li><a href="https://www.salon.com/" target="_blank">Salon</a>
-                                </li>
-                                <li><a href="https://www.savvyauntie.com/defaulthome.aspx" target="_blank">Savvy Auntie</a>
-                                </li>
-                                <li><a href="https://www.secretsocietyofwomen.com/" target="_blank">Secret Society of Women</a>
-                                </li>
-                                <li><a href="https://www.sheknows.com/" target="_blank">She Knows</a>
-                                </li>
-                                <li><a href="https://www.shetakesontheworld.com/" target="_blank">She Takes on the World</a>
-                                </li>
-                                <li><a href="https://www.observer.com/short-list/" target="_blank">Short List</a>
-                                </li>
-                                <li><a href="https://www.smittenkitchen.com/" target="_blank">Smitten Kitchen</a>
-                                </li>
-                                <li><a href="https://www.sousstyle.com/" target="_blank">Sous Style</a>
-                                </li>
-                                <li><a href="https://www.stylebubble.co.uk/" target="_blank">Style Bubble</a>
-                                </li>
-                                <li><a href="https://www.summertomato.com/" target="_blank">Summer Tomato</a>
-                                </li>
-                                <li><a href="https://www.techmamas.com/" target="_blank">Tech Mamas</a>
-                                </li>
-                                <li><a href="https://www.unwomen.org/en" target="_blank">UN Women</a>
-                                </li>
-                                <li><a href="https://www.wahm.com/" target="_blank">WAHM</a>
-                                </li>
-                                <li><a href="https://www.wardrobeoxygen.com/" target="_blank">Wardrobe Oxygen</a>
-                                </li>
-                                <li><a href="https://www.wellandgood.com/" target="_blank">Well+Good</a>
-                                </li>
-                                <li><a href="https://www.whattheflicka.com/" target="_blank">What the Flicka?</a>
-                                </li>
-                                <li><a href="https://www.whynotgirl.com/" target="_blank">Why Not Girl</a>
-                                </li>
-                                <li><a href="https://www.women2.com/" target="_blank">Women 2.0</a>
-                                </li>
-                                <li><a href="https://blog.womenandhollywood.com/" target="_blank">Women and Hollywood</a>
-                                </li>
-                                <li><a href="https://www.entrepreneur.com/topic/women-entrepreneurs" target="_blank">Women Entrepreneurs</a>
-                                </li>
-                                <li><a href="https://www.womenforhire.com/" target="_blank">Women for Hire</a>
-                                </li>
-                                <li><a href="https://www.womensenews.org/" target="_blank">Women's eNews</a>
-                                </li>
-                                <li><a href="https://www.womensmediacenter.com/" target="_blank">Women's Media Center</a>
-                                </li>
-                                <li><a href="https://www.xojane.com/" target="_blank">xoJane</a>
-                                </li>
-                                
-                                
-                                
-                        </li>
-                    </ul>
+                <div class="row">
+                    <div class="col-lg-12">
+						Your Content
+                    </div>
                 </div>
-                
-                <!--/.nav-collapse -->
-    
             </div>
         </div>
-    <!-- /.container -->
-
+        <!-- /#page-content-wrapper -->
+    </div>
+</div>
+<!-- /#wrapper -->
+                              
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -532,8 +531,13 @@ window.onload = function(){
     getRandomUrl(myFrame);
 };
 </script>
-
-
+	
+	<script type="text/javascript">
+$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+	</script>
 
         
 
