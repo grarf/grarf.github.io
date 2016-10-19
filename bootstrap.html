@@ -8,9 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <title>
-    Basf
-    </title>
+    <title>Bd</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -48,10 +46,10 @@
     transition: all 0.5s ease;
 }
 #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
+    width: 100%;
 }
 #page-content-wrapper {
-    padding: 15px;
+    padding: 0px;
     width: 100%;
 }
 #wrapper.toggled #page-content-wrapper {
@@ -70,8 +68,6 @@
 .sidebar-nav li {
     text-indent: 20px;
     line-height: 40px;
-	border-top: 1px solid #008000;
-		border-bottom: 1px solid #008000;
 }
 .sidebar-nav li a {
     display: block;
@@ -113,12 +109,20 @@
         width: 0;
     }
     #page-content-wrapper {
-        padding: 20px;
+        padding: 0px;
     }
     #wrapper.toggled #page-content-wrapper {
         position: relative;
         margin-right: 0;
     }
+}
+        body {
+            padding-top: 50px;
+        }
+         .scrollable-menu {
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
 }
 @import url('http://getbootstrap.com/dist/css/bootstrap.css');
 .glyphicon-random {
@@ -166,7 +170,7 @@
 </script>    
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -202,96 +206,40 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-		    <li class="sidebar-brand"></li>
-         
-               
+              	<li class="sidebar-brand">
+                    <br>
+                </li>
+                <li class="sidebar-brand">
+                    <a href="#" class="navbar-brand">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile
+                    </a>
+                </li>
                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> 15 Minute Beauty</a>
+                    <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
                 </li>
                  <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Autostraddle</a>
+                    <a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Sports</a>
                 </li>                
                
                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Babble</a>
+                    <a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Science</a>
                 </li>
                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> The Bloggess</a>
+                    <a href="#"><span class="" aria-hidden="true"></span> Design</a>
                 </li>
                
                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> BlogHer</a>
+                    <a href="#"><span class="" aria-hidden="true"></span> Viral</a>
                 </li>
               	<li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Bust</a>
+                    <a href="#"><span class="" aria-hidden="true"></span> Social</a>
                 </li>
-		     <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> 15 Minute Beauty</a>
-                </li>
-                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Autostraddle</a>
-                </li>                
-               
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Babble</a>
-                </li>
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> The Bloggess</a>
-                </li>
-               
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> BlogHer</a>
-                </li>
-              	<li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Bust</a>
-                </li>
-		     <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> 15 Minute Beauty</a>
-                </li>
-                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Autostraddle</a>
-                </li>                
-               
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Babble</a>
-                </li>
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> The Bloggess</a>
-                </li>
-               
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> BlogHer</a>
-                </li>
-              	<li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Bust</a>
-                </li>
-		     <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> 15 Minute Beauty</a>
-                </li>
-                 <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Autostraddle</a>
-                </li>                
-               
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Babble</a>
-                </li>
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> The Bloggess</a>
-                </li>
-               
-                <li>
-                    <a href="#"><span class="" aria-hidden="true"></span> BlogHer</a>
-                </li>
-              	<li>
-                    <a href="#"><span class="" aria-hidden="true"></span> Bust</a>
-                </li>
-		    
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-        <div id="page-content-wrapper" class="toggled">
+        <div id="page-content-wrapper">
             
         <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
                 
@@ -369,10 +317,8 @@ var windowLinks = shuffle([
       "http://theglasshammer.com/",
       "http://www.goodguide.com/",
       "http://heragenda.com/",
-      "http://www.hercampus.com/",
       "http://www.huffingtonpost.com/section/women",
        "http://www.makers.com/",
-      "http://msmagazine.com/blog/",
       "http://www.purewow.com/",
       "http://www.quarterlette.com/",
       "http://racialicious.tumblr.com/",
