@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.ico">
 
-    <title>Test</title>
+    <title>Newspaper</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -47,39 +47,6 @@
     75%  {color:green; }
     100% {color:red; }
 }
-	    .dropdown-menu {
-	min-width: 200px;
-}
-.dropdown-menu.columns-2 {
-	min-width: 400px;
-}
-
-.dropdown-menu li a {
-	padding: 0px;
-	font-weight: 300;
-}
-.multi-column-dropdown {
-	list-style: none;
-}
-.multi-column-dropdown li a {
-	display: block;
-	clear: both;
-	line-height: 1.428571429;
-	color: #333;
-	white-space: normal;
-}
-.multi-column-dropdown li a:hover {
-	text-decoration: none;
-	color: #262626;
-	background-color: #f5f5f5;
-}
- 
-@media (max-width: 767px) {
-	.dropdown-menu.multi-column {
-		min-width: 240px !important;
-		overflow-x: hidden;
-	}
-}
 
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -97,7 +64,7 @@
     <![endif]-->
    
     
-    <script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -106,16 +73,15 @@
   ga('create', 'UA-81679041-1', 'auto');
   ga('send', 'pageview');
 
-</script>
+</script>    
 </head>
 
-<body>
   <!-- Wrap all page content here -->
     <div id="wrap">
         <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
 
         <!-- Fixed navbar -->
-         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -129,51 +95,224 @@
 </a>
 <!--
 <a class="navbar-brand" href="#" onclick="openStuff();">
-<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window" data-toggle="tooltip" title="Load new site in another tab"></span>
-</a>-->
-    
+<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window"data-toggle="tooltip" title="Open new source in new tab"></span>
+</a>
+    -->
     <a class="navbar-brand" href="#">
-    <span id="btn" class="glyphicon glyphicon-random" data-toggle="tooltip" title="Click to load new site"></span>
+    <span id="btn" class="glyphicon glyphicon-random" data-toggle="tooltip" title="Click to load new source at random"></span>
     </a>
-    
-    
                 </div>
-		     <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                <li class="dropdown">
-	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Three Column <b class="caret"></b></a>
-	            <ul class="dropdown-menu multi-column columns-2">
-		            <div class="row">
-			            <div class="col-sm-6">
-				            <ul class="multi-column-dropdown" style="min-width: 150px">
-					            <li><a href="#">Action</a></li>
-					            <li><a href="#">Another action</a></li>
-					            <li><a href="#">Something else here</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">Separated link</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">One more separated link</a></li>
-				            </ul>
-			            </div>
-			            <div class="col-sm-6">
-				            <ul class="multi-column-dropdown">
-					            <li><a href="#">Action</a></li>
-					            <li><a href="#">Another action</a></li>
-					            <li><a href="#">Something else here</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">Separated link</a></li>
-					            <li class="divider"></li>
-					            <li><a href="#">One more separated link</a></li>
-				            </ul>
-			            </div>
-			            
-		            </div>
-	            </ul>
-	        </li>
-			     </ul>
-		    </div>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>Front Page </strong><b class="caret"></b></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                                <li><a href="http://www.abcnews.go.com/" target="_blank">ABC</a>
+                                </li>
+                                <li><a href="http://www.aljazeera.com/news/" target="_blank">Al Jazeera</a>
+                                </li>
+                                <li><a href="http://www.alternet.org/" target="_blank">Alternet</a>
+                                </li>
+                                <li><a href="http://www.aol.com/news/" target="_blank">AOL</a>
+                                </li>
+                                <li><a href="http://www.arcamax.com/" target="_blank">ArcaMax</a>
+                                </li>
+                                <li><a href="http://www.bbc.com/news" target="_blank">BBC</a>
+                                </li>
+                                <li><a href="http://www.breakingnews.com/" target="_blank">Breaking News</a>
+                                </li>
+                                <li><a href="http://www.breitbart.com/" target="_blank">Breitbart</a>
+                                </li>
+                                <li><a href="http://www.cbc.ca/news" target="_blank">CBC</a>
+                                </li>
+                                <li><a href="http://www.cbsnews.com/" target="_blank">CBS</a>
+                                </li>
+                                <li><a href="http://www.chinadaily.com.cn/" target="_blank">China Daily</a>
+                                </li>
+                                <li><a href="http://www.csmonitor.com/" target="_blank">Christian Science Monitor</a>
+                                </li>
+                                <li><a href="http://www.cnn.com/" target="_blank">CNN</a>
+                                </li>
+                                <li><a href="http://www.commondreams.org/" target="_blank">Common Dreams</a>
+                                </li>
+                                <li><a href="http://www.ctvnews.ca/" target="_blank">CTV</a>
+                                </li>
+                                <li><a href="http://www.dailydot.com/" target="_blank">The Daily Dot</a>
+                                </li>
+                                <li><a href="http://www.dailymail.co.uk/" target="_blank">Daily Mail</a>
+                                </li>
+                                <li><a href="http://www.drudgereport.com/" target="_blank">Drudge Report</a>
+                                </li>
+                                <li><a href="http://www.dw.com/" target="_blank">DW</a>
+                                </li>
+                                <li><a href="http://www.economist.com/" target="_blank">The Economist</a>
+                                </li>
+                                <li><a href="http://www.theepochtimes.com/" target="_blank">The Epoch Times</a>
+                                </li>
+                                <li><a href="http://www.fark.com/" target="_blank">Fark</a>
+                                </li>
+                                <li><a href="http://next.ft.com/" target="_blank">Financial Times</a>
+                                </li>
+                                <li><a href="http://www.fortune.com/" target="_blank">Fortune</a>
+                                </li>
+                                <li><a href="http://www.foxnews.com/" target="_blank">Fox News</a>
+                                </li>
+                                <li><a href="http://www.france24.com/en/" target="_blank">France 24</a>
+                                </li>
+                                <li><a href="http://www.theguardian.com/" target="_blank">The Guardian</a>
+                                </li>
+                                <li><a href="http://www.thehill.com/" target="_blank">The Hill</a>
+                                </li>
+                                <li><a href="http://www.thehindu.com/news/" target="_blank">The Hindu</a>
+                                </li>
+                                <li><a href="http://www.huffingtonpost.com/" target="_blank">Huffington Post</a>
+                                </li>
+                                <li><a href="http://www.independent.co.uk/" target="_blank">Independent</a>
+                                </li>
+                                <li><a href="http://www.pjmedia.com/instapundit/" target="_blank">Instapundit</a>
+                                </li>
+                                <li><a href="http://www.irishtimes.com/" target="_blank">The Irish Times</a>
+                                </li>
+                                <li><a href="http://www.latimes.com" target="_blank">Los Angeles Times</a>
+                                </li>
+                                <li><a href="http://www.mercurynews.com/" target="_blank">The Mercury News</a>
+                                </li>
+                                <li><a href="http://www.nationalpost.com/index.html" target="_blank">National Post</a>
+                                </li>
+                                <li><a href="http://www.nbcnews.com/" target="_blank">NBC</a>
+                                </li>
+                                <li><a href="http://www.newser.com/" target="_blank">Newser</a>
+                                </li>
+                                <li><a href="http://www.newsmax.com/" target="_blank">Newsmax</a>
+                                </li>
+                                <li><a href="http://www.newsvine.com/" target="_blank">Newsvine</a>
+                                </li>
+                                <li><a href="http://www.nydailynews.com/" target="_blank">New York Daily News</a>
+                                </li>
+                                <li><a href="http://www.nypost.com/news/" target="_blank">New York Post</a>
+                                </li>
+                                <li><a href="http://www.nytimes.com" target="_blank">The New York Times</a>
+                                </li>
+                                <li><a href="http://www.npr.org/" target="_blank">NPR</a>
+                                </li>
+                                <li><a href="http://www.observer.com/" target="_blank">Observer</a>
+                                </li>
+                                <li><a href="http://www.pbs.org/newshour/" target="_blank">PBS</a>
+                                </li>
+                                <li><a href="http://www.pjmedia.com/" target="_blank">PJ Media</a>
+                                </li>
+                                <li><a href="http://www.pri.org/" target="_blank">PRI</a>
+                                </li>
+                                <li><a href="http://www.qz.com/" target="_blank">QZ</a>
+                                </li>
+                                <li><a href="http://www.rawstory.com/" target="_blank">Raw Story</a>
+                                </li>
+                                <li><a href="https://www.reddit.com/r/inthenews/" target="_blank">Reddit</a>
+                                </li>
+                                <li><a href="http://www.reuters.com/" target="_blank">Reuters</a>
+                                </li>
+                                <li><a href="http://news.sky.com/" target="_blank">Sky</a>
+                                </li>
+                                <li><a href="http://www.thestar.com/" target="_blank">The Star</a>
+                                </li>
+                                <li><a href="http://www.telegraph.co.uk/" target="_blank">The Telegraph</a>
+                                </li>
+                                <li><a href="http://www.thetimes.co.uk/" target="_blank">The Times</a>
+                                </li>
+                                <li><a href="http://www.townhall.com/" target="_blank">Townhall</a>
+                                </li>
+                                 <li><a href="http://www.upi.com/" target="_blank">UPI</a>
+                                </li>
+                                 <li><a href="http://www.usatoday.com" target="_blank">USA Today</a>
+                                </li>
+                                 <li><a href="http://www.usnews.com/" target="_blank">U.S. News</a>
+                                </li>
+                                 <li><a href="http://news.vice.com/" target="_blank">Vice</a>
+                                </li>
+                                <li><a href="http://www.voanews.com/" target="_blank">Voice of America</a>
+                                </li>
+                                <li><a href="http://www.vox.com/" target="_blank">Vox</a>
+                                </li>
+                                <li><a href="http://www.wsj.com/" target="_blank">The Wall Street Journal</a>
+                                </li>
+                                <li><a href="http://www.washingtonpost.com/" target="_blank">The Washington Post</a>
+                                </li>
+                                <li><a href="http://www.theweek.com/" target="_blank">The Week</a>
+                                </li>
+                                <li><a href="http://www.wn.com/" target="_blank">WN</a>
+                                </li>
+                                <li><a href="http://www.yahoo.com/news/" target="_blank">Yahoo</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="/newspaper-us.html">U.S.</a>
+                        </li>
+                        <li><a href="/newspaper-world.html">World</a>
+                        </li>
+               
+                        <li><a href="/newspaper-metro.html">Metro</a>
+                        </li>
+                        
+                        <li><a href="/newspaper-sports.html">Sports</a>
+                        </li>
+                         
+                         <li><a href="/newspaper-economy.html">Economy</a>
+                        </li>
+                        <li><a href="/newspaper-entertainment.html">Entertainment</a>
+                        </li>
+                        <li><a href="/newspaper-opinion.html">Opinion</a>
+                        </li>
+                
+                        <li><a href="/newspaper-politics.html">Politics</a>
+                        </li>
+                     <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/newspaper-travel.html">Travel</a>
+                                </li>
+                                <li><a href="/newspaper-arts.html">Arts</a>
+                                </li>
+                                 <li><a href="/newspaper-tech.html">Tech</a>
+                                </li>
+                                <li><a href="/newspaper-food.html">Food</a>
+                                </li>
+                                <li><a href="/newspaper-science.html">Science</a>
+                                </li>
+                                <li><a href="/newspaper-health.html">Health</a>
+                                </li>
+                                <li><a href="/newspaper-fashion.html">Fashion</a>
+                                </li>
+                                <li><a href="/newspaper-living.html">Living</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/newspaper-comics">Comics</a>
+                                </li>
+                                <li><a href="/newspaper-crossword">Crossword</a>
+                                </li>
+                                <li><a href="/newspaper-jobs">Jobs</a>
+                                </li>
+                                <li><a href="/newspaper-classifieds">Classifieds</a>
+                                </li>
+                                <li><a href="/newspaper-obituaries">Obituaries</a>
+                                </li>
+                                <li><a href="/newspaper-realestate">Real Estate</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/newspaper-magazine">Magazine</a>
+                                </li>
+                                <li><a href="/newspaper-independentjournalism">Independent Journalism</a>
+                                </li>
+                            </ul>
+            
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+    
+            </div>
+        </div>
     <!-- /.container -->
-</div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -208,14 +347,130 @@ function shuffle(array) {
 
 // Open in new Window
 var windowLinks = shuffle([
-   "",
+    "http://www.nytimes.com",
+        "http://www.dailymail.co.uk/",
+        "https://www.reddit.com/",
+        "http://www.telegraph.co.uk/",
+        "https://www.thestar.com/",
+        "http://www.thehindu.com/news/",
+        "https://www.yahoo.com/news/",
+        "http://www.vox.com/",
+        "http://www.theguardian.com/",
+        "https://next.ft.com/",
+        "https://pjmedia.com/instapundit/",
+        "https://pjmedia.com/",
+        "http://www.commondreams.org/",
+        "http://www.aol.com/news/",
+        "http://www.thetimes.co.uk/",
+        "http://www.economist.com/",
+        "http://abcnews.go.com/",
+        "http://www.theepochtimes.com/",
+        "http://www.pri.org/",
+        "http://www.cbsnews.com/",
+        "http://www.bbc.com/news",
+        "http://www.nydailynews.com/",
+        "http://nypost.com/news/",
+        "https://news.vice.com/",
+        "http://www.huffingtonpost.com/",
+        "https://www.washingtonpost.com/",
+        "http://qz.com/",
+        "http://theweek.com/",
+        "http://fortune.com/",
+        "http://www.dailydot.com/",
+        "http://townhall.com/",
+        "http://www.fark.com/",
+        "http://www.alternet.org/",
+        "http://www.irishtimes.com/",
+        "http://www.breitbart.com/",
+        "http://www.newsvine.com/",
+        "http://www.newsmax.com/",
+        "http://www.upi.com/",
+        "http://www.pbs.org/newshour/",
+        "http://www.ctvnews.ca/",
+        "http://www.wsj.com/",
+        "http://usatoday.com",
+        "http://www.independent.co.uk/",
+        "http://www.newser.com/",
+        "http://www.drudgereport.com/",
+        "http://www.dw.com/",
+        "http://www.chinadaily.com.cn/",
+        "http://www.mercurynews.com/",
+        "http://www.voanews.com/",
+        "http://www.foxnews.com/",
+        "http://news.sky.com/",
+        "http://www.nationalpost.com/index.html",
+        "http://www.rawstory.com/",
+        "http://www.france24.com/en/",
+        "http://www.csmonitor.com/",
+        "http://thehill.com/",
+        "http://latimes.com",
+        "http://observer.com/",
+        "http://www.usnews.com/",
+        "http://www.cbc.ca/news",
+        "http://www.npr.org/",       
+        "http://www.cnn.com/",
+        "http://www.aljazeera.com/news/",
+        "http://wn.com/",
+        "http://www.arcamax.com/",
+        "http://www.breakingnews.com/",
+        "http://www.reuters.com/",
+        "http://www.nbcnews.com/",
 ]);
 var windowLinksIndex = 0;
 // iFrame links
 var iframeLinks = shuffle([
- 	"http://www.espn.com",
-	"http://www.goodguide.com",
-	
+     "http://www.thetimes.co.uk/",
+        "http://www.economist.com/",
+        "http://abcnews.go.com/",
+        "http://www.theepochtimes.com/",
+        "http://www.pri.org/",
+        "http://www.cbsnews.com/",
+        "http://www.bbc.com/news",
+        "http://www.nydailynews.com/",
+        "http://nypost.com/news/",
+        "https://news.vice.com/",
+        "http://www.huffingtonpost.com/",
+        "https://www.washingtonpost.com/",
+        "http://qz.com/",
+        "http://theweek.com/",
+        "http://fortune.com/",
+        "http://www.dailydot.com/",
+        "http://townhall.com/",
+        "http://www.fark.com/",
+        "http://www.alternet.org/",
+        "http://www.irishtimes.com/",
+        "http://www.breitbart.com/",
+        "http://www.newsvine.com/",
+        "http://www.newsmax.com/",
+        "http://www.upi.com/",
+        "http://www.pbs.org/newshour/",
+        "http://www.ctvnews.ca/",
+        "http://www.wsj.com/",
+        "http://usatoday.com",
+        "http://www.newser.com/",
+        "http://www.drudgereport.com/",
+        "http://www.dw.com/",
+        "http://www.chinadaily.com.cn/",
+        "http://www.mercurynews.com/",
+        "http://www.voanews.com/",
+        "http://news.sky.com/",
+        "http://www.nationalpost.com/index.html",
+        "http://www.rawstory.com/",
+        "http://www.france24.com/en/",
+        "http://www.csmonitor.com/",
+        "http://thehill.com/",
+        "http://latimes.com",
+        "http://observer.com/",
+        "http://www.usnews.com/",
+        "http://www.cbc.ca/news",
+        "http://www.npr.org/",       
+        "http://www.cnn.com/",
+        "http://www.aljazeera.com/news/",
+        "http://wn.com/",
+        "http://www.arcamax.com/",
+        "http://www.breakingnews.com/",
+        "http://www.reuters.com/",
+        "http://www.nbcnews.com/",
 ]);
 var iframeLinksIndex = 0;
 
@@ -260,10 +515,6 @@ window.onload = function(){
     getRandomUrl(myFrame);
 };
 </script>
-
-
-
-        
 
 
 </body>
