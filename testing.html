@@ -1,181 +1,483 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Testing</title>
-		<meta name="description" content="Multi-Level Push Menu: Off-screen navigation with multiple levels" />
-		<meta name="keywords" content="multi-level, menu, navigation, off-canvas, off-screen, mobile, levels, nested, transform" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/icons.css" />
-		<link rel="stylesheet" type="text/css" href="css/component.css" />
-		<script src="js/modernizr.custom.js"></script>
+<html>
+<head>
+  /* Adding gvnix styles css - NO COPIAR */
+  @import 'http://geo-gvnix.rhcloud.com/resources/styles/standard.css';
+ /* Custom fixed navs */
+
+   header.navbar+nav.navbar{
+   /* margin-top: 20px;same margin-bottom .navbar */
+   }
+   .navbar.navbar-default.navbar-fixed-top{
+   margin-top: 50px;
+   }
+   .sidebar.navbar-fixed-top{
+    margin-top: 100px;
+   }
+
+   @media (min-width: 768px) and (max-width: 998px){
+       .navbar.navbar-default.navbar-fixed-top{
+       margin-top: 100px;
+       }
+       .sidebar.navbar-fixed-top{
+        margin-top: 150px;
+       }
+    }
+
+  /* Custom navbar default: global*/
+
+  .navbar.navbar-default{
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+    margin: 0;
+    border-radius: 0;
+  }
+  .navbar.navbar-default .navbar-brand {
+    color: #666;
+    text-shadow: none;
+    min-width: 150px;
+    }
+   .navbar.navbar-default .navbar-nav > li > a {
+    color: #666;
+    text-shadow: none;
+    }
+    .navbar.navbar-default .navbar-nav > li > a {
+    color: #666;
+    text-shadow: none;
+    }
+    .navbar.navbar-default .navbar-nav > li > a:hover{
+    color: #acc47f;
+    }
+    .navbar.navbar-default .navbar-nav > .active > a{
+    color: #fff;
+    background-color: #acc47f;
+    }
+    .navbar.navbar-default .navbar-nav > .active > a:hover{
+    color: #608224;
+    background-color: #acc47f;
+    }
+    .navbar.navbar-default .caret {
+    border-top-color: #ccc;
+    border-bottom-color: #ccc;
+    }
+    .navbar.navbar-default .caret:hover {
+    border-top-color: #333;
+    border-bottom-color: #333;
+    }
+
+
+/* Custom sidebar menu */
+
+ /*Remove rounded coners*/
+
+  nav.sidebar.navbar {
+    border-radius: 0px;
+  }
+
+  nav.sidebar, .main{
+    -webkit-transition: margin 200ms ease-out;
+      -moz-transition: margin 200ms ease-out;
+      -o-transition: margin 200ms ease-out;
+      transition: margin 200ms ease-out;
+  }
+
+  /* Add gap to nav and right windows.*/
+  .main{
+    padding: 10px 10px 0 10px;
+  }
+
+  /* .....NavBar: Icon only with coloring/layout.....*/
+
+  /*small/medium side display*/
+  @media (min-width: 768px) {
+
+    /*Allow main to be next to Nav*/
+    .main{
+      position: absolute;
+      width: calc(100% - 40px); /*keeps 100% minus nav size*/
+      margin-left: 40px;
+      float: right;
+    }
+
+    /*lets nav bar to be showed on mouseover*/
+    nav.sidebar:hover + .main{
+      margin-left: 200px;
+    }
+
+    /*Center Brand*/
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+      margin-left: 0px;
+    }
+    /*Center Brand*/
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+      text-align: center;
+      width: 100%;
+      margin-left: 0px;
+    }
+
+    /*Center Icons*/
+    nav.sidebar a{
+      padding-right: 13px;
+            min-width: 100px;
+    }
+
+    /*custom sidebar nav*/
+        nav.sidebar ul.nav.navbar-nav{
+            margin: 0;
+        }
+        nav.sidebar.navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+            color: white;
+        }
+
+    /*adds border top to first nav box */
+    nav.sidebar .navbar-nav > li:first-child{
+      border-top: 1px #e5e5e5 solid;
+    }
+
+    /*adds border to bottom nav boxes*/
+    nav.sidebar .navbar-nav > li{
+      border-bottom: 1px #e5e5e5 solid;
+    }
+    /*adds background on hover*/
+    nav.sidebar .navbar-nav > li:hover{
+        color: #fff;
+            background-color: #43600E;
+    }
+    /*removes border last element*/
+    nav.sidebar .navbar-nav > li.last{
+      border-bottom: none;
+    }
+
+    /* Colors/style dropdown box*/
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+      position: static;
+      float: none;
+      width: auto;
+      margin-top: 0;
+      background-color: transparent;
+      border: 0;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    /*allows nav box to use 100% width*/
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+      padding: 0 0px 0 0px;
+    }
+
+    /*colors dropdown box text */
+    .navbar-inverse .navbar-nav .open .dropdown-menu>li>a {
+      color: #777;
+    }
+
+/*O quanto o menu irá esconder á esquerda*/
+    /*gives sidebar width/height*/
+    nav.sidebar{
+      width: 200px;
+      height: 100%;
+      margin-left: -270px;
+      float: left;
+      z-index: 8000;
+      margin-bottom: 0px;
+    }
+
+    /*give sidebar 100% width;*/
+    nav.sidebar li {
+      width: 100%;
+    }
+
+    /* Move nav to full on mouse over*/
+    nav.sidebar:hover{
+      margin-left: 0px;
+    }
+    /*for hiden things when navbar hidden*/
+    .forAnimate{
+      opacity: 0;
+    }
+  }
+
+  /* .....NavBar: Fully showing nav bar..... */
+
+  @media (min-width: 1330px) {
+
+/*     Allow main to be next to Nav
+    .main{
+      width: calc(100% - 200px); keeps 100% minus nav size
+      margin-left: 200px;
+    }
+
+    Show all nav
+    nav.sidebar{
+      margin-left: 0px;
+      float: left;
+    }
+    Show hidden items on nav
+    nav.sidebar .forAnimate{
+      opacity: 1;
+    } */
+  }
+
+  nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
+    color: #CCC;
+    background-color: transparent;
+  }
+
+  nav:hover .forAnimate{
+    opacity: 1;
+  }
+  
+  
+  /*---- FIM SLIDE MENU*/
+  
+  .nav-side-menu {
+  overflow: auto;
+  font-family: verdana;
+  font-size: 12px;
+  font-weight: 200;
+  background-color: #2e353d;
+  position: fixed;
+  top: 0px;
+  width: 300px;
+  height: 100%;
+  color: #e1ffff;
+}
+.nav-side-menu .brand {
+  background-color: #23282e;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+}
+.nav-side-menu .toggle-btn {
+  display: none;
+}
+.nav-side-menu ul,
+.nav-side-menu li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 35px;
+  cursor: pointer;
+  /*    
+    .collapsed{
+       .arrow:before{
+                 font-family: FontAwesome;
+                 content: "\f053";
+                 display: inline-block;
+                 padding-left:10px;
+                 padding-right: 10px;
+                 vertical-align: middle;
+                 float:right;
+            }
+     }
+*/
+}
+.nav-side-menu ul :not(collapsed) .arrow:before,
+.nav-side-menu li :not(collapsed) .arrow:before {
+  font-family: FontAwesome;
+  content: "\f078";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+  float: right;
+}
+.nav-side-menu ul .active,
+.nav-side-menu li .active {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+}
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li.active a,
+.nav-side-menu li .sub-menu li.active a {
+  color: #d19b3d;
+}
+.nav-side-menu ul .sub-menu li,
+.nav-side-menu li .sub-menu li {
+  background-color: #181c20;
+  border: none;
+  line-height: 28px;
+  border-bottom: 1px solid #23282e;
+  margin-left: 0px;
+}
+.nav-side-menu ul .sub-menu li:hover,
+.nav-side-menu li .sub-menu li:hover {
+  background-color: #020203;
+}
+.nav-side-menu ul .sub-menu li:before,
+.nav-side-menu li .sub-menu li:before {
+  font-family: FontAwesome;
+  content: "\f105";
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.nav-side-menu li {
+  padding-left: 0px;
+  border-left: 3px solid #2e353d;
+  border-bottom: 1px solid #23282e;
+}
+.nav-side-menu li a {
+  text-decoration: none;
+  color: #e1ffff;
+}
+.nav-side-menu li a i {
+  padding-left: 10px;
+  width: 20px;
+  padding-right: 20px;
+}
+.nav-side-menu li:hover {
+  border-left: 3px solid #d19b3d;
+  background-color: #4f5b69;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+@media (max-width: 767px) {
+  .nav-side-menu {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .nav-side-menu .toggle-btn {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 10 !important;
+    padding: 3px;
+    background-color: #ffffff;
+    color: #000;
+    width: 40px;
+    text-align: center;
+  }
+  .brand {
+    text-align: left !important;
+    font-size: 22px;
+    padding-left: 20px;
+    line-height: 50px !important;
+  }
+}
+@media (min-width: 767px) {
+  .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+
 	</head>
-	<body>
-		<div class="container">
-			<!-- Push Wrapper -->
-			<div class="mp-pusher" id="mp-pusher">
+<body>
+<!--nav sidebar -->
+<aside>
+  <nav class="navbar navbar-inverse sidebar navbar-fixed-top" role="navigation">
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-				<!-- mp-menu -->
-				<nav id="mp-menu" class="mp-menu">
-					<div class="mp-level">
-						<h2 class="icon icon-world">Playlists</h2>
-						<ul>
-							<li class="icon icon-arrow-left">
-								<a class="icon icon-display" href="#">Home</a>
-								<div class="mp-level">
-									<h2 class="icon icon-display">Devices</h2>
-									<ul>
-										<li class="icon icon-arrow-left">
-											<a class="icon icon-phone" href="#">Mobile Phones</a>
-											<div class="mp-level">
-												<h2>Mobile Phones</h2>
-												<ul>
-													<li><a href="#">Super Smart Phone</a></li>
-													<li><a href="#">Thin Magic Mobile</a></li>
-													<li><a href="#">Performance Crusher</a></li>
-													<li><a href="#">Futuristic Experience</a></li>
-												</ul>
-											</div>
-										</li>
-										<li class="icon icon-arrow-left">
-											<a class="icon icon-tv" href="#">Televisions</a>
-											<div class="mp-level">
-												<h2>Televisions</h2>
-												<ul>
-													<li><a href="#">Flat Superscreen</a></li>
-													<li><a href="#">Gigantic LED</a></li>
-													<li><a href="#">Power Eater</a></li>
-													<li><a href="#">3D Experience</a></li>
-													<li><a href="#">Classic Comfort</a></li>
-												</ul>
-											</div>
-										</li>
-										<li class="icon icon-arrow-left">
-											<a class="icon icon-camera" href="#">Cameras</a>
-											<div class="mp-level">
-												<h2>Cameras</h2>
-												<ul>
-													<li><a href="#">Smart Shot</a></li>
-													<li><a href="#">Power Shooter</a></li>
-													<li><a href="#">Easy Photo Maker</a></li>
-													<li><a href="#">Super Pixel</a></li>
-												</ul>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li class="icon icon-arrow-left">
-								<a class="icon icon-news" href="#">News</a>
-								<div class="mp-level">
-									<h2 class="icon icon-news">Magazines</h2>
-									<ul>
-										<li><a href="http://www.cnn.com" target="myIframe">CNN</a></li>
-										<li><a href="#">Scientific American</a></li>
-										<li><a href="#">The Spectator</a></li>
-										<li><a href="#">The Rambler</a></li>
-										<li><a href="#">Physics World</a></li>
-										<li><a href="#">The New Scientist</a></li>
-									</ul>
-								</div>
-							</li>
-							<li class="icon icon-arrow-left">
-								<a class="icon icon-shop" href="#">Sports</a>
-								<div class="mp-level">
-									<h2 class="icon icon-shop">Store</h2>
-									<ul>
-										<li class="icon icon-arrow-left">
-											<a class="icon icon-t-shirt" href="#">Clothes</a>
-											<div class="mp-level">
-												<h2 class="icon icon-t-shirt">Clothes</h2>
-												<ul>
-													<li class="icon icon-arrow-left">
-														<a class="icon icon-female" href="#">Women's Clothing</a>
-														<div class="mp-level">
-															<h2>Women's Clothing</h2>
-															<ul>
-																<li><a href="#">Tops</a></li>
-																<li><a href="#">Dresses</a></li>
-																<li><a href="#">Trousers</a></li>
-																<li><a href="#">Shoes</a></li>
-																<li><a href="#">Sale</a></li>
-															</ul>
-														</div>
-													</li>
-													<li class="icon icon-arrow-left">
-														<a class="icon icon-male" href="#">Men's Clothing</a>
-														<div class="mp-level">
-															<h2>Men's Clothing</h2>
-															<ul>
-																<li><a href="#">Shirts</a></li>
-																<li><a href="#">Trousers</a></li>
-																<li><a href="#">Shoes</a></li>
-																<li><a href="#">Sale</a></li>
-															</ul>
-														</div>
-													</li>
-												</ul>
-											</div>
-										</li>
-										<li>
-											<a class="icon icon-diamond" href="#">Jewelry</a>
-										</li>
-										<li>
-											<a class="icon icon-music" href="#">Music</a>
-										</li>
-										<li>
-											<a class="icon icon-food" href="#">Grocery</a>
-										</li>
-									</ul>
-								</div>
-							</li>
-							<li><a class="icon icon-photo" href="#">Style</a></li>
-							<li><a class="icon icon-wallet" href="http://www.cnn.com" target="myIframe">Tech</a></li>
-						</ul>
-					</div>
-				</nav>
-				<!-- /mp-menu -->
+<div class="nav-side-menu">
+    <div class="brand">Brand Logo</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+  
+        <div class="menu-list">
+  
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                  <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                  </a>
+                </li>
 
-				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
-					<div class="scroller-inner">
-						<!-- Top Navigation -->
-						<div class="codrops-top clearfix">
-							<!--<a class="codrops-icon codrops-icon-prev" href="http://tympanus.net/Tutorials/CircularNavigation/"><span>Previous Demo</span></a>
--->
-							<a href="#" id="trigger" class="menu-trigger">Open/Close Menu</a>
-<span class="right"><a class="codrops-icon codrops-icon-drop" href="http://tympanus.net/codrops/?p=16252"><span>Back to the Codrops Article</span></a></span>
-						</div>
-					<iframe name="myIframe" src="http://www.espn.com" style="height:100%;width:100%;"></iframe>
-						<!--<div class="content clearfix">
-							
-							<div class="block block-40 clearfix">
-								<p><a href="#" id="trigger" class="menu-trigger">Open/Close Menu</a></p>
-								<nav class="codrops-demos">
-									<a class="current-demo" href="index.html">Demo 1: Overlapping levels</a>
-									<a href="index2.html">Demo 2: Covering levels</a>
-									<a href="index3.html">Demo 3: Overlapping levels with back links</a>
-								</nav>
-							</div>
-							<div class="block block-60">
-								<p><strong>Demo 1:</strong> Overlapping levels</p>
-								<p>This menu will open by pushing the website content to the right. It has multi-level functionality, allowing endless nesting of navigation elements.</p>
-								<p>The next level can optionally overlap or cover the previous one.</p>
-							</div>
-						</div>-->
-					</div><!-- /scroller-inner -->
-				</div><!-- /scroller -->
+                <li  data-toggle="collapse" data-target="#products" class="collapsed active">
+                  <a href="#"><i class="fa fa-gift fa-lg"></i> UI Elements  <i class="fa fa-gift fa-lg btn pull-right" style="margin-top:5px"></i></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li class="active"><a href="#">CSS3 Animation</a></li>
+                    <li><a href="#">General</a></li>
+                    <li><a href="#">Buttons</a></li>
+                    <li><a href="#">Tabs & Accordions</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">FontAwesome</a></li>
+                    <li><a href="#">Slider</a></li>
+                    <li><a href="#">Panels</a></li>
+                    <li><a href="#">Widgets</a></li>
+                    <li><a href="#">Bootstrap Model</a></li>
+                </ul>
 
-			</div><!-- /pusher -->
-		</div><!-- /container -->
-		<script src="js/classie.js"></script>
-		<script src="js/mlpushmenu.js"></script>
-		<script>
-			new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'trigger' ) );
-		</script>
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#"><i class="fa fa-globe fa-lg"></i> Services <span class="arrow"></span></a>
+                </li>  
+                <ul class="sub-menu collapse" id="service">
+                  <li>New Service 1</li>
+                  <li>New Service 2</li>
+                  <li>New Service 3</li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#"><i class="fa fa-car fa-lg"></i> New <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>New New 1</li>
+                  <li>New New 2</li>
+                  <li>New New 3</li>
+                </ul>
+
+
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Profile
+                  </a>
+                  </li>
+
+                 <li>
+                  <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Users
+                  </a>
+                </li>
+            </ul>
+     </div>
+</div>
+  </nav>
+  
+</aside>
+
+<div class="main">
+</div>
+	<script type="text/javascript">
+		    function htmlbodyHeightUpdate(){
+		var height3 = $( window ).height()
+		var height1 = $('.nav').height()+50
+		height2 = $('.main').height()
+		if(height2 > height3){
+			$('html').height(Math.max(height1,height3,height2)+10);
+			$('body').height(Math.max(height1,height3,height2)+10);
+		}
+		else
+		{
+			$('html').height(Math.max(height1,height3,height2));
+			$('body').height(Math.max(height1,height3,height2));
+		}
+		
+	}
+	$(document).ready(function () {
+		htmlbodyHeightUpdate()
+		$( window ).resize(function() {
+			htmlbodyHeightUpdate()
+		});
+		$( window ).scroll(function() {
+			height2 = $('.main').height()
+  			htmlbodyHeightUpdate()
+		});
+	});
+	</script>
 	</body>
 </html>
