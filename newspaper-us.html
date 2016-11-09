@@ -1,39 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="/favicon.ico">
-
-    <title>Newspaper - U.S. News</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+     $(document).ready(function(){
+        $('.dropdown-toggle').dropdown()
+    });
+</script>
+    <title>Newspaper</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="sticky-footer-navbar.css" rel="stylesheet">
     <style>
+	    
+myIframe {
+	   height: 100%;
+	width: 100%;
+	    }
+	    /*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* Toggle Styles */
+
+	    
+	    
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled {
+    padding-left: 250px;
+}
+#sidebar-wrapper {
+    position: fixed;
+    left: 250px;
+    z-index: 1000;
+    margin-left: -250px;
+    overflow-y: auto;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+    width: 100%;
+	padding-bottom: 80px;
+}
+#page-content-wrapper {
+    padding: 0px;
+    width: 100%;
+}
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+	    	    
+/* Sidebar Styles */
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    list-style: none;
+}
+.sidebar-nav li {
+    text-indent: 10px;
+    line-height: 20px;
+}
+.sidebar-nav li a {
+    display: block;
+    color: #3F4854;
+    text-decoration: none;
+	border-top: 0px solid #FDFDFE;
+    border-bottom: 1px solid #FDFDFE;
+	 -webkit-transition: background .5s;
+    -moz-transition: background .5s;
+    -o-transition: background .5s;
+    -ms-transition: background .5s;
+    transition: background .5s;
+}
+.sidebar-nav li a:hover {
+    background: inherit;
+    color: #000;
+    text-decoration: none;
+}
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+.sidebar-nav > .sidebar-brand a:hover {
+    background: inherit;
+    color: #fff;
+}
+@media (min-width: 700px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+    #sidebar-wrapper {
+        width: 250px;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+    #page-content-wrapper {
+        padding: 0px;
+    }
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+	    min-height: 700px;
+	    min-width: 700px;
+    }
+}
         body {
             padding-top: 50px;
         }
         
-         .scrollable-menu {
-    height: auto;
-    max-height: 500px;
-    overflow-x: hidden;
 }
-
+	</style>
+	<style>
 @import url('http://getbootstrap.com/dist/css/bootstrap.css');
 .glyphicon-random {
-    fill: #fff;
+    
     -webkit-animation: animation-button 20000ms infinite;
     -moz-animation: animation-button 20000ms infinite;
     -o-animation: animation-button 20000ms infinite;
     animation: animation-button 20000ms infinite;
 }
-
 @-webkit-keyframes animation-button {
     0%   {color:red; }
     25%  {color:yellow; }
@@ -48,7 +173,6 @@
     75%  {color:green; }
     100% {color:red; }
 }
-
     </style>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
    
@@ -57,18 +181,20 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      
+      uncooperative links:      "http://www.bloomberg.com/",
+                                "https://news.google.com/",
     <![endif]-->
+   
     
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-81679041-1', 'auto');
   ga('send', 'pageview');
-</script>
-
+</script> 
 </head>
 
   <!-- Wrap all page content here -->
