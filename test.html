@@ -204,6 +204,12 @@
     75%  {color:green; }
     100% {color:red; }
 }
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -811,9 +817,17 @@ window.onload = function(){
 </script>
 	
 	<script type="text/javascript">
-$("#menu-toggle").click(function(e) {
+	$("#menu-toggle1").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
     });
 	</script>
 
