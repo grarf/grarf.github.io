@@ -323,7 +323,20 @@
     <!-- Placed at the end of the document so the pages load faster -->
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-		
+	<script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>	
 
 
 </body>
