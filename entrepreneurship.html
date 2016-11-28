@@ -544,7 +544,12 @@ function shuffle(array) {
 }
 // Open in new Window
 var windowLinks = shuffle([
-"http://www.huffingtonpost.com/small-business/",
+
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"http://www.huffingtonpost.com/small-business/",
      "http://fortune.com/",
      "http://jumpstartmag.com/",
      "https://techcrunch.com/",
@@ -563,11 +568,6 @@ var windowLinks = shuffle([
      "http://www.cofmag.com/",
      "http://under30ceo.com/category/blog/",
      "http://www.startup360mag.com/",
-]);
-var windowLinksIndex = 0;
-// iFrame links
-var iframeLinks = shuffle([
-	
 ]);
 var iframeLinksIndex = 0;
 if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
