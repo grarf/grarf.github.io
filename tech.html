@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Test</title>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <script src="https://use.fontawesome.com/1204df7688.js"></script>
+
+
+    <!-- Custom CSS -->
+   
+    <style>
+        
+                /*!
+         * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
+         body {
+            overflow-x: hidden;
+            padding-top: 50px;
+         };
+	    a.navbar-brand {
+    text-shadow: none;
+    color: #474747;
+    margin-left: 0px;
+    margin-right: 0px;
+		    padding: 0px;
+	    }
+        /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 617px;
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.glyphicon-refresh {
+    fill: #fff;
+    -webkit-animation: animation-button 20000ms infinite;
+    -moz-animation: animation-button 20000ms infinite;
+    -o-animation: animation-button 20000ms infinite;
+    animation: animation-button 20000ms infinite;
+}
+@-webkit-keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+@keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+
+
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-61948197-1', 'auto');
+  ga('send', 'pageview');
+
+
+</script>
+
+
+</head>
+
+
+<body>
+   <!-- <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+        <div>
+            <div class="navbar-header">
+
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		    
+                <a class="navbar-brand" href="#"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="#"><object data="/favicon.ico" style="width:20px;height:20px;"></object>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+
+
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#">
+                    <span id="btn" class="glyphicon glyphicon-home"></span>
+                </a>
+
+
+			</div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Title</strong></a>
+                        </li>
+                       
+		    </ul>
+		</div>
+	</nav>
+
+
+                  <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Messages </a></li>
+             	<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Out</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>
+        </div>
+    </div>
+</nav>
+-->
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+		<a class="navbar-brand"><span class="glyphicon glyphicon-triangle-left" aria-hidden="false"></span></a>
+	    <a class="navbar-brand"><span class="glyphicon glyphicon-triangle-right" aria-hidden="false"></span></a>	    
+       <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" aria-hidden="false"></span></a>
+	    <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="false"></span></a>
+		<a class="navbar-brand"><span id="btn" class="glyphicon glyphicon-refresh" aria-hidden="false"></span></a>
+	    </div>
+	    
+	    
+	    <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Tech</strong></a>
+                        </li>
+                       
+		    </ul>
+		
+	    
+	    
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="fa fa-thumbs-up" aria-hidden="false"></span></a></li>
+		<li><a href="#"><span class="fa fa-thumbs-down" aria-hidden="false"></span></a></li>
+            </ul>
+            <!--<form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>-->
+        </div>
+    </div>
+	    </div>
+</nav>
+    <div id="wrapper" class="toggled">
+
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+		    <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+		    </li>
+		  <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+		     <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+		    <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+		     <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+		     <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+		     <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+		     <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+		    <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+		    <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+		    <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+		    <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+		    <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+		    <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+		    <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+		    <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+		    <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+		    <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+		    <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+		    <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+		    <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+		    <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+		    <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+		    <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+		    <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+		    <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+		    <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+		    <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+		    
+		    <br>
+		    <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+		     <li><a href="#"><h5 style="color: #d7d7d7">TECH</h5></a>
+		    </li>
+		   <li><a href="http://twitter.com/search?q=technology&src=typd" target="_blank">#Tech</a></li>
+				    <li><a href="http://abcnews.go.com/Technology" target="_blank">ABC</a></li>  
+				    <li><a href="http://america.aljazeera.com/topics/topic/categories/technology.html" target="_blank">Al Jazeera</a></li>
+				    <li><a href="http://arstechnica.com/" target="_blank">Ars Technica</a></li>
+				    <li><a href="http://askdavetaylor.com/" target="_blank">Ask Dave Taylor</a></li>
+				    <li><a href="http://backchannel.com/" target="_blank">Backchannel</a></li>
+				    <li><a href="http://bbc.com/news/technology" target="_blank">BBC</a></li>
+				    <li><a href="http://betanews.com/" target="_blank">BetaNews</a></li>  
+				    <li><a href="http://biztechmagazine.com/" target="_blank">BizTech</a></li>
+				    <li><a href="http://breakingnews.com/topic/tech/" target="_blank">Breaking News</a></li>
+				    <li><a href="http://businessinsider.com/sai" target="_blank">Business Insider</a></li>
+				    <li><a href="http://buzzfeed.com/tech" target="_blank">Buzzfeed</a></li>
+				    <li><a href="http://cnet.com/" target="_blank">CNET</a></li>
+				    <li><a href="http://cnn.com/tech" target="_blank">CNN</a></li>  
+				    <li><a href="http://computerworld.com/" target="_blank">Computerworld</a></li>
+				    <li><a href="http://dailydot.com/tags/tech/" target="_blank">The Daily Dot</a></li>
+				    <li><a href="http://digitaltrends.com/" target="_blank">Digital Trends</a></li>
+				    <li><a href="http://engadget.com/" target="_blank">Engadget</a></li>
+				    <li><a href="http://theepochtimes.com/n3/c/tech/" target="_blank">The Epoch Times</a></li>
+				    <li><a href="http://extremetech.com/" target="_blank">ExtremeTech</a></li>
+				    <li><a href="http://ft.com/companies/technology" target="_blank">Financial Times</a></li>
+				    <li><a href="http://fortune.com/tech/" target="_blank">Fortune</a></li>  
+				    <li><a href="http://fossbytes.com/" target="_blank">fossBytes</a></li>
+				    <li><a href="http://foxnews.com/tech.html" target="_blank">FOX</a></li>
+				    <li><a href="http://france24.com/en/tv-shows/tech-24/" target="_blank">France 24</a></li>
+				    <li><a href="http://gizmodo.com/" target="_blank">Gizmodo</a></li>
+				    <li><a href="http://theguardian.com/us/technology" target="_blank">The Guardian</a></li>
+				    <li><a href="http://hongkiat.com/blog/" target="_blank">Hongkiat</a></li>  
+				    <li><a href="http://howtogeek.com/" target="_blank">How-To Geek</a></li>
+				    <li><a href="http://huffingtonpost.com/section/technology" target="_blank">Huffington Post</a></li>
+				    <li><a href="http://independent.co.uk/life-style/gadgets-and-tech" target="_blank">The Independent</a></li>
+				    <li><a href="http://pjmedia.com/instapundit/" target="_blank">Instapundit</a></li>
+				    <li><a href="http://irishtimes.com/news/technology" target="_blank">The Irish Times</a></li>
+		                    <li><a href="http://news.komando.com/" target="_blank">Komando</a></li>
+				    <li><a href="http://latimes.com/business/technology/" target="_blank">Los Angeles Times</a></li>
+				    <li><a href="http://macworld.com/" target="_blank">Macworld</a></li>  
+				    <li><a href="http://mashable.com/tech" target="_blank">Mashable</a></li>
+				    <li><a href="http://news.nationalpost.com/tag/technology" target="_blank">National Post</a></li>
+				    <li><a href="http://nbcnews.com/tech" target="_blank">NBC</a></li>
+				    <li><a href="http://newser.com/section/7/technology-news-headlines.html" target="_blank">Newser</a></li>  
+				    <li><a href="http://newsmax.com/ScienceTechnology/" target="_blank">Newsmax</a></li>
+				    <li><a href="http://nypost.com/tech/" target="_blank">New York Post</a></li>
+				    <li><a href="http://nytimes.com/column/bits" target="_blank">The New York Times Bits</a></li>
+				    <li><a href="http://nytimes.com/pages/technology/index.html" target="_blank">The New York Times Tech</a></li>
+				    <li><a href="http://thenextweb.com/ " target="_blank">The Next Web</a></li>
+				    <li><a href="http://npr.org/sections/technology/" target="_blank">NPR</a></li>
+				    <li><a href="http://pcmag.com/" target="_blank">PC Magazine</a></li>  
+				    <li><a href="http://pcworld.com/" target="_blank">PCWorld</a></li>
+				    <li><a href="http://popsci.com/technology" target="_blank">Popular Science</a></li>
+				    <li><a href="http://reddit.com/r/technology/" target="_blank">r/Technology</a></li>  
+				    <li><a href="http://readwrite.com/" target="_blank">ReadWrite</a></li>
+				    <li><a href="http://recode.net/" target="_blank">Recode</a></li>
+				    <li><a href="http://reuters.com/news/technology" target="_blank">Reuters</a></li>
+				    <li><a href="http://sfgate.com/technology/" target="_blank">SFGate</a></li>
+				    <li><a href="http://siliconbeat.com/" target="_blank">Silicon Beat</a></li>
+				    <li><a href="http://news.sky.com/technology" target="_blank">Sky</a></li>
+				    <li><a href="http://slashdot.org/" target="_blank">Slashdot</a></li>
+				    <li><a href="http://stratechery.com/" target="_blank">Stratechery</a></li>
+				    <li><a href="http://tech.firstpost.com/" target="_blank">Tech2</a></li>  
+				    <li><a href="http://techcabal.com/" target="_blank">TechCabal</a></li>
+				    <li><a href="http://techcrunch.com/" target="_blank">TechCrunch</a></li>
+				    <li><a href="http://technewsworld.com/" target="_blank">TechNewsWorld</a></li>
+				    <li><a href="http://technobuffalo.com/" target="_blank">TechnoBuffalo</a></li>
+				    <li><a href="http://techpp.com" target="_blank">TechPP</a></li>
+				    <li><a href="http://techradar.com" target="_blank">TechRadar</a></li>
+				    <li><a href="http://techspot.com/" target="_blank">TechSpot</a></li>  
+				    <li><a href="http://techvibes.com/" target="_blank">TechVibes</a></li>
+				    <li><a href="http://telegraph.co.uk/technology/" target="_blank">The Telegraph</a></li>
+				    <li><a href="http://tomshardware.com/" target="_blank">Tom's Hardware</a></li>
+				    <li><a href="http://usatoday.com/tech/" target="_blank">USA Today</a></li>
+				    <li><a href="http://usnews.com/topics/subjects/technology" target="_blank">U.S. News &amp; World Report</a></li>
+				    <li><a href="http://venturebeat.com/" target="_blank">VentureBeat</a></li>
+				    <li><a href="http://theverge.com/tech" target="_blank">The Verge</a></li>  
+				    <li><a href="http://vox.com/technology" target="_blank">Vox</a></li>  
+				    <li><a href="http://wsj.com/news/technology" target="_blank">The Wall Street Journal</a></li>
+				    <li><a href="http://washingtonpost.com/news/innovations/" target="_blank">The Washington Post Innovations</a></li>
+				    <li><a href="http://washingtonpost.com/business/technology/" target="_blank">The Washington Post Technology</a></li>
+				    <li><a href="http://wired.com/" target="_blank">Wired</a></li>
+				    <li><a href="http://yahoo.com/tech/" target="_blank">Yahoo</a></li>
+				    <li><a href="http://zdnet.com/" target="_blank">ZDNet</a></li> 
+              
+		    <br>
+		    <br>
+               <br>
+		   
+            </ul>
+        </div>
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
+
+
+            </div>
+        <!-- /#page-content-wrapper -->
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+  <script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+
+
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"http://tech.firstpost.com/",
+	"http://www.digitaltrends.com/",
+	"http://www.techradar.com",
+	"http://www.businessinsider.com/sai",    
+	"http://www.wired.com/",
+        "https://techcrunch.com/",
+        "http://thenextweb.com/ ",
+        "https://www.engadget.com/",
+        "http://gizmodo.com/",
+	"http://www.wsj.com/news/technology",
+	"http://www.reuters.com/news/technology",
+	"https://www.washingtonpost.com/business/technology/",
+	"https://www.washingtonpost.com/news/innovations/",
+	"http://www.usnews.com/topics/subjects/technology",
+	"http://www.usatoday.com/tech/",
+	"http://news.sky.com/technology",
+	"http://news.nationalpost.com/tag/technology",
+	"http://www.nbcnews.com/tech",
+	"http://www.newser.com/section/7/technology-news-headlines.html",
+	"http://www.newsmax.com/ScienceTechnology/",
+	"http://nypost.com/tech/",
+	"http://www.nytimes.com/pages/technology/index.html",
+	"http://www.npr.org/sections/technology/",
+	"http://fortune.com/tech/",
+	"http://www.siliconbeat.com/",
+	"http://www.latimes.com/business/technology/",
+	"http://www.irishtimes.com/news/technology",
+	"http://www.huffingtonpost.com/section/technology",
+	"https://www.ft.com/companies/technology",
+	"http://www.france24.com/en/tv-shows/tech-24/",
+	"http://www.dailydot.com/tags/tech/",
+	"http://www.theepochtimes.com/n3/c/tech/",
+	"http://www.cnn.com/tech",
+	"http://www.bbc.com/news/technology",
+	"http://www.technewsworld.com/",
+	"http://www.sfgate.com/technology/",
+	"http://www.breakingnews.com/topic/tech/",
+	"http://www.computerworld.com/",
+	"http://abcnews.go.com/Technology",
+	"http://america.aljazeera.com/topics/topic/categories/technology.html",
+	"https://stratechery.com/",
+	"http://techpp.com/",
+	"http://www.howtogeek.com/",
+	"http://www.tomshardware.com/",
+	"http://www.zdnet.com/",
+	"http://www.hongkiat.com/blog/",
+	"https://slashdot.org/",
+	"https://fossbytes.com/",
+	"http://www.technobuffalo.com/",
+	"http://techcabal.com/",
+	"http://readwrite.com/",
+	"http://www.askdavetaylor.com/",
+	"https://techvibes.com/",
+	"http://arstechnica.com/",
+	"http://venturebeat.com/",
+	"http://www.popsci.com/technology",
+	"http://betanews.com/",
+	"http://www.techspot.com/",
+
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+  
+  <script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>	
+
+
+
+
+</body>
+</html>
+
+
+
+
