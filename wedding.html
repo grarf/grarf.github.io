@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Wedding</title>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <script src="https://use.fontawesome.com/1204df7688.js"></script>
+
+
+    <!-- Custom CSS -->
+   
+    <style>
+        
+                /*!
+         * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
+         body {
+            overflow-x: hidden;
+            padding-top: 50px;
+         };
+	    a.navbar-brand {
+    text-shadow: none;
+    color: #474747;
+    margin-left: 0px;
+    margin-right: 0px;
+		    padding: 0px;
+	    }
+        /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 617px;
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.glyphicon-refresh {
+    fill: #fff;
+    -webkit-animation: animation-button 20000ms infinite;
+    -moz-animation: animation-button 20000ms infinite;
+    -o-animation: animation-button 20000ms infinite;
+    animation: animation-button 20000ms infinite;
+}
+@-webkit-keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+@keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+
+
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-61948197-1', 'auto');
+  ga('send', 'pageview');
+
+
+</script>
+
+
+</head>
+
+
+<body>
+   <!-- <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+        <div>
+            <div class="navbar-header">
+
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		    
+                <a class="navbar-brand" href="#"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="#"><object data="/favicon.ico" style="width:20px;height:20px;"></object>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+
+
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#">
+                    <span id="btn" class="glyphicon glyphicon-home"></span>
+                </a>
+
+
+			</div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Title</strong></a>
+                        </li>
+                       
+		    </ul>
+		</div>
+	</nav>
+
+
+                  <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Messages </a></li>
+             	<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Out</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>
+        </div>
+    </div>
+</nav>
+-->
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+		<a class="navbar-brand"><span class="glyphicon glyphicon-triangle-left" aria-hidden="false"></span></a>
+	    <a class="navbar-brand"><span class="glyphicon glyphicon-triangle-right" aria-hidden="false"></span></a>	    
+       <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" aria-hidden="false"></span></a>
+	    <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="false"></span></a>
+		<a class="navbar-brand"><span id="btn" class="glyphicon glyphicon-refresh" aria-hidden="false"></span></a>
+	    </div>
+	    
+	    
+	    <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Wedding</strong></a>
+                        </li>
+                       
+		    </ul>
+		
+	    
+	    
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="fa fa-thumbs-up" aria-hidden="false"></span></a></li>
+		<li><a href="#"><span class="fa fa-thumbs-down" aria-hidden="false"></span></a></li>
+            </ul>
+            <!--<form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>-->
+        </div>
+    </div>
+	    </div>
+</nav>
+    <div id="wrapper" class="toggled">
+
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+		    <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+		    </li>
+		  <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+		     <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+		    <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+		     <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+		     <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+		     <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+		     <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+		    <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+		    <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+		    <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+		    <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+		    <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+		    <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+		    <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+		    <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+		    <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+		    <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+		    <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+		    <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+		    <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+		    <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+		    <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+		    <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+		    <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+		    <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+		    <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+		    <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+		    
+		    <br>
+		    <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+		     <li><a href="#"><h5 style="color: #d7d7d7">WEDDING</h5></a>
+		    </li>
+		   <li><a href="http://adornmagazine.com/blog/" target="_blank">Adorn</a>
+</li>
+<li><a href="http://aisleperfect.com/" target="_blank">Aisle Perfect</a>
+</li>
+<li><a href="http://amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=wedding&rh=i%3Aaps%2Ck%3Awedding" target="_blank">Amazon</a>
+</li>
+<li><a href="http://appycouple.com/planning" target="_blank">Appy Couple</a>
+</li>
+<li><a href="http://artfullywed.com/" target="_blank">Artfully Wed</a>
+</li>
+<li><a href="http://asianweddingideas.co.uk/" target="_blank">Asian Wedding Ideas</a>
+</li>
+<li><a href="http://bespoke-bride.com/" target="_blank">Bespoke Bride</a>
+</li>
+<li><a href="http://bestdestinationwedding.com/" target="_blank">Best Destination Wedding</a>
+</li>
+<li><a href="http://onabicyclebuiltfortwo.com/" target="_blank">A Bicycle Built for Two</a>
+</li>
+<li><a href="http://thebigfatindianwedding.com/" target="_blank">The Big Fat Indian Wedding</a>
+</li>
+<li><a href="http://thebigfatjewishwedding.com/" target="_blank">The Big Fat Jewish Wedding</a>
+</li>
+<li><a href="http://blackbride.com/" target="_blank">Black Bride</a>
+</li>
+<li><a href="http://boudoircollective.com/" target="_blank">Boudoir Collective</a>
+</li>
+<li><a href="http://thebridalbox.com/" target="_blank">The Bridal Box</a>
+</li>
+<li><a href="http://thebridechilla.com/category/blog/" target="_blank">The Bridechilla</a>
+</li>
+<li><a href="http://thebridelink.com/" target="_blank">The Bride Link</a>
+</li>
+<li><a href="http://thebridescafe.com/" target="_blank">The Bride's Cafe</a>
+</li>
+<li><a href="http://bklynbride.com/" target="_blank">Brooklyn Bride</a>
+</li>
+<li><a href="http://brendasweddingblog.com/" target="_blank">Brenda's Wedding Blog</a>
+</li>
+<li><a href="http://bridalguide.com/" target="_blank">Bridal Guide</a>
+</li>
+<li><a href="http://bridalmusings.com/" target="_blank">Bridal Musings</a>
+</li>
+<li><a href="http://brides.com/" target="_blank">Brides</a>
+</li>
+<li><a href="http://thebrokeassbride.com/" target="_blank">The Broke Ass Bride</a>
+</li>
+<li><a href="http://thebudgetsavvybride.com/" target="_blank">The Budget Savvy Bride</a>
+</li>
+<li><a href="http://bummedbride.com/" target="_blank">Bummed Bride</a>
+</li>
+<li><a href="http://catalystwedco.com/blog/" target="_blank">Catalyst Wedding Co.</a>
+</li>
+<li><a href="http://chicbrownbride.com/" target="_blank">Chic Brown Bride</a>
+</li>
+<li><a href="http://thecinderellaproject.blogspot.co.uk/" target="_blank">The Cinderella Project</a>
+</li>
+<li><a href="http://acoastalbride.com/" target="_blank">A Coastal Bride</a>
+</li>
+<li><a href="http://thecrimsonbride.com/" target="_blank">The Crimson Bride</a>
+</li>
+<li><a href="http://destinationweddingmag.com/" target="_blank">Destination Weddings &amp; Honeymoons</a>
+</li>
+<li><a href="http://elizabethannedesigns.com/" target="_blank">Elizabeth Anne Designs</a>
+</li>
+<li><a href="http://engagedandready.com/" target="_blank">Engaged and Ready</a>
+</li>
+<li><a href="http://etsy.com/c/weddings" target="_blank">Etsy</a>
+</li>
+<li><a href="http://theeverylastdetail.com/" target="_blank">Every Last Detail</a>
+</li>
+<li><a href="http://festivalbrides.co.uk/" target="_blank">Festival Brides</a>
+</li>
+<li><a href="http://fluttermag.com/" target="_blank">Flutter</a>
+</li>
+<li><a href="http://flyawaybride.com/" target="_blank">Fly Away Bride</a>
+</li>
+<li><a href="http://4realequalityweddings.com/" target="_blank">For Real Equality</a>
+</li>
+<li><a href="http://fyeahgayweddings.com/" target="_blank">F Yeah Gay Weddings</a>
+</li>
+<li><a href="http://thegayweddingguide.co.uk/" target="_blank">The Gay Wedding Guide</a>
+</li>
+<li><a href="http://greylikesweddings.com/" target="_blank">Grey Likes Weddings</a>
+</li>
+<li><a href="http://handhweddings.com/blog" target="_blank">H&amp;H</a>
+</li>
+<li><a href="http://heartlovealways.com/category/weddings/" target="_blank">Heart Love Always</a>
+</li>
+<li><a href="http://hellomay.com.au/" target="_blank">Hello May</a>
+</li>
+<li><a href="http://heyweddinglady.com/" target="_blank">Hey Wedding Lady</a>
+</li>
+<li><a href="http://hitched.co.uk/" target="_blank">Hitched</a>
+</li>
+<li><a href="http://howheasked.com/" target="_blank">How He Asked</a>
+</li>
+<li><a href="http://insideweddings.com/" target="_blank">Inside Weddings</a>
+</li>
+<li><a href="http://intimateweddings.com/" target="_blank">Intimate Weddings</a>
+</li>
+<li><a href="http://kissmytulle.com/" target="_blank">Kiss My Tulle</a>
+</li>
+<li><a href="http://theknot.com/" target="_blank">The Knot</a>
+</li>
+<li><a href="http://knotsvilla.com/" target="_blank">KnotsVilla</a>
+</li>
+<li><a href="http://thelane.com/" target="_blank">The Lane</a>
+</li>
+<li><a href="http://latinobrideandgroom.com/" target="_blank">Latino Bride and Groom</a>
+</li>
+<li><a href="http://loveincmag.com/" target="_blank">Love Inc.</a>
+</li>
+<li><a href="http://lover.ly" target="_blank">Lover.ly</a>
+</li>
+<li><a href="http://magnoliarouge.com/" target="_blank">Magnolia Rouge</a>
+</li>
+<li><a href="http://maharaniweddings.com/" target="_blank">Maharani Weddings</a>
+</li>
+<li><a href="http://marthastewartweddings.com" target="_blank">Martha Stewart</a>
+</li>
+<li><a href="http://themodernjewishwedding.com/" target="_blank">The Modern Jewish Wedding</a>
+</li>
+<li><a href="http://themodestbride.com.au/" target="_blank">The Modest Bride</a>
+</li>
+<li><a href="http://mrandmrsunique.co.uk" target="_blank">Mr &amp; Mrs Unique</a>
+</li>
+<li><a href="http://munaluchibridal.com/" target="_blank">Munaluchi</a>
+</li>
+<li><a href="http://mywedding.com/" target="_blank">My Wedding</a>
+</li>
+<li><a href="http://naturalhairbride.com/" target="_blank">Natural Hair Bride</a>
+</li>
+<li><a href="http://nigerianweddingblog.com/" target="_blank">Nigerian Wedding Blog</a>
+</li>
+<li><a href="http://nubride.com/" target="_blank">Nu Bride</a>
+</li>
+<li><a href="http://offbeatbride.com/" target="_blank">Offbeat Bride</a>
+</li>
+<li><a href="http://oncewed.com/" target="_blank">Once Wed</a>
+</li>
+<li><a href="http://theoverwhelmedbride.com/" target="_blank">The Overwhelmed Bride</a>
+</li>
+<li><a href="http://perfectmuslimwedding.com/" target="_blank">Perfect Muslim Wedding</a>
+</li>
+<li><a href="http://pinterest.com/categories/weddings/" target="_blank">Pinterest</a>
+</li>
+<li><a href="http://theplunge.com/" target="_blank">The Plunge</a>
+</li>
+<li><a href="http://apracticalwedding.com/" target="_blank">A Practical Wedding</a>
+</li>
+<li><a href="http://premierbride.com/" target="_blank">Premier Bride</a>
+</li>
+<li><a href="http://theprettybrownbride.com/" target="_blank">The Pretty Brown Bride</a>
+</li>
+<li><a href="http://prettypearbride.com/" target="_blank">Pretty Pear Bride</a>
+</li>
+<li><a href="http://projectwedding.com/" target="_blank">Project Wedding</a>
+</li>
+<li><a href="http://rocknrollbride.com/" target="_blank">Rock n Roll Bride</a>
+</li>
+<li><a href="http://rubiesandribbon.com/" target="_blank">Rubies and Ribbon</a>
+</li>
+<li><a href="http://secretweddingblog.com/" target="_blank">Secret Wedding Blog</a>
+</li>
+<li><a href="http://smashingtheglass.com/" target="_blank">Smashing the Glass</a>
+</li>
+<li><a href="http://storyboardwedding.com/" target="_blank">Storyboard</a>
+</li>
+<li><a href="http://swoonedmagazine.com/" target="_blank">Swooned</a>
+</li>
+<li><a href="http://thisfairytalelife.com/category/weddings/" target="_blank">This Fairy Tale Life</a>
+</li>
+<li><a href="http://trendygroom.com/" target="_blank">Trendy Groom</a>
+</li>
+<li><a href="http://ukbride.co.uk/" target="_blank">UK Bride</a>
+</li>
+<li><a href="http://wayoutwedding.com/" target="_blank">Way Out</a>
+</li>
+<li><a href="http://weddingbee.com/" target="_blank">Wedding Bee</a>
+</li>
+<li><a href="http://weddingpaperdivas.com/" target="_blank">Wedding Paper Divas</a>
+</li>
+<li><a href="http://weddingsparrow.com/" target="_blank">Wedding Sparrow</a>
+</li>
+<li><a href="http://weddingstylemagazine.com/" target="_blank">Wedding Style</a>
+</li>
+<li><a href="http://weddingwindow.com/" target="_blank">Wedding Window</a>
+</li>
+<li><a href="http://weddingwire.com" target="_blank">Wedding Wire</a>
+</li>
+<li><a href="http://wedmegood.com/blog/" target="_blank">Wed Me Good</a>
+</li>
+<li><a href="http://wellgroomedblog.com/" target="_blank">Well-Groomed</a>
+</li>
+<li><a href="http://youandyourwedding.co.uk/" target="_blank">You &amp; Your Wedding</a>
+</li>
+              
+		    <br>
+		    <br>
+               <br>
+		   
+            </ul>
+        </div>
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
+
+
+            </div>
+        <!-- /#page-content-wrapper -->
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+  <script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+
+
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"http://www.bespoke-bride.com/boutique/",
+"http://www.fyeahgayweddings.com/",
+            "http://www.blackbride.com/",
+"http://weddingsparrow.com/",
+		"http://www.mrandmrsunique.com",
+            "http://weddingsparrow.com/shop",
+            "http://weddingsparrow.com/planning",
+            "http://weddingsparrow.com/bridal-style",
+            "http://weddingsparrow.com/engagements",
+            "http://weddingsparrow.com/inspiration",
+            "http://weddingsparrow.com/weddings",
+ "http://www.maharaniweddings.com/gallery",
+            "http://www.maharaniweddings.com/",
+ "https://weddingstylemagazine.com/",
+            "https://weddingstylemagazine.com/blog",
+            "https://weddingstylemagazine.com/inspiration/real-weddings",
+            "https://weddingstylemagazine.com/honeymoon-destinations",
+            "https://weddingstylemagazine.com/wedding-destination",
+            "https://weddingstylemagazine.com/fashion",
+            "http://www.bespoke-bride.com/planning/",
+            "http://www.bespoke-bride.com/be-inspired/",
+            "http://www.bespoke-bride.com/travel/",
+            "http://www.bespoke-bride.com/real-weddings/",
+            "http://www.bespoke-bride.com/",
+ "http://www.mrandmrsunique.co.uk/category/inspiration/",
+            "http://www.mrandmrsunique.co.uk/category/unique-weddings/",
+            "http://www.mrandmrsunique.co.uk/blog/",
+ "http://www.ukbride.co.uk/wedding-forum/",
+              "http://fluttermag.com/",
+               "https://lover.ly/real-weddings/",
+"http://fluttermag.com/blog/","http://www.ukbride.co.uk/pages/tips-and-advice",
+"http://www.trendygroom.com/",
+            "http://www.trendygroom.com/groom-ideas/",
+            "http://www.trendygroom.com/proposals/",
+            "http://www.trendygroom.com/styled-wedding-shoots/",
+            "http://www.trendygroom.com/engagements/",
+            "http://www.trendygroom.com/weddings/",
+            "http://www.catalystwedco.com/blog/",
+            "http://www.onabicyclebuiltfortwo.com/",
+ "http://www.youandyourwedding.co.uk/forum/",
+            "http://www.youandyourwedding.co.uk/",
+            "http://www.youandyourwedding.co.uk/real-weddings/",
+            "http://www.youandyourwedding.co.uk/honeymoons/",
+            "http://www.youandyourwedding.co.uk/planning/",
+            "http://www.youandyourwedding.co.uk/dresses-and-style/",
+"http://www.marthastewartweddings.com/600340/love-marriage",
+            "http://www.marthastewartweddings.com/600239/honeymoon-travel",
+            "http://www.marthastewartweddings.com/600330/beauty-ideas",
+            "http://www.marthastewartweddings.com/600319/fashion",
+            "http://www.marthastewartweddings.com/600338/real-weddings",
+            "http://www.marthastewartweddings.com/600231/wedding-inspiration-ideas",
+            "http://www.marthastewartweddings.com/600221/wedding-planning-advice",
+            "http://www.marthastewartweddings.com/",
+"http://www.intimateweddings.com/blog/",
+            "http://thecinderellaproject.blogspot.co.uk/",
+            "http://www.intimateweddings.com/blog/category/diy-wedding/diy-food-drink/",
+            "http://www.intimateweddings.com/blog/diy-weddings/",
+            "http://www.intimateweddings.com/blog/real-weddings/",
+ "http://munaluchibridal.com/",
+            "http://munaluchibridal.com/blog/",
+            "http://munaluchibridal.com/category/travel/",
+            "http://munaluchibridal.com/category/inspiration/",
+            "http://munaluchibridal.com/category/realweddinginspiration/",
+            "http://munaluchibridal.com/category/beauty/",
+            "http://munaluchibridal.com/category/fashion-2/",
+"http://www.artfullywed.com/shop/",
+            "http://www.artfullywed.com/category/planning/",
+            "http://www.artfullywed.com/category/wedding-inspiration/",
+            "http://www.artfullywed.com/category/real-couples/",
+            "http://www.artfullywed.com/",
+  "https://www.weddingpaperdivas.com/",
+  "https://blog.weddingpaperdivas.com/category/real-weddings-and-engagements/",
+            "https://blog.weddingpaperdivas.com/",
+"http://www.brides.com/",
+            "http://www.brides.com/blogs/aisle-say",
+            "http://www.brides.com/wedding-ideas/photo-galleries",
+            "http://www.brides.com/wedding-ideas",
+            "http://www.brides.com/wedding-dresses-style/wedding-beauty",
+            "http://www.brides.com/wedding-dresses-style",
+            "http://www.brides.com/wedding-engagement",
+  "http://themodestbride.com.au/",
+            "http://themodestbride.com.au/category/marriage-2/",
+            "http://themodestbride.com.au/category/editorials/",
+            "http://themodestbride.com.au/category/styling/",
+            "http://themodestbride.com.au/category/real-weddings-2/",
+            "http://themodestbride.com.au/category/gown-inspiration/",
+ "http://www.swoonedmagazine.com/blog/",
+	"http://www.swoonedmagazine.com",
+            "http://www.swoonedmagazine.com/main/shop.html",
+            "http://www.swoonedmagazine.com/main/inspiration_gallery.htmlhttp://fluttermag.com/",
+ "http://aisleperfect.com/",
+"http://bridalmusings.com/",
+            "http://bridalmusings.com/photo-gallery/",
+            "http://bridalmusings.com/category/style/",
+            "http://bridalmusings.com/category/bridal-hair-beauty/",
+            "http://bridalmusings.com/category/diy-tutorials/",
+            "http://bridalmusings.com/category/inspiration/wedding-music/",
+            "http://bridalmusings.com/category/planning/",
+            "http://bridalmusings.com/category/inspiration/",
+            "http://bridalmusings.com/real-weddings/",
+            "http://aisleperfect.com/blog",
+            "http://aisleperfect.com/category/planning",
+            "http://aisleperfect.com/category/real-weddings",
+            "http://aisleperfect.com/category/inspiration",
+ "http://www.thebridelink.com/blog/category/real-weddings/",
+            "http://www.thebridelink.com/vendors-we-love/shop",
+            "http://www.thebridelink.com/blog/category/fashion/",
+            "http://www.thebridelink.com/blog/category/diy-ideas/",
+            "http://www.thebridelink.com/blog/category/pretty-palettes/",
+            "http://www.thebridelink.com/",
+ "http://thelane.com/",
+            "http://thelane.com/Daily-Inspiration/",
+            "http://thelane.com/Style-Guide",
+"http://www.knotsvilla.com/category/save-money/",
+            "http://www.knotsvilla.com/wedding-shop/",
+            "http://www.knotsvilla.com/category/fashion-style/",
+            "http://www.knotsvilla.com/category/real-events/",
+            "http://www.knotsvilla.com/category/inspiration/",
+            "http://www.knotsvilla.com/",
+            "http://www.elizabethannedesigns.com/blog/",
+   "http://prettypearbride.com/",
+            "http://prettypearbride.com/diy/",
+ "http://www.hitched.co.uk/speeches/speechhome.aspx",
+            "http://www.hitched.co.uk/wedding-dress/",
+            "http://www.hitched.co.uk/wedding-inspiration/",
+            "http://prettypearbride.com/category/styled-shoot/",
+            "http://prettypearbride.com/category/realweddings/",
+            "http://prettypearbride.com/engaged-start-here/",
+            "http://prettypearbride.com/",
+"http://www.theplunge.com/",
+"http://flyawaybride.com/",
+            "http://flyawaybride.com/wedding-style/",
+            "http://flyawaybride.com/destination-wedding-locations/",
+            "http://flyawaybride.com/destination-wedding-planning/",
+            "http://flyawaybride.com/decor-ideas/",
+            "http://www.theplunge.com/the-honeymoon/",
+            "http://www.theplunge.com/the-big-day/",
+            "http://www.theplunge.com/bachelor-party/",
+            "http://www.theplunge.com/groomsmen/",
+            "http://www.theplunge.com/groom-duties/",
+            "http://www.theplunge.com/the-proposal/",
+            "http://www.theplunge.com/tools/",
+            "http://www.theplunge.com/shop-mens-gifts/",
+ "http://www.appycouple.com/planning",
+            "http://howheasked.com/",
+"http://thegayweddingguide.co.uk/",
+"http://www.theoverwhelmedbride.com/shop/",
+            "http://www.theoverwhelmedbride.com/",
+            "http://thegayweddingguide.co.uk/etsy-wedding-shop/",
+            "http://thegayweddingguide.co.uk/top-gay-honeymoon-destinations-luxury-gay-holidays/",
+            "http://thegayweddingguide.co.uk/gay-wedding-photography/",
+            "http://thegayweddingguide.co.uk/wedding-ideas-blog/",
+ "http://www.thebridescafe.com/",
+            "http://www.thebridescafe.com/?page=real-weddings",
+            "http://www.thebridescafe.com/?catID=41&diy-projects",
+            "http://www.thebridescafe.com/floral-gallery.cfm",
+            "https://www.appycouple.com/signup/theme",
+"http://www.mywedding.com/",
+  "http://loveincmag.com/category/planning/",
+            "http://loveincmag.com/",
+            "http://loveincmag.com/category/real-weddings/",
+            "http://loveincmag.com/outfit/",
+  "http://www.thebridalbox.com/planning/",
+            "http://www.thebridalbox.com/more/",
+            "http://www.thebridalbox.com/engagement-rings-jewellery/",
+            "http://www.thebridalbox.com/bridal-makeup-beauty/",
+            "http://www.thebridalbox.com/attire-grooming/",
+            "http://www.thebridalbox.com/",
+ "http://www.themodernjewishwedding.com/category/real-weddings/",
+            "http://www.themodernjewishwedding.com/category/inspiration/",
+            "http://www.themodernjewishwedding.com/",
+            "http://www.mywedding.com/engagement/",
+            "http://www.mywedding.com/wedding-ideas/",
+  "http://www.smashingtheglass.com/",
+            "http://www.smashingtheglass.com/category/advice-planning/",
+            "http://www.smashingtheglass.com/category/weddings/",
+            "http://www.mywedding.com/dresses/",
+            "http://www.mywedding.com/shop",
+            "http://www.mywedding.com/travel",
+            "http://www.mywedding.com/jewelry/",
+ "http://apracticalwedding.com/category/advice/",
+            "http://apracticalwedding.com/category/real-weddings/",
+            "http://apracticalwedding.com/",
+  "http://storyboardwedding.com/",
+            "http://storyboardwedding.com/category/real-weddings/",
+            "http://storyboardwedding.com/category/vendor-spotlight/",
+            "http://storyboardwedding.com/photo-spot/",
+            "http://storyboardwedding.com/category/do-it-yourself/",
+ "http://naturalhairbride.com/",
+            "http://www.wellgroomedblog.com/",
+            "http://naturalhairbride.com/nhbblog/",
+            "http://naturalhairbride.com/category/inspire/",
+            "http://www.oncewed.com/",
+            "http://www.oncewed.com/diy/",
+            "http://www.oncewed.com/real-weddings/",
+            "http://www.oncewed.com/wedding-ideas/",
+"http://thisfairytalelife.com/category/diy/",
+            "http://thisfairytalelife.com/category/travel/",
+            "http://thisfairytalelife.com/category/weddings/",
+            "http://www.oncewed.com/used-wedding-dresses/",
+"http://theeverylastdetail.com/get-inspired/",
+            "http://theeverylastdetail.com/category/real-weddings/",
+            "http://theeverylastdetail.com/",
+            "http://festivalbrides.co.uk/category/fashion-and-beauty/",
+            "http://festivalbrides.co.uk/category/wedding-decor-inspiration/",
+            "http://festivalbrides.co.uk/category/real-weddings/",
+            "http://festivalbrides.co.uk/category/wedding-planning/",
+             "https://www.wedmegood.com/real_wedding",
+            "http://thebridechilla.com/category/blog/",
+            "http://bklynbride.com/",
+            "http://www.wedmegood.com/blog/",
+            "http://www.engagedandready.com/",
+            "http://www.engagedandready.com/category/love-marriage/",
+            "http://www.engagedandready.com/category/real-weddings/",
+            "http://www.engagedandready.com/category/wedding-ceremonies/",
+            "http://www.wellgroomedblog.com/search/label/W-G%20Gifts",
+            "http://www.wellgroomedblog.com/search/label/Style%20Boards",
+            "http://www.wellgroomedblog.com/search/label/W-G%20Engagements",
+            "http://www.wellgroomedblog.com/search/label/W-G%20Grooms",
+            "http://secretweddingblog.com/category/real-weddings/",
+            "http://secretweddingblog.com/",
+            "http://www.wayoutwedding.com/category/inspiration/styled-shoots/",
+            "http://www.wayoutwedding.com/category/real-wedding/",
+            "http://www.wayoutwedding.com/",
+            "http://www.magnoliarouge.com/",
+            "http://www.magnoliarouge.com/galleries/",
+            "http://www.magnoliarouge.com/inspiration/",
+            "http://www.destinationweddingmag.com/",
+            "http://www.destinationweddingmag.com/ideas",
+            "http://acoastalbride.com/",
+            "http://theprettybrownbride.com/",
+            "http://www.bestdestinationwedding.com/forum/",
+            "http://www.bestdestinationwedding.com/",
+            "http://www.bestdestinationwedding.com/wedding-tips/c/planning/",
+            "http://bklynbride.com/wedding-galleries/",
+            "http://www.latinobrideandgroom.com/bridal-inspiration/",
+            "http://www.latinobrideandgroom.com/",
+            "http://perfectmuslimwedding.com/",
+            "http://www.nigerianweddingblog.com/",
+            "http://www.greylikesweddings.com/",
+            "https://www.weddingwire.com/wedding-forums",  
+            "https://www.weddingwire.com/wedding-photos",
+            "https://www.weddingwire.com/wedding-photos/dresses",
+            "https://www.weddingwire.com/wedding-venues",
+            "http://4realequalityweddings.com/",
+            "http://thebigfatindianwedding.com/",
+            "http://www.handhweddings.com/blog",
+            "https://www.rocknrollbride.com/",
+            "http://nubride.com/",
+            "https://premierbride.com/",
+            "https://premierbride.com/category/trends-ideas/",
+            "http://chicbrownbride.com/",
+            "http://adornmagazine.com/blog/",
+            "http://boards.weddingbee.com/",
+            "http://www.thebrokeassbride.com/",
+            "http://thebigfatjewishwedding.com/",
+            "http://www.boudoircollective.com/",
+            "http://www.brendasweddingblog.com/",
+            "http://heyweddinglady.com/",
+            "http://www.weddingbee.com/",
+            "http://www.heartlovealways.com/category/weddings/",
+
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+  
+  <script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>	
+
+
+
+
+</body>
+</html>
+
+
+
+
