@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Music</title>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <script src="https://use.fontawesome.com/1204df7688.js"></script>
+
+
+    <!-- Custom CSS -->
+   
+    <style>
+        
+                /*!
+         * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
+         body {
+            overflow-x: hidden;
+            padding-top: 50px;
+         };
+	    a.navbar-brand {
+    text-shadow: none;
+    color: #474747;
+    margin-left: 0px;
+    margin-right: 0px;
+		    padding: 0px;
+	    }
+        /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 617px;
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.glyphicon-refresh {
+    fill: #fff;
+    -webkit-animation: animation-button 20000ms infinite;
+    -moz-animation: animation-button 20000ms infinite;
+    -o-animation: animation-button 20000ms infinite;
+    animation: animation-button 20000ms infinite;
+}
+@-webkit-keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+@keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+
+
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-61948197-1', 'auto');
+  ga('send', 'pageview');
+
+
+</script>
+
+
+</head>
+
+
+<body>
+   <!-- <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+        <div>
+            <div class="navbar-header">
+
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		    
+                <a class="navbar-brand" href="#"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="#"><object data="/favicon.ico" style="width:20px;height:20px;"></object>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+
+
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#">
+                    <span id="btn" class="glyphicon glyphicon-home"></span>
+                </a>
+
+
+			</div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Title</strong></a>
+                        </li>
+                       
+		    </ul>
+		</div>
+	</nav>
+
+
+                  <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Messages </a></li>
+             	<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Out</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>
+        </div>
+    </div>
+</nav>
+-->
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+		<a class="navbar-brand"><span class="glyphicon glyphicon-triangle-left" aria-hidden="false"></span></a>
+	    <a class="navbar-brand"><span class="glyphicon glyphicon-triangle-right" aria-hidden="false"></span></a>	    
+       <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" aria-hidden="false"></span></a>
+	    <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="false"></span></a>
+		<a class="navbar-brand"><span id="btn" class="glyphicon glyphicon-refresh" aria-hidden="false"></span></a>
+	    </div>
+	    
+	    
+	    <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Music</strong></a>
+                        </li>
+                       
+		    </ul>
+		
+	    
+	    
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="fa fa-thumbs-up" aria-hidden="false"></span></a></li>
+		<li><a href="#"><span class="fa fa-thumbs-down" aria-hidden="false"></span></a></li>
+            </ul>
+            <!--<form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>-->
+        </div>
+    </div>
+	    </div>
+</nav>
+    <div id="wrapper" class="toggled">
+
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+		    <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+		    </li>
+		  <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+		     <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+		    <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+		     <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+		     <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+		     <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+		     <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+		    <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+		    <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+		    <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+		    <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+		    <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+		    <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+		    <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+		    <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+		    <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+		    <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+		    <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+		    <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+		    <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+		    <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+		    <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+		    <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+		    <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+		    <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+		    <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+		    <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+		    
+		    <br>
+		    <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+		     <li><a href="#"><h5 style="color: #d7d7d7">MUSIC</h5></a>
+		    </li>
+        <li><a href="http://2dopeboyz.com/" target="_blank">2 Dope Boyz</a>
+                            	</li>
+                            	<li><a href="http://acousticguitar.com/" target="_blank">Acoustic Guitar</a>
+                            	</li>
+                            	<li><a href="http://adhoc.fm/" target="_blank">Ad Hoc</a>
+                            	</li>
+                            	<li><a href="http://allhiphop.com/" target="_blank">Allhiphop</a>
+                            	</li>
+                            	<li><a href="http://allmusic.com/" target="_blank">AllMusic</a>
+                            	</li>
+                            	<li><a href="http://altpress.com/" target="_blank">Alternative Press</a>
+                            	</li>
+                            	<li><a href="http://americansongwriter.com/" target="_blank">American Songwriter</a>
+                            	</li>
+                            	<li><a href="http://aquariumdrunkard.com/" target="_blank">Aquarium Drunkard</a>
+                            	</li>
+                            	<li><a href="http://bassplayer.com/" target="_blank">Bass Player</a>
+                            	</li>
+                            	<li><a href="http://bigcheesemagazine.com/" target="_blank">Big Cheese</a>
+                            	</li>
+                            	<li><a href="http://billboard.com/" target="_blank">Billboard</a>
+                            	</li>
+                            	<li><a href="http://complex.com/music/" target="_blank">Complex</a>
+                            	</li>
+                            	<li><a href="http://consequenceofsound.net/" target="_blank">Consequence of Sound</a>
+                            	</li>
+                            	<li><a href="http://cyclicdefrost.com/" target="_blank">Cyclic Defrost</a>
+                            	</li>
+                            	<li><a href="http://dancingastronaut.com/" target="_blank">Dancing Astronaut</a>
+                            	</li>
+                            	<li><a href="http://datpiff.com/" target="_blank">DatPiff</a>
+                            	</li>
+                            	<li><a href="http://disconaivete.com/" target="_blank">Disco Naivete</a>
+                            	</li>
+                            	<li><a href="http://djmag.com/" target="_blank">DJ Magazine</a>
+                            	</li>
+                            	<li><a href="http://downbeat.com/" target="_blank">Downbeat</a>
+                            	</li>
+                            	<li><a href="http://drownedinsound.com/" target="_blank">Drowned in Sound</a>
+                            	</li>
+                            	<li><a href="http://drummagazine.com/" target="_blank">DRUM!</a>
+                            	</li>
+                            	<li><a href="http://edmsauce.com/" target="_blank">EDM Sauce</a>
+                            	</li>
+                            	<li><a href="http://egotripland.com/" target="_blank">Egotripland</a>
+                            	</li>
+                            	<li><a href="http://emusician.com/" target="_blank">Electronic Musician</a>
+                            	</li>
+                            	<li><a href="http://ew.com/music" target="_blank">Entertainment Weekly</a>
+                            	</li>
+                            	<li><a href="http://everynoise.com/engenremap.html" target="_blank">Every Noise at Once</a>
+                            	</li>
+                            	<li><a href="http://factmag.com/" target="_blank">FACT</a>
+                            	</li>
+                            	<li><a href="http://thefader.com/" target="_blank">The FADER</a>
+                            	</li>
+                            	<li><a href="http://fakeshoredrive.com/" target="_blank">Fake Shore Drive</a>
+                            	</li>
+                            	<li><a href="http://futuremusic.com/" target="_blank">Future Music</a>
+                            	</li>
+                            	<li><a href="http://play.google.com/music/listen#/now" target="_blank">Google Play Music</a>
+                            	</li>
+                            	<li><a href="http://gorillavsbear.net/" target="_blank">Gorilla vs. Bear</a>
+                            	</li>
+                            	<li><a href="http://hardcorefornerds.tumblr.com/" target="_blank">Hardcore for Nerds</a>
+                            	</li>
+                            	<li><a href="http://hitsdailydouble.com/" target="_blank">HITS</a>
+                            	</li>
+                            	<li><a href="http://thehouseofdisco.com/" target="_blank">The House of Disco</a>
+                            	</li>
+                            	<li><a href="http://hypem.com/" target="_blank">Hype Machine</a>
+                            	</li>
+                            	<li><a href="http://hypetrak.com/" target="_blank">HYPETRAK</a>
+                            	</li>
+                            	<li><a href="http://iheart.com/" target="_blank">iHeartRadio</a>
+                            	</li>
+                            	<li><a href="http://indieshuffle.com/" target="_blank">Indie Shuffle</a>
+                            	</li>
+                            	<li><a href="http://internationalmusician.org/" target="_blank">International Musician</a>
+                            	</li>
+                            	<li><a href="http://jango.com/" target="_blank">Jango</a>
+                            	</li>
+                            	<li><a href="http://last.fm/" target="_blank">Last.fm</a>
+                            	</li>
+                            	<li><a href="http://thelineofbestfit.com/" target="_blank">The Line of Best Fit</a>
+                            	</li>
+                            	<li><a href="http://magnetmagazine.com/" target="_blank">Magnet</a>
+                            	</li>
+                            	<li><a href="http://messandnoise.com/" target="_blank">Mess+Noise</a>
+                            	</li>
+                            	<li><a href="http://mixmag.net/" target="_blank">Mixmag</a>
+                            	</li>
+                            	<li><a href="http://mojo4music.com/" target="_blank">MOJO</a>
+                            	</li>
+                            	<li><a href="http://musicradar.com/" target="_blank">Music Radar</a>
+                            	</li>
+                            	<li><a href="http://musicweek.com/" target="_blank">Music Week</a>
+                            	</li>
+                            	<li><a href="http://myspace.com/discover/songs?" target="_blank">Myspace</a>
+                            	</li>
+                            	<li><a href="http://nme.com/us/" target="_blank">NME</a>
+                            	</li>
+                            	<li><a href="http://npr.org/music/" target="_blank">NPR Music</a>
+                            	</li>
+                            	<li><a href="http://oneweekoneband.tumblr.com/" target="_blank">One Week One Band</a>
+                            	</li>
+                            	<li><a href="http://orfium.com/" target="_blank">Orfium</a>
+                            	</li>
+                            	<li><a href="https://www.pandora.com/" target="_blank">Pandora</a>
+                            	</li>
+                            	<li><a href="http://pigeonsandplanes.com/" target="_blank">Pigeons &amp; Planes</a>
+                            	</li>
+                            	<li><a href="http://pitchfork.com/" target="_blank">Pitchfork</a>
+                            	</li>
+                            	<li><a href="http://popjustice.com/" target="_blank">Pop Justice</a>
+                            	</li>
+                            	<li><a href="http://premierguitar.com/" target="_blank">Premier Guitar</a>
+                            	</li>
+                            	<li><a href="http://qthemusic.com/" target="_blank">Q</a>
+                            	</li>
+                            	<li><a href="http://thequietus.com/" target="_blank">The Quietus</a>
+                            	</li>
+                            	<li><a href="http://radio.com/" target="_blank">Radio.com</a>
+                            	</li>
+                            	<li><a href="http://rapradar.com/" target="_blank">Rap Radar</a>
+                            	</li>
+                            	<li><a href="http://relix.com/" target="_blank">Relix</a>
+                            	</li>
+                            	<li><a href="http://residentadvisor.net/" target="_blank">Resident Advisor</a>
+                            	</li>
+                            	<li><a href="http://rollingstone.com/" target="_blank">Rolling Stone</a>
+                            	</li>
+                            	<li><a href="http://self-titledmag.com/" target="_blank">Self-Titled</a>
+                            	</li>
+                            	<li><a href="http://slacker.com/" target="_blank">Slacker</a>
+                            	</li>
+                            	<li><a href="http://soundcloud.com/" target="_blank">Soundcloud</a>
+                            	</li>
+                            	<li><a href="http://soundonsound.com/" target="_blank">Sound on Sound</a>
+                            	</li>
+                            	<li><a href="http://spin.com/" target="_blank">Spin</a>
+                            	</li>
+                            	<li><a href="https://play.spotify.com/" target="_blank">Spotify</a>
+                            	</li>
+                            	<li><a href="http://stereogum.com/" target="_blank">Stereogum</a>
+                            	</li>
+                            	<li><a href="http://substreammagazine.com/" target="_blank">Substream</a>
+                            	</li>
+                            	<li><a href="http://teamrock.com/" target="_blank">Team Rock</a>
+                            	</li>
+                            	<li><a href="http://tinymixtapes.com/" target="_blank">Tiny Mix Tapes</a>
+                            	</li>
+                            	<li><a href="http://en.traxmag.com/" target="_blank">Trax</a>
+                            	</li>
+                            	<li><a href="http://uncut.co.uk/" target="_blank">Uncut</a>
+                            	</li>
+                            	<li><a href="http://undertheradarmag.com/" target="_blank">Under the Radar</a>
+                            	</li>
+                            	<li><a href="http://variety.com/" target="_blank">Variety</a>
+                            	</li>
+                            	<li><a href="http://waxpoetics.com/" target="_blank">Wax Poetics</a>
+                            	</li>
+                            	<li><a href="http://thewildhoneypie.com/" target="_blank">The Wild Honey Pie</a>
+                            	</li>
+                            	<li><a href="http://xlr8r.com/" target="_blank">XLR8R</a>
+                            	</li>
+                            	<li><a href="http://xxlmag.com/" target="_blank">XXL</a>
+                            	</li>
+                            	<li><a href="http://yahoo.com/music" target="_blank">Yahoo Music</a>
+                            	</li>
+                            	<li><a href="http://youredm.com/" target="_blank">Your EDM</a>
+                            	</li>
+                            	<li><a href="http://yvynyl.com/" target="_blank">Yvynyl</a>
+                            	</li>
+		   
+              
+		    <br>
+		    <br>
+               <br>
+		   
+            </ul>
+        </div>
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
+
+
+            </div>
+        <!-- /#page-content-wrapper -->
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+  <script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+
+
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"http://www.aquariumdrunkard.com/",
+   "http://everynoise.com/engenremap.html",
+   "http://www.tinymixtapes.com/",
+   "http://pigeonsandplanes.com/",
+    "http://www.self-titledmag.com/",
+   "http://www.allmusic.com/",
+   "http://www.npr.org/music/",
+   "http://www.cyclicdefrost.com/",
+"http://hypem.com/",
+   "http://www.iheart.com/",
+   "http://www.factmag.com/",
+   "http://adhoc.fm/",
+   "http://yvynyl.com/",
+   "http://www.thehouseofdisco.com/",
+         "http://www.egotripland.com/",
+   "http://disconaivete.com/",
+   "http://hardcorefornerds.tumblr.com/",
+   "http://messandnoise.com/",
+"http://www.gorillavsbear.net/",
+   "http://radio.com/",
+   "http://thequietus.com/",
+	// start here
+	"http://futuremusic.com/",
+	"http://teamrock.com/",
+			"http://variety.com/",
+"http://acousticguitar.com/",
+	"http://www.qthemusic.com/",
+			"http://www.ew.com/music",
+"https://www.thelineofbestfit.com/",
+	"http://mixmag.net/",
+			"https://www.residentadvisor.net/",
+"http://drownedinsound.com/",
+	"http://rapradar.com/",
+"http://www.waxpoetics.com/",
+	"https://www.xlr8r.com/",
+		"http://downbeat.com/",
+	"http://www.complex.com/music/",
+"http://www.rollingstone.com/",
+	"http://www.uncut.co.uk/",
+"http://dancingastronaut.com/",
+"http://www.thewildhoneypie.com/",
+	"http://allhiphop.com/",
+"https://americansongwriter.com/",
+	"http://www.billboard.com/",
+	"http://www.stereogum.com/",
+	"http://www.musicradar.com/",
+	"http://www.soundonsound.com/",
+	"http://www.bigcheesemagazine.com/",
+"http://www.mojo4music.com/",
+	"http://consequenceofsound.net/",
+	"http://substreammagazine.com/",
+	"http://www.youredm.com/",
+	"http://www.altpress.com/",
+	"http://www.relix.com/",
+	"http://www.popjustice.com/",
+	"http://www.edmsauce.com/",
+	"http://www.waxpoetics.com/",
+	"http://www.musicweek.com/",
+	"http://www.undertheradarmag.com/",
+	"http://www.fakeshoredrive.com/",
+	"http://www.indieshuffle.com/",
+	"http://www.emusician.com/",
+	"http://www.nme.com/us/",
+	"http://www.xxlmag.com/",
+	"http://hypetrak.com/",
+	"http://2dopeboyz.com/",
+	"http://www.premierguitar.com/",
+	"http://hitsdailydouble.com/",
+	"http://www.drummagazine.com/",
+	"http://www.thefader.com/",
+	"https://internationalmusician.org/",
+	"http://www.bassplayer.com/",
+	"http://www.spin.com/",
+	"http://www.magnetmagazine.com/",
+
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+  
+  <script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>	
+
+
+
+
+</body>
+</html>
+
+
+
+
