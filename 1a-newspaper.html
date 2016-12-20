@@ -247,211 +247,393 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
-        <div>
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"></a>
-                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><img src="/favicon.ico" style="width:20px;height:20px;"></a>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-th"></span></a>
-                <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
-
-                <a class="navbar-brand" data-toggle="tooltip" title="Load a new site" href="#">
-                    <span id="btn" class="glyphicon glyphicon-refresh"></span>
-                </a>
-                <a class="navbar-brand" href="#"></a>
-
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-
-                    <li><a href="#"><strong>Page 1</strong></a>
-                    </li>
-                    <li><a href="#">Page 2</a>
-                    </li>
-                    <li><a href="#">Page 3</a>
-                    </li>
-                    <li><a href="#">Page 4</a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <!--<div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="false"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="false"></span></a></li>
-        </ul>
-        </div>
-
-            <form class="navbar-form navbar-right" action="#" method="GET">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
-                    </div>
-                </div>
-
-            </form>
--->
-        </div>
-
-    </nav>
-    <div id="wrapper" class="toggled">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                
-                <li><a href="http://www.espn.com" target="myIframe">Section 1</a></li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-
-                <iframe id="myFrame" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
-
-            </div>
-        <!-- /#page-content-wrapper -->
-
+   <div class="wrap">
+	<section class="top-section">
+		<nav class="navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="#">Brand</a>
+				</div>
+				
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav ">
+						<li class="active">
+							<a href="#">Link</a>
+						</li>
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+								<li>
+									<a href="#">One more separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-left ng-pristine ng-valid" role="search">
+						<div class="form-group">
+							<input class="form-control" type="text">
+						</div> <button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</div>
+		</nav>
+      <div class="bgafter"></div>
+		<div class="container">
+			<div class="jumbotron">
+				<div class="row">
+					<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+						<h1>
+							Hello, world!
+						</h1>
+						<p>
+							<!-- Begin MailChimp Signup Form -->
+<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
+	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<div id="mc_embed_signup">
+<form action="//jabzoo.us10.list-manage.com/subscribe/post?u=410f496dd6bd35d114135a117&amp;id=a752952145" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+	<h2>Yes, sign me up for fat loss!</h2>
+<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
+<div class="mc-field-group">
+	<label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+</label>
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+</div>
+<div class="mc-field-group">
+	<label for="mce-FNAME">First Name  <span class="asterisk">*</span>
+</label>
+	<input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_410f496dd6bd35d114135a117_a752952145" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
     </div>
-    <!-- /#wrapper -->
+</form>
+</div><p>
+<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
+						</p>
+                      
+						<p>
+							<a href="http://bootstraptor.com/bootstrap-free/" class="btn btn-primary btn-lg">More freebies</a>
+						</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                      	<div class="mail">
+                          <div class="paper">
+                            <span class="head span1"></span>
+                            <span class="head span2"></span>
+                            <span class="body span3"></span>
+                            <span class="body span4"></span>
+                            <span class="body span5"></span>
+                            <span class="body span6"></span>
+                          </div>
+                          <span class="number">5</span>
+                          <span class="shadow"></span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<section class="second-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="text-center">
+						<span class="glyphicon glyphicon-check"></span>
+					</div>
+					<h3 class="text-center">
+						Built with Bootstrap 3
+					</h3>
+					<p>
+						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+					</p>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="text-center">
+						<span class="glyphicon glyphicon-check"></span>
+					</div>
+					<h3 class="text-center">
+						Fully Responsive
+					</h3>
+					<p>
+						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+					</p>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="text-center">
+						<span class="glyphicon glyphicon-check"></span>
+					</div>
+					<h3 class="text-center">
+						Totally Free License
+					</h3>
+					<p>
+						Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="features-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="page-header text-center">
+						<h1>
+							Example page header <small>Subtext for header</small>
+						</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="list-group">
+						 <a href="#" class="list-group-item active"> Cras justo odio</a> <a href="#" class="list-group-item">Dapibus ac facilisis in</a> <a href="#" class="list-group-item">Morbi leo risus</a> <a href="#" class="list-group-item">Porta ac consectetur ac</a> <a href="#" class="list-group-item">Vestibulum at eros</a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<h3>
+						h3. Bootstrap heading
+					</h3>
+					<ul>
+						<li>
+							Lorem ipsum dolor sit amet
+						</li>
+						<li>
+							Consectetur adipiscing elit
+						</li>
+						<li>
+							Integer molestie lorem at massa
+						</li>
+						<li>
+							Facilisis in pretium nisl aliquet
+						</li>
+						<li>
+							Nulla volutpat aliquam velit
+							<ul>
+								<li>
+									Phasellus iaculis neque
+								</li>
+								<li>
+									Purus sodales ultricies
+								</li>
+								<li>
+									Vestibulum laoreet porttitor sem
+								</li>
+								<li>
+									Ac tristique libero volutpat at
+								</li>
+							</ul>
+						</li>
+						<li>
+							Faucibus porta lacus fringilla vel
+						</li>
+						<li>
+							Aenean sit amet erat nunc
+						</li>
+						<li>
+							Eget porttitor lorem
+						</li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<h3>
+						h3. Bootstrap heading
+					</h3>
+					<ul>
+						<li>
+							Lorem ipsum dolor sit amet
+						</li>
+						<li>
+							Consectetur adipiscing elit
+						</li>
+						<li>
+							Integer molestie lorem at massa
+						</li>
+						<li>
+							Facilisis in pretium nisl aliquet
+						</li>
+						<li>
+							Nulla volutpat aliquam velit
+							<ul>
+								<li>
+									Phasellus iaculis neque
+								</li>
+								<li>
+									Purus sodales ultricies
+								</li>
+								<li>
+									Vestibulum laoreet porttitor sem
+								</li>
+								<li>
+									Ac tristique libero volutpat at
+								</li>
+							</ul>
+						</li>
+						<li>
+							Faucibus porta lacus fringilla vel
+						</li>
+						<li>
+							Aenean sit amet erat nunc
+						</li>
+						<li>
+							Eget porttitor lorem
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="price-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h3 class="text-center">
+								DEV PLAN
+							</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead">
+								<strong>$10 / month</strong>
+							</p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> Personal use
+							</li>
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> Unlimited projects
+							</li>
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> 27/7 support
+							</li>
+						</ul>
+						<div class="panel-footer">
+							 <a class="btn btn-lg btn-block btn-success" href="https://creativemarket.com/artlabs/12114-Bootstrap-3.0.-pricing-tables-flat">BUY NOW!</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h3 class="text-center">
+								PRO PLAN
+							</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead">
+								<strong>$10 / month</strong>
+							</p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> Personal use
+							</li>
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> Unlimited projects
+							</li>
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> 27/7 support
+							</li>
+						</ul>
+						<div class="panel-footer">
+							 <a class="btn btn-lg btn-block btn-success" href="https://creativemarket.com/artlabs/12114-Bootstrap-3.0.-pricing-tables-flat">BUY NOW!</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h3 class="text-center">
+								FREE PLAN
+							</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead">
+								<strong>$10 / month</strong>
+							</p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> Personal use
+							</li>
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> Unlimited projects
+							</li>
+							<li class="list-group-item">
+								<i class="icon-ok text-danger"></i> 27/7 support
+							</li>
+						</ul>
+						<div class="panel-footer">
+							 <a class="btn btn-lg btn-block btn-success" href="https://creativemarket.com/artlabs/12114-Bootstrap-3.0.-pricing-tables-flat">BUY NOW!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+  <section class="buy-section">
+    <div class="container">
+      <div class="row">
+        
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script type="text/javascript">
-// cookie value geetter
-function readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-// Knuth array shuffle
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-	randomIndex = Math.floor(Math.random() * currentIndex);
-	currentIndex -= 1;
-	temporaryValue = array[currentIndex];
-	array[currentIndex] = array[randomIndex];
-	array[randomIndex] = temporaryValue;
-    }
-    return array;
-}
-    var windowLinksIndex = 0;
-// iFrame links
-var iframeLinks = shuffle([
-	 "http://www.thetimes.co.uk/",
-        "http://www.economist.com/",
-        "http://abcnews.go.com/",
-        "http://www.theepochtimes.com/",
-        "http://www.pri.org/",
-        "http://www.cbsnews.com/",
-        "http://www.bbc.com/news",
-        "http://www.nydailynews.com/",
-        "http://nypost.com/news/",
-        "http://www.huffingtonpost.com/",
-        "https://www.washingtonpost.com/",
-        "http://qz.com/",
-        "http://theweek.com/",
-        "http://fortune.com/",
-        "http://www.dailydot.com/",
-        "http://townhall.com/",
-        "http://www.fark.com/",
-        "http://www.alternet.org/",
-   	 "http://www.irishtimes.com/",
-        "http://www.breitbart.com/",
-        "http://www.newsvine.com/",
-        "http://www.newsmax.com/",
-        "http://www.upi.com/",
-        "http://www.pbs.org/newshour/",
-        "http://www.ctvnews.ca/",
-        "http://www.wsj.com/",
-        "http://usatoday.com",
-        "http://www.newser.com/",
-        "http://www.drudgereport.com/",
-        "http://www.dw.com/",
-    "http://www.chinadaily.com.cn/",
-        "http://www.mercurynews.com/",
-        "http://www.voanews.com/",
-        "http://news.sky.com/",
-        "http://www.nationalpost.com/index.html",
-        "http://www.rawstory.com/",
-        "http://www.france24.com/en/",
-        "http://www.csmonitor.com/",
-        "http://thehill.com/",
-        "http://latimes.com",
-        "http://observer.com/",
-        "http://www.usnews.com/",
-        "http://www.cbc.ca/news",
-        "http://www.npr.org/",       
-        "http://www.cnn.com/",
-        "http://www.aljazeera.com/news/",
-        "http://wn.com/",
-        "http://www.arcamax.com/",
-        "http://www.breakingnews.com/",
-        "http://www.reuters.com/",
-        "http://www.nbcnews.com/",
-]);
-var iframeLinksIndex = 0;
-if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
-    windowLinks = readCookie('windowlinkscookie').split(',');
-    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
-}else{
-    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
-    document.cookie = 'windowlinksindex=' + windowLinksIndex;
-}
-    
-if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
-    windowLinks = readCookie('framelinkscookie').split(',');
-    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
-}else{
-    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
-    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
-}
-openStuff = function () {
-    var link = windowLinks[windowLinksIndex];
-    windowLinksIndex++;
-    windowLinksIndex %= windowLinks.length;
-    window.open(link);
-};
-// Open in iFrame
-var myFrame = document.getElementById("frame");
-function getRandomUrl(myFrame) {
-    var url = iframeLinks[iframeLinksIndex];
-    iframeLinksIndex++;
-    iframeLinksIndex %= iframeLinks.length;
-    myFrame.src = url;
-}
-var refreshBtn = document.getElementById("btn");
-refreshBtn.addEventListener("click", function() {
-    getRandomUrl(myFrame); 
-});
-window.onload = function(){
-    getRandomUrl(myFrame);
-};
-</script>
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
 
+        <div class="col-md-12"><h2 class="text-center">Call to action! Buy awesome product now!</h2></div>
+        <div class="col-md-4 col-md-offset-4" style="margin-top:20px;"><button href="http://bootstraptor.com" class="btn btn-info btn-block btn-lg">GET MORE FREEBIES</button></div>
+
+      </div>
+    </div>
+  </section>
+</div>
 </body>
 
 </html>
