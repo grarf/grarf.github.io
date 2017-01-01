@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>News - Arts</title>
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+   
+    <style>
+        
+                /*!
+         * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
+         body {
+            overflow-x: hidden;
+            padding-top: 50px;
+         };
+	    a.navbar-brand {
+    text-shadow: none;
+    color: #474747;
+    margin-left: 0px;
+    margin-right: 0px;
+		    padding: 0px;
+	    }
+        /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 617px;
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.glyphicon-refresh {
+    fill: #fff;
+    -webkit-animation: animation-button 20000ms infinite;
+    -moz-animation: animation-button 20000ms infinite;
+    -o-animation: animation-button 20000ms infinite;
+    animation: animation-button 20000ms infinite;
+}
+@-webkit-keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+@keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61948197-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+        <div>
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		    
+                <a class="navbar-brand"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><object data="/favicon.ico" style="width:20px;height:20px;"></object></a>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#"><span id="btn" class="glyphicon glyphicon-refresh"></span></a>
+               
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a><strong>Arts</strong></a>
+                        </li>
+			<li class="#"><a href="/newspaper.html">Front Page</a>
+                        </li>
+                        <!--<li class="dropdown">
+                            <a href="/newspaper-us.html" class="dropdown-toggle" data-toggle="dropdown"><strong>U.S. </strong><b class="caret"></b></a>
+                            <ul class="dropdown-menu scrollable-menu">
+                            <li><a href="/newspaper-us-alabama.html">Alabama</a>
+                            </li>
+                            <li><a href="/newspaper-us-alaska.html">Alaska</a>
+                            </li>
+                            <li><a href="/newspaper-us-arizona.html">Arizona</a>
+                            </li>
+                            <li><a href="/newspaper-us-arkansas.html">Arkansas</a>
+                            </li>
+                            <li><a href="/newspaper-us-california.html">California</a>
+                            </li>
+                            <li><a href="/newspaper-us-colorado.html">Colorado</a>
+                            </li>
+                            <li><a href="/newspaper-us-connecticut.html">Connecticut</a>
+                            </li>
+                            <li><a href="/newspaper-us-delaware.html">Delaware</a>
+                            </li>
+                            <li><a href="/newspaper-us-florida.html">Florida</a>
+                            </li>
+                            <li><a href="/newspaper-us-georgia.html">Georgia</a>
+                            </li>
+                            <li><a href="/newspaper-us-hawaii.html">Hawaii</a>
+                            </li>
+                            <li><a href="/newspaper-us-idaho.html">Idaho</a>
+                            </li>
+                            <li><a href="/newspaper-us-illinois.html">Illinois</a>
+                            </li>
+                            <li><a href="/newspaper-us-indiana.html">Indiana</a>
+                            </li>
+                            <li><a href="/newspaper-us-iowa.html">Iowa</a>
+                            </li>
+                            <li><a href="/newspaper-us-kansas.html">Kansas</a>
+                            </li>
+                            <li><a href="/newspaper-us-kentucky.html">Kentucky</a>
+                            </li>
+                            <li><a href="/newspaper-us-louisiana.html">Louisiana</a>
+                            </li>
+                            <li><a href="/newspaper-us-maine.html">Maine</a>
+                            </li>
+                            <li><a href="/newspaper-us-maryland.html">Maryland</a>
+                            </li>
+                            <li><a href="/newspaper-us-massachusetts.html">Massachusetts</a>
+                            </li>
+                            <li><a href="/newspaper-us-michigan.html">Michigan</a>
+                            </li>
+                            <li><a href="/newspaper-us-minnesota.html">Minnesota</a>
+                            </li>
+                            <li><a href="/newspaper-us-mississippi.html">Mississippi</a>
+                            </li>
+                            <li><a href="/newspaper-us-missouri.html">Missouri</a>
+                            </li>
+                            <li><a href="/newspaper-us-montana.html">Montana</a>
+                            </li>
+                            <li><a href="/newspaper-us-nebraska.html">Nebraska</a>
+                            </li>
+                            <li><a href="/newspaper-us-nevada.html">Nevada</a>
+                            </li>
+                            <li><a href="/newspaper-us-new-hampshire.html">New Hampshire</a>
+                            </li>
+                            <li><a href="/newspaper-us-new-jersey.html">New Jersey</a>
+                            </li>
+                            <li><a href="/newspaper-us-new-mexico.html">New Mexico</a>
+                            </li>
+                            <li><a href="/newspaper-us-new-york.html">New York</a>
+                            </li>
+                            <li><a href="/newspaper-us-north-carolina.html">North Carolina</a>
+                            </li>
+                            <li><a href="/newspaper-us-north-dakota.html">North Dakota</a>
+                            </li>
+                            <li><a href="/newspaper-us-ohio.html">Ohio</a>
+                            </li>
+                            <li><a href="/newspaper-us-oklahoma.html">Oklahoma</a>
+                            </li>
+                            <li><a href="/newspaper-us-oregon.html">Oregon</a>
+                            </li>
+                            <li><a href="/newspaper-us-pennsylvania.html">Pennsylvania</a>
+                            </li>
+                            <li><a href="/newspaper-us-rhode-island.html">Rhode Island</a>
+                            </li>
+                            <li><a href="/newspaper-us-south-carolina.html">South Carolina</a>
+                            </li>
+                            <li><a href="/newspaper-us-south-dakota.html">South Dakota</a>
+                            </li>
+                            <li><a href="/newspaper-us-tennessee.html">Tennessee</a>
+                            </li>
+                            <li><a href="/newspaper-us-texas.html">Texas</a>
+                            </li>
+                            <li><a href="/newspaper-us-utah.html">Utah</a>
+                            </li>
+                            <li><a href="/newspaper-us-vermont.html">Vermont</a>
+                            </li>
+                            <li><a href="/newspaper-us-virginia.html">Virginia</a>
+                            </li>
+                            <li><a href="/newspaper-us-washington.html">Washington</a>
+                            </li>
+                            <li><a href="/newspaper-us-west-virginia.html">West Virginia</a>
+                            </li>
+                            <li><a href="/newspaper-us-wisconsin.html">Wisconsin</a>
+                            </li>
+                            <li><a href="/newspaper-us-wyoming.html">Wyoming</a>
+                            </li>
+                            </ul>
+                        </li>
+                        -->
+                        <li class="#"><a href="/newspaper-us.html">U.S.</a>
+                        </li>
+                        <li class="#"><a href="/newspaper-world.html">World</a>
+                        </li>
+                    
+                        <li><a href="/newspaper-metro.html">Metro</a>
+                        </li>
+                        
+                        <li><a href="/newspaper-sports.html">Sports</a>
+                        </li>
+                        
+                         <li><a href="/newspaper-economy.html">Economy</a>
+                        </li>
+                       
+                        <li><a href="/newspaper-entertainment.html">Entertainment</a>
+                        </li>
+                        <li><a href="/newspaper-opinion.html">Opinion</a>
+                        </li>
+                    
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+				   <li><a href="/newspaper-politics.html">Politics</a>
+                        	</li>
+                                <li><a href="/newspaper-travel.html">Travel</a>
+                                </li>
+                                <li><a href="/newspaper-tech.html">Tech</a>
+                                </li>
+                                <li><a href="/newspaper-food.html">Food</a>
+                                </li>
+                                <li><a href="/newspaper-science.html">Science</a>
+                                </li>
+                                <li><a href="/newspaper-health.html">Health</a>
+                                </li>
+                                <li><a href="/newspaper-fashion.html">Fashion</a>
+                                </li>
+                                <li><a href="/newspaper-living.html">Living</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/newspaper-comics.html">Comics</a>
+                                </li>
+                                <li><a href="/newspaper-crossword.html">Crossword</a>
+                                </li>
+                                <li><a href="/newspaper-jobs.html">Jobs</a>
+                                </li>
+                                <li><a href="/newspaper-classifieds.html">Classifieds</a>
+                                </li>
+                                <li><a href="/newspaper-obituaries.html">Obituaries</a>
+				    </li>
+                                <li><a href="/newspaper-realestate.html">Real Estate</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/newspaper-magazine.html">Magazine</a>
+                                </li>
+                                <li><a href="/newspaper-independentjournalism.html">Independent Journalism</a>
+                                </li>
+                           
+                            </ul>
+		    </ul>
+		</div>
+
+            <!--<div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="false"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="false"></span></a></li>
+        </ul>
+        </div>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </form>
+-->
+        </div>
+
+    </nav>
+    <div id="wrapper" class="toggled">
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+		    <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+		    </li>
+		  
+		    <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+		     <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+		    <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+		     <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+		     <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+		     <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+		     <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+		    <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+		    <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+		    <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+		    <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+		    <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+		    <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+		    <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+		    <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+		    <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+		    <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+		    <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+		    <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+		    <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+		    <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+		    <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+		    <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+		    <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+		    <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+		    <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+		    <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+		    <br>
+		    <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+		     <li><a href="#"><h5 style="color: #d7d7d7">ARTS</h5></a>
+		    </li>
+		    
+		    
+		    
+		    <li><a href="https://twitter.com/search?q=arts&src=typd" target="_blank">#Arts <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    <li><a href="http://www.adweek.com/" target="myIframe">Adweek</a>
+		    		</li>
+		     <li><a href="http://www.aestheticamagazine.com/" target="myIframe">Aesthetica</a>
+		    		</li>
+		    <li><a href="http://www.aljazeera.com/topics/categories/arts-and-culture.html" target="myIframe">Al Jazeera</a>
+		    		</li>
+		    <li><a href="https://www.americanartcollector.com/" target="myIframe">American Art Collector</a>
+		    		</li>
+		    <li><a href="http://www.art21.org/" target="myIframe">Art21</a>
+		    		</li>
+		      <li><a href="http://artbabble.org/" target="_blank">Art Babble <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+                                </li>
+		    
+		    <li><a href="http://artdaily.com/" target="myIframe">Art Daily</a>
+                                </li>
+		    <li><a href="http://adcglobal.org/blog/" target="_blank">Art Directors Club <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+                                </li>
+		    <li><a href="https://www.artforum.com/" target="myIframe">Artforum</a>
+		    		</li>
+		    <li><a href="http://artistaday.com/" target="myIframe">Artist A Day</a>
+                                </li>
+		    
+		     <li><a href="http://www.artsjournal.com/" target="myIframe">ArtsJournal</a>
+		    		</li>
+		    <li><a href="http://artlog.com/" target="_blank">ARTLOG <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+                                </li>
+		    <li><a href="http://artnaz.com/" target="myIframe">Artnaz</a>
+                                </li>
+		    
+		     <li><a href="https://news.artnet.com/art-world" target="myIframe">artnet</a>
+		    		</li>
+		    
+		     <li><a href="http://www.artnews.com/" target="myIframe">ARTnews</a>
+		    		</li>
+		    <li><a href="http://theartnewspaper.com/" target="_blank">The Art Newspaper <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		    <li><a href="http://www.artparasites.com/" target="myIframe">artparasites</a>
+		    		</li>
+		    
+		     <li><a href="http://www.artspace.com/" target="myIframe">Artspace</a>
+		    		</li>
+		    <li><a href="http://www.artspan.com/" target="_blank">ArtSpan <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		   <li><a href="https://www.artstation.com/" target="_blank">ArtStation <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    <li><a href="https://www.artsy.net/" target="_blank">Artsy <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		     <li><a href="http://www.artweek.com/" target="myIframe">Art Week</a>
+		    		</li>
+		    <li><a href="http://blog.art.com/artwiki/~/" target="myIframe">Art Wiki</a>
+                                </li>
+		     
+		     <li><a href="http://www.bbc.co.uk/arts" target="myIframe">BBC</a>
+		    		</li>
+		     <li><a href="http://www.blouinartinfo.com/" target="myIframe">BLOUIN ARTINFO</a>
+		    		</li>
+		    <li><a href="http://www.cbc.ca/beta/arts" target="myIframe">CBC</a>
+		    		</li>
+		     <li><a href="http://www.chinadaily.com.cn/culture/" target="myIframe">China Daily</a>
+		    		</li>
+		     <li><a href="http://www.csmonitor.com/The-Culture/Arts" target="myIframe">Christian Science Monitor</a>
+		    		</li>
+		     <li><a href="http://www.cnn.com/style/arts" target="myIframe">CNN</a>
+		    		</li>
+		     <li><a href="http://www.commarts.com/" target="myIframe">Communication Arts</a>
+		    		</li>
+		     <li><a href="http://www.contemporaryartdaily.com/" target="myIframe">Contemporary Art Daily</a>
+		    		</li>
+		      <li><a href="http://www.thisiscolossal.com" target="_blank">Colossal <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    </li>
+		    
+		    <li><a href="http://curiator.com/" target="_blank">Curiator <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+                                </li>
+		     <li><a href="http://www.dailyartfixx.com/" target="_blank">Daily Art Fixx <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		    
+		    
+		    
+		    <li><a href="http://www.dailymail.co.uk/news/arts/index.html" target="myIframe">Daily Mail</a>
+		    		</li>
+		    <li><a href="http://designtaxi.com/" target="myIframe">Design Taxi</a>
+                                </li>
+		     <li><a href="http://www.deviantart.com/" target="myIframe">DeviantArt</a>
+		    		</li>
+		     <li><a href="http://www.economist.com/topics/visual-arts" target="_blank">The Economist <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.theepochtimes.com/n3/c/arts-culture/" target="myIframe">The Epoch Times</a>
+		    		</li>
+		    
+		    <li><a href="https://www.ft.com/arts" target="_blank">Financial Times <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.forbes.com/forbeslife/arts/#7a184f9f3672" target="_blank">Forbes</a>
+		    		</li>
+		    <li><a href="http://www.foxnews.com/category/entertainment/genres/arts.html" target="_blank">FOX News <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.france24.com/en/tag/art/" target="_blank">France 24 <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		     <li><a href="https://www.google.com/culturalinstitute/beta/" target="_blank">Google Arts &amp; Culture <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    <li><a href="https://www.theguardian.com/artanddesign/art" target="_blank">The Guardian <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     
+		     <li><a href="http://www.huffingtonpost.com/arts/" target="myIframe">The Huffington Post</a>
+		    		</li>
+		    <li><a href="http://www.independent.co.uk/arts-entertainment" target="_blank">The Independent <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.irishtimes.com/culture/art-and-design" target="_blank">The Irish Times <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.latimes.com/entertainment/arts/" target="myIframe">Los Angeles Times</a>
+		    		</li>
+		    
+		    <li><a href="http://mymodernmet.com/" target="myIframe">My Modern Met</a>
+		    		</li>
+		     <li><a href="http://news.nationalpost.com/category/arts" target="myIframe">National Post</a>
+		    		</li>
+		     <li><a href="http://www.nydailynews.com/entertainment/theater-arts" target="_blank">New York Daily News <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		    <li><a href="http://nypost.com/tag/art/" target="myIframe">New York Post</a>
+		    		</li>
+		     <li><a href="http://www.nytimes.com/section/arts" target="_blank">The New York Times <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		     <li><a href="https://www.nowness.com/" target="myIframe">NOWNESS</a>
+		    		</li>
+		     <li><a href="http://www.npr.org/sections/arts/" target="myIframe">NPR</a>
+		    		</li>
+		    
+		    <li><a href="http://observer.com/art/" target="myIframe">Observer</a>
+		    		</li>
+		     <li><a href="http://www.pbs.org/newshour/art/" target="_blank">PBS NewsHour <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    
+		     <li><a href="http://postmatter.com/latest" target="myIframe">POSTmatter</a>
+		    		</li>
+		    <li><a href="http://www.pri.org/sections/arts-culture-media" target="myIframe">PRI</a>
+		    		</li>
+		    
+		    <li><a href="https://www.reddit.com/r/Art/" target="_blank">r/Art <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.reuters.com/news/entertainment/arts" target="myIframe">Reuters</a>
+		    		</li>
+		    
+		    <li><a href="https://www.saatchiart.com/" target="myIframe">Saatchi Art</a>
+		    		</li>
+		     <li><a href="http://news.sky.com/entertainment" target="myIframe">Sky</a>
+		    		</li>
+		     <li><a href="http://www.sothebys.com/en.html" target="myIframe">Sotheby's</a>
+		    		</li>
+		     <li><a href="http://www.streetartutopia.com/" target="_blank">Street Art Utopia <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		     <li><a href="http://www.telegraph.co.uk/art/" target="_blank">The Telegraph <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    		
+		  
+		    		
+		    <li><a href="http://www.ugallery.com" target="myIframe">UGallery</a>
+		    		</li>
+		    <li><a href="http://www.usatoday.com/life/" target="myIframe">USA Today</a>
+		    		</li>
+		    
+		     <li><a href="https://www.vice.com/en_us/topic/culture" target="myIframe">VICE</a>
+		    		</li>
+		    <li><a href="http://www.voanews.com/z/602.html" target="myIframe">VOA</a>
+		    		</li>
+		    <li><a href="http://www.voxmagazine.com/arts/" target="_blank">Vox Magazine <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+		    <li><a href="http://www.wsj.com/news/arts" target="myIframe">The Wall Street Journal</a>
+		    		</li>
+		     <li><a href="https://www.washingtonpost.com/news/arts-and-entertainment/?utm_term=.8c44c320eca7" target="myIframe">The Washington Post</a>
+		    		</li>
+		     <li><a href="http://theweek.com/section/entertainment" target="myIframe">The Week</a>
+		    		</li>
+		     <li><a href="https://www.wikiart.org/" target="myIframe">WikiArt</a>
+		    		</li>
+		    <li><a href="https://www.wondereur.com/" target="_blank">Wondereur <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+		    		</li>
+                
+                               
+                                
+		    <br>
+		    <br>
+               <br>
+		   
+            </ul>
+        </div>
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
+
+            </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+     "https://news.artnet.com/art-world",
+        "https://www.reddit.com/r/Art/",
+        "http://www.forbes.com/forbeslife/arts/#7a184f9f3672",
+        "https://www.theguardian.com/artanddesign/art",
+
+        "https://twitter.com/search?q=art&src=typd",
+		"http://www.telegraph.co.uk/art/",
+"http://theartnewspaper.com/",
+	"https://www.artstation.com/",
+	"http://www.independent.co.uk/arts-entertainment",
+	"https://www.theguardian.com/artanddesign/",
+	"http://curiator.com/",
+	"http://www.nytimes.com/section/arts",
+	"https://www.google.com/culturalinstitute/beta/",
+
+	"http://www.voxmagazine.com/arts/",
+	"http://www.reuters.com/news/entertainment/arts",
+	"http://nypost.com/tag/art/",
+	"http://www.nydailynews.com/entertainment/theater-arts",
+	"http://www.pbs.org/newshour/art/",
+	"http://www.streetartutopia.com/",
+	"http://artlog.com/",
+	"http://adcglobal.org/blog/",
+	"http://www.artspan.com/",
+	"https://www.artsy.net/",
+	"http://artbabble.org/",
+	"https://www.wondereur.com/",
+	"http://www.dailyartfixx.com/",
+"http://www.economist.com/topics/visual-arts",
+	"https://www.ft.com/arts",
+	"http://www.foxnews.com/category/entertainment/genres/arts.html",
+	"http://www.france24.com/en/tag/art/",
+	"http://www.irishtimes.com/culture/art-and-design",
+	"http://www.thisiscolossal.com/",
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	 "http://www.adweek.com/",        
+              "http://www.latimes.com/entertainment/arts/",  
+        "http://www.artnews.com/",
+        "https://www.nowness.com/",
+        "http://www.huffingtonpost.com/arts/",
+        "http://www.wsj.com/news/arts",
+        "https://news.artnet.com/art-world",
+        "http://www.artsjournal.com/",
+	
+	"http://postmatter.com/latest",
+	
+	"https://www.wikiart.org/",
+	"http://www.artparasites.com/",
+	"https://www.americanartcollector.com/",
+	"https://www.saatchiart.com/",
+	"http://www.art21.org/",
+	"http://mymodernmet.com/",
+	"https://www.artforum.com/",
+	"http://artdaily.com/",
+	"http://www.artnet.com/",
+"http://www.artspace.com/",
+	"http://artistaday.com/",
+	"http://blog.art.com/artwiki/~/",
+	"http://www.aestheticamagazine.com/",
+	"http://www.blouinartinfo.com/",
+	"http://www.commarts.com/",
+	"http://www.contemporaryartdaily.com/",
+	"http://designtaxi.com/",
+	"http://www.deviantart.com/",
+	"http://www.ugallery.com/",
+	"http://artnaz.com/",
+	"http://www.sothebys.com/en.html",
+	"http://www.npr.org/sections/arts/",
+	"http://www.aljazeera.com/topics/categories/arts-and-culture.html",
+	"http://www.bbc.co.uk/arts",
+	"http://www.csmonitor.com/The-Culture/Arts",
+	"http://www.cbc.ca/beta/arts",
+	"http://www.chinadaily.com.cn/culture/",
+	"http://www.cnn.com/style/arts",
+	"http://www.dailymail.co.uk/news/arts/index.html",
+	"http://www.theepochtimes.com/n3/c/arts-culture/",
+	"http://www.latimes.com/entertainment/arts/",
+	"http://news.nationalpost.com/category/arts",
+	"http://observer.com/art/",
+"http://www.reuters.com/news/entertainment/arts",
+	"http://news.sky.com/entertainment",
+	"http://www.pri.org/sections/arts-culture-media",
+	"http://theweek.com/section/entertainment",
+	"http://www.artweek.com/",
+	"https://www.washingtonpost.com/news/arts-and-entertainment/?utm_term=.8c44c320eca7",
+	"http://www.voanews.com/z/602.html",
+	"https://www.vice.com/en_us/topic/culture",
+	"http://www.usatoday.com/life/",
+      
+  
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+	<script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>
+
+	
+
+
+</body>
+</html>
