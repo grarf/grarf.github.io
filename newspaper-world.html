@@ -1,38 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="/favicon.ico">
 
-    <title>World News</title>
+    <title>News</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+   
     <style>
-        body {
+        
+                /*!
+         * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
+         body {
+            overflow-x: hidden;
             padding-top: 50px;
+         };
+	    a.navbar-brand {
+    text-shadow: none;
+    color: #474747;
+    margin-left: 0px;
+    margin-right: 0px;
+		    padding: 0px;
+	    }
+        /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
         }
-         .scrollable-menu {
-    height: auto;
-    max-height: 500px;
-    overflow-x: hidden;
-}
-
-@import url('http://getbootstrap.com/dist/css/bootstrap.css');
-.glyphicon-random {
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 617px;
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.glyphicon-refresh {
     fill: #fff;
     -webkit-animation: animation-button 20000ms infinite;
     -moz-animation: animation-button 20000ms infinite;
     -o-animation: animation-button 20000ms infinite;
     animation: animation-button 20000ms infinite;
 }
-
 @-webkit-keyframes animation-button {
     0%   {color:red; }
     25%  {color:yellow; }
@@ -48,72 +205,217 @@
     100% {color:red; }
 }
 
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
     </style>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-   
-    
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-61948197-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
 </head>
 
-  <!-- Wrap all page content here -->
-    <div id="wrap">
-        <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
 
-        <!-- Fixed navbar -->
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-     <a class="navbar-brand" href="/index.html" style="color: #EBEBEB">
-<span style="color:#E8E8E8" class="glyphicon glyphicon-home" data-toggle="tooltip" title="GRARF"></span>
-</a>
-<!--
-<a class="navbar-brand" href="#" onclick="openStuff();">
-<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window" data-toggle="tooltip" title="Load the next site in new tab"></span>
-</a>   -->            
-                    
-                    <a class="navbar-brand" href="#">
-    <span id="btn" class="glyphicon glyphicon-random" data-toggle="tooltip" title="Load the next site"></span>
-    </a>
-                </div>
-                
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
 		    
-		    <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
+                <a class="navbar-brand"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><object data="/favicon.ico" style="width:20px;height:20px;"></object></a>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#"><span id="btn" class="glyphicon glyphicon-refresh"></span></a>
+               
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a><strong>Front Page</strong></a>
+                        </li>
+                       
+                        <li class="#"><a href="/newspaper-us.html">U.S.</a>
+                        </li>
+                        <li class="#"><a href="/newspaper-world.html">World</a>
+                        </li>
+                    
+                        <li><a href="/newspaper-metro.html">Metro</a>
+                        </li>
+                        
+                        <li><a href="/newspaper-sports.html">Sports</a>
+                        </li>
+                        
+                         <li><a href="/newspaper-economy.html">Economy</a>
+                        </li>
+                       
+                        <li><a href="/newspaper-entertainment.html">Entertainment</a>
+                        </li>
+                        <li><a href="/newspaper-opinion.html">Opinion</a>
+                        </li>
+                    
+                        <li><a href="/newspaper-politics.html">Politics</a>
+                        </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><strong>World </strong><b class="caret"></b></a>
-                            <ul class="dropdown-menu scrollable-menu">
-				<li><a href="/newspaper-world-africa"><strong>Africa</strong></a>
-                            </li>
-						    <li><a href="/newspaper-world-americas"><strong>Americas</strong></a>
-                            </li>
-                            <li><a href="/newspaper-world-asia-pacific"><strong>Asia-Pacific</strong></a>
-                            </li>
-                            <li><a href="/newspaper-world-europe"><strong>Europe</strong></a>
-                            </li>
-                            <li><a href="/newspaper-world-latin-america"><strong>Latin America</strong></a>
-                            </li>
-                            <li><a href="/newspaper-world-middle-east"><strong>Middle East</strong></a>
-                            </li>
-				    				    				    <li class="divider"></li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/newspaper-travel.html">Travel</a>
+                                </li>
+                                <li><a href="/newspaper-arts.html">Arts</a>
+                                </li>
+                                <li><a href="/newspaper-tech.html">Tech</a>
+                                </li>
+                                <li><a href="/newspaper-food.html">Food</a>
+                                </li>
+                                <li><a href="/newspaper-science.html">Science</a>
+                                </li>
+                                <li><a href="/newspaper-health.html">Health</a>
+                                </li>
+                                <li><a href="/newspaper-fashion.html">Fashion</a>
+                                </li>
+                                <li><a href="/newspaper-living.html">Living</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/newspaper-comics.html">Comics</a>
+                                </li>
+                                <li><a href="/newspaper-crossword.html">Crossword</a>
+                                </li>
+                                <li><a href="/newspaper-jobs.html">Jobs</a>
+                                </li>
+                                <li><a href="/newspaper-classifieds.html">Classifieds</a>
+                                </li>
+                                <li><a href="/newspaper-obituaries.html">Obituaries</a>
+                                </li>
+                                <li><a href="/newspaper-realestate.html">Real Estate</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/newspaper-magazine.html">Magazine</a>
+                                </li>
+                                <li><a href="/newspaper-independentjournalism.html">Independent Journalism</a>
+                                </li>
+                           
+                            </ul>
+		    </ul>
+		</div>
 
-				    
-			    <li><a href="#"><strong>World News</strong></a>
-                            </li>
-				    
-				    
-				<li><a href="" target="_blank">#News <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
+            <!--<div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="false"></span></a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="false"></span></a></li>
+        </ul>
+        </div>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </form>
+-->
+        </div>
+
+    </nav>
+    <div id="wrapper" class="toggled">
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+		    <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+		    </li>
+		  
+		    <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+		     <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+		    <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+		     <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+		     <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+		     <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+		     <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+		    <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+		    <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+		    <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+		    <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+		    <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+		    <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+		    <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+		    <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+		    <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+		    <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+		    <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+		    <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+		    <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+		    <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+		    <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+		    <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+		    <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+		    <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+		    <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+		    <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+		    <br>
+		    <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+		     <li><a href="#"><h5 style="color: #d7d7d7">SITES</h5></a>
+		    </li>
+		   
+
+<li><a href="" target="_blank">#News <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
                             	</li>   
                 		<li><a href="" target="myIframe">ABC</a>
                                 </li>
@@ -261,80 +563,23 @@
                                 </li>
                                 <li><a href="" target="_blank">Yahoo <span style="float:right; padding-right:30px"><i class="glyphicon glyphicon-new-window" style="color:#d3d3d3"></i></span></a>
                                 </li>
-
-				
-			    </ul>
-                        </li>
-			    
-                        <li><a href="/newspaper.html">Front Page</a>
-                        </li>
-                        <li><a href="/newspaper-us.html">U.S.</a>
-                        </li>
-                        <li><a href="/newspaper-metro.html">Metro</a>
-                        </li>
-                        
-                        <li><a href="/newspaper-sports.html">Sports</a>
-                        </li>
-                         
-                         <li><a href="/newspaper-economy.html">Economy</a>
-                        </li>
-                        <li><a href="/newspaper-entertainment.html">Entertainment</a>
-                        </li>
-                        <li><a href="/newspaper-opinion.html">Opinion</a>
-                        </li>
-                
-                        <li><a href="/newspaper-politics.html">Politics</a>
-                        </li>
-                     <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/newspaper-travel.html">Travel</a>
-                                </li>
-                                <li><a href="/newspaper-arts.html">Arts</a>
-                                </li>
-                                 <li><a href="/newspaper-tech.html">Tech</a>
-                                </li>
-                                <li><a href="/newspaper-food.html">Food</a>
-                                </li>
-                                <li><a href="/newspaper-science.html">Science</a>
-                                </li>
-                                <li><a href="/newspaper-health.html">Health</a>
-                                </li>
-                                <li><a href="/newspaper-fashion.html">Fashion</a>
-                                </li>
-                                <li><a href="/newspaper-living.html">Living</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="/newspaper-comics">Comics</a>
-                                </li>
-                                <li><a href="/newspaper-crossword">Crossword</a>
-                                </li>
-                                <li><a href="/newspaper-jobs">Jobs</a>
-                                </li>
-                                <li><a href="/newspaper-classifieds">Classifieds</a>
-                                </li>
-                                <li><a href="/newspaper-obituaries">Obituaries</a>
-                                </li>
-                                <li><a href="/newspaper-realestate">Real Estate</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="/newspaper-magazine">Magazine</a>
-                                </li>
-                                <li><a href="/newspaper-independentjournalism">Independent Journalism</a>
-                                </li>
-                            </ul>
-            
-                        </li>
-                    </ul>
-                </div>
-		    
-		    
-				
-                <!--/.nav-collapse -->
-		</div>
+               
+		    <br>
+		    <br>
+               <br>
+		   
+            </ul>
         </div>
-    <!-- /.container -->
 
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
+
+            </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -353,7 +598,6 @@ function readCookie(name) {
     }
     return null;
 }
-
 // Knuth array shuffle
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -366,223 +610,20 @@ function shuffle(array) {
     }
     return array;
 }
-
 // Open in new Window
 var windowLinks = shuffle([
-    "http://www.scmp.com/frontpage/international",
-        "http://www.npr.org/sections/world/",
-        "http://en.people.cn/",
-        "http://www.smh.com.au/",
-        "http://metro.co.uk/",
-        "https://www.thesun.co.uk/",
-        "http://www.bbc.com/news/world",
-        "http://www.csmonitor.com/World",
-        "http://www.chicagotribune.com/news/nationworld/",
-        "http://www.jpost.com/",
-        "https://twitter.com/search?q=world%20news&src=typd",
-        "http://abcnews.go.com/International",
-        "http://metro.co.uk/news/world/",
-        "http://www.usatoday.com/news/world/",
-        "http://www.mercurynews.com/news/nation-world",
-        "http://www.aljazeera.com/topics/regions/middleeast.html",
-        "http://indianexpress.com/",
-        "http://usa.chinadaily.com.cn/world/",
-        "http://www.wsj.com/news/world",
-        "https://www.reddit.com/r/worldnews/",
-        "http://en.people.cn/90777/index.html",
-        "http://www.irishtimes.com/news/world",
-        "http://www.militarytimes.com/",
-        "http://www.aljazeera.com/topics/regions/africa.html",
-        "http://www.aljazeera.com/topics/regions/asia.html",
-        "http://www.stripes.com/",
-        "http://www.nydailynews.com/news/world",
-        "http://www.lucianne.com/",
-        "http://www.express.co.uk/",
-        "http://www.ctvnews.ca/world",
-        "http://www.aljazeera.com/topics/regions/latin-america.html",
-        "http://www.aljazeera.com/topics/regions/europe.html",
-        "http://www.aljazeera.com/topics/regions/asia-pacific.html",
-        "http://www.huffingtonpost.com/world/",
-        "http://www.washingtonpost.com/world/?nid=menu_nav_world",
-        "http://www.washingtonpost.com/world/africa/?nid=menu_nav_world-africa",
-        "http://www.washingtonpost.com/world/americas/?nid=menu_nav_world-theamericas",
-        "http://www.belfasttelegraph.co.uk/",
-        "http://www.washingtonpost.com/world/asia-pacific/?nid=menu_nav_world-asiaandpacific",
-        "http://www.washingtonpost.com/world/europe/?nid=menu_nav_world-europe",
-        "http://www.washingtonpost.com/world/middle-east/?nid=menu_nav_world-middleeast",
-        "http://www.denverpost.com/news/nation-world/",
-        "https://www.washingtonpost.com/world/national-security/?nid=menu_nav_world-nationalsecurity",
-        "http://www.standard.co.uk/",
-        "http://www.smh.com.au/world",
-        "https://www.washingtonpost.com/news/worldviews/",
-        "https://www.washingtonpost.com/news/checkpoint/?nid=menu_nav_world-checkpoint",
-        "http://www.theepochtimes.com/n3/c/world/",
-        "http://www.theepochtimes.com/n3/c/world/africa/",
-        "http://www.theepochtimes.com/n3/c/world/americas/",
-        "http://www.theepochtimes.com/n3/c/world/asia-pacific/",
-        "http://news.nationalpost.com/category/news/world/",
-        "http://www.breitbart.com/london/",
-        "http://www.breitbart.com/jerusalem/",
-        "http://www.theepochtimes.com/n3/c/world/canada/",
-        "http://www.reuters.com/news/world",
-        "http://www.reuters.com/subjects/euro-zone",
-        "http://www.reuters.com/subjects/middle-east",
-        "http://www.reuters.com/places/china",
-        "http://www.reuters.com/places/japan",
-        "http://www.reuters.com/places/mexico",
-        "http://www.reuters.com/places/brazil",
-        "http://www.reuters.com/places/africa",
-        "http://www.reuters.com/places/russia",
-        "http://www.reuters.com/places/india",
-        "http://www.theepochtimes.com/n3/c/world/europe/",
-        "http://www.theepochtimes.com/n3/c/world/india/",
-        "http://www.theepochtimes.com/n3/c/world/international/",
-        "http://www.theepochtimes.com/n3/c/world/middle-east/",
-        "http://www.theepochtimes.com/n3/c/china/",
-        "http://www.hindustantimes.com/",
-        "http://www.themoscowtimes.com/",
-        "http://www.cnn.com/world",
-        "http://www.cnn.com/africa",
-        "http://www.cnn.com/americas",
-        "http://www.cnn.com/asia",
-        "http://www.cnn.com/europe",
-        "http://www.dailymail.co.uk/news/worldnews/index.html",
-        "http://www.cnn.com/middle-east",
-        "http://www.euronews.com/",
-        "http://www.france24.com/en/africa/",
-        "http://www.france24.com/en/middle-east/",
-        "http://www.france24.com/en/europe/",
-        "http://www.france24.com/en/americas/",
-        "http://www.france24.com/en/asia-pacific/",
-        "http://www.voanews.com/section/africa/2204.html",
-        "http://www.voanews.com/section/asia/2205.html",
-        "http://www.voanews.com/section/middle_east/2206.html",
-        "http://www.voanews.com/section/europe/2210.html",
-        "http://www.nytimes.com/pages/world/africa/index.html",
-        "http://www.nytimes.com/pages/world/middleeast/index.html",
-        "http://www.nytimes.com/pages/world/index.html",
-        "http://www.nytimes.com/pages/world/americas/index.html",
-        "https://next.ft.com/stream/sectionsId/OQ==-U2VjdGlvbnM=",
-        "http://www.arabnews.com/",
-        "http://www.latimes.com/world/",
-        "http://www.latimes.com/world/africa/#nt=secondarynavbar",
-        "http://www.latimes.com/world/mexico-americas/#nt=secondarynavbar",
-        "http://www.latimes.com/world/asia/#nt=secondarynavbar",
-        "http://www.latimes.com/world/europe/#nt=secondarynavbar",
-        "http://www.latimes.com/world/middleeast/#nt=secondarynavbar",
-        "http://www.latimes.com/world/global-development/",
-        "http://www.upi.com/Top_News/World-News/",
-        "http://www.independent.co.uk/news/world/europe",
-        "http://www.independent.co.uk/news/world",
-        "http://www.independent.co.uk/news/world/americas",
-        "http://www.independent.co.uk/news/uk",
+   
+
 
 ]);
 var windowLinksIndex = 0;
 // iFrame links
 var iframeLinks = shuffle([
-    "http://www.npr.org/sections/world/",
-        "http://en.people.cn/",
-        "http://www.smh.com.au/",
-        "https://www.thesun.co.uk/",
-        "http://www.bbc.com/news/world",
-        "http://www.csmonitor.com/World",
-        "http://www.chicagotribune.com/news/nationworld/",
-        "http://www.jpost.com/",
-        "http://abcnews.go.com/International",
-        "http://metro.co.uk/news/world/",
-        "http://www.usatoday.com/news/world/",
-        "http://www.mercurynews.com/news/nation-world",
-        "http://www.aljazeera.com/topics/regions/middleeast.html",
-        "http://indianexpress.com/",
-        "http://usa.chinadaily.com.cn/world/",
-        "http://www.wsj.com/news/world",
-        "http://en.people.cn/90777/index.html",
-        "http://www.irishtimes.com/news/world",
-        "http://www.militarytimes.com/",
-        "http://www.aljazeera.com/topics/regions/africa.html",
-        "http://www.aljazeera.com/topics/regions/asia.html",
-        "http://www.stripes.com/",
-        "http://www.nydailynews.com/news/world",
-        "http://www.lucianne.com/",
-        "http://www.express.co.uk/",
-        "http://www.ctvnews.ca/world",
-        "http://www.aljazeera.com/topics/regions/latin-america.html",
-        "http://www.aljazeera.com/topics/regions/europe.html",
-        "http://www.aljazeera.com/topics/regions/asia-pacific.html",
-        "http://www.huffingtonpost.com/world/",
-        "http://www.washingtonpost.com/world/?nid=menu_nav_world",
-        "http://www.washingtonpost.com/world/africa/?nid=menu_nav_world-africa",
-        "http://www.washingtonpost.com/world/americas/?nid=menu_nav_world-theamericas",
-        "http://www.belfasttelegraph.co.uk/",
-        "http://www.washingtonpost.com/world/asia-pacific/?nid=menu_nav_world-asiaandpacific",
-        "http://www.washingtonpost.com/world/europe/?nid=menu_nav_world-europe",
-        "http://www.washingtonpost.com/world/middle-east/?nid=menu_nav_world-middleeast",
-        "http://www.denverpost.com/news/nation-world/",
-        "https://www.washingtonpost.com/world/national-security/?nid=menu_nav_world-nationalsecurity",
-        "http://www.standard.co.uk/",
-        "http://www.smh.com.au/world",
-        "https://www.washingtonpost.com/news/worldviews/",
-        "https://www.washingtonpost.com/news/checkpoint/?nid=menu_nav_world-checkpoint",
-        "http://www.theepochtimes.com/n3/c/world/",
-        "http://www.theepochtimes.com/n3/c/world/africa/",
-        "http://www.theepochtimes.com/n3/c/world/americas/",
-        "http://www.theepochtimes.com/n3/c/world/asia-pacific/",
-        "http://news.nationalpost.com/category/news/world/",
-        "http://www.breitbart.com/london/",
-        "http://www.breitbart.com/jerusalem/",
-        "http://www.theepochtimes.com/n3/c/world/canada/",
-        "http://www.reuters.com/news/world",
-        "http://www.reuters.com/subjects/euro-zone",
-        "http://www.reuters.com/subjects/middle-east",
-        "http://www.reuters.com/places/china",
-        "http://www.reuters.com/places/japan",
-        "http://www.reuters.com/places/mexico",
-        "http://www.reuters.com/places/brazil",
-        "http://www.reuters.com/places/africa",
-        "http://www.reuters.com/places/russia",
-        "http://www.reuters.com/places/india",
-        "http://www.theepochtimes.com/n3/c/world/europe/",
-        "http://www.theepochtimes.com/n3/c/world/india/",
-        "http://www.theepochtimes.com/n3/c/world/international/",
-        "http://www.theepochtimes.com/n3/c/world/middle-east/",
-        "http://www.theepochtimes.com/n3/c/china/",
-        "http://www.hindustantimes.com/",
-        "http://www.themoscowtimes.com/",
-        "http://www.cnn.com/world",
-        "http://www.cnn.com/africa",
-        "http://www.cnn.com/americas",
-        "http://www.cnn.com/asia",
-        "http://www.cnn.com/europe",
-        "http://www.dailymail.co.uk/news/worldnews/index.html",
-        "http://www.cnn.com/middle-east",
-        "http://www.euronews.com/",
-        "http://www.france24.com/en/africa/",
-        "http://www.france24.com/en/middle-east/",
-        "http://www.france24.com/en/europe/",
-        "http://www.france24.com/en/americas/",
-        "http://www.france24.com/en/asia-pacific/",
-        "http://www.voanews.com/section/africa/2204.html",
-        "http://www.voanews.com/section/asia/2205.html",
-        "http://www.voanews.com/section/middle_east/2206.html",
-        "http://www.voanews.com/section/europe/2210.html",
-        "http://www.nytimes.com/pages/world/africa/index.html",
-        "http://www.nytimes.com/pages/world/middleeast/index.html",
-        "http://www.nytimes.com/pages/world/index.html",
-        "http://www.nytimes.com/pages/world/americas/index.html",
-        "https://next.ft.com/stream/sectionsId/OQ==-U2VjdGlvbnM=",
-        "http://www.arabnews.com/",
-        "http://www.latimes.com/world/",
-        "http://www.latimes.com/world/africa/#nt=secondarynavbar",
-        "http://www.latimes.com/world/mexico-americas/#nt=secondarynavbar",
-        "http://www.latimes.com/world/asia/#nt=secondarynavbar",
-        "http://www.latimes.com/world/europe/#nt=secondarynavbar",
-        "http://www.latimes.com/world/middleeast/#nt=secondarynavbar",
-        "http://www.latimes.com/world/global-development/",
-        "http://www.upi.com/Top_News/World-News/",
+	
+
+
 ]);
 var iframeLinksIndex = 0;
-
 if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
     windowLinks = readCookie('windowlinkscookie').split(',');
     windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
@@ -597,17 +638,13 @@ if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
     document.cookie = 'framelinkscookie=' + windowLinks.join(',');
     document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
 }
-
-
 openStuff = function () {
     var link = windowLinks[windowLinksIndex];
     windowLinksIndex++;
     windowLinksIndex %= windowLinks.length;
     window.open(link);
 };
-
 // Open in iFrame
-
 var myFrame = document.getElementById("frame");
 function getRandomUrl(myFrame) {
     var url = iframeLinks[iframeLinksIndex];
@@ -619,15 +656,26 @@ var refreshBtn = document.getElementById("btn");
 refreshBtn.addEventListener("click", function() {
     getRandomUrl(myFrame); 
 });
-
 window.onload = function(){
     getRandomUrl(myFrame);
 };
 </script>
+	<script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>
 
-
-
-        
+	
 
 
 </body>
