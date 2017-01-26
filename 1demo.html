@@ -299,7 +299,7 @@
 		<a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><object data="/favicon.ico" style="width:20px;height:20px;"></object></a>    
        <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" aria-hidden="false"></span></a>
 	    <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="false"></span></a>
-		<a class="navbar-brand"><span id="btn" class="glyphicon glyphicon-refresh" aria-hidden="false"></span></a>
+		<a class="navbar-brand" href="#"><span id="btn" class="glyphicon glyphicon-refresh" aria-hidden="false"></span></a>
 	    </div>
 	    
 	    
@@ -417,9 +417,10 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
+		
+		titty
 
-                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
-
+              
             </div>
         <!-- /#page-content-wrapper -->
 
@@ -431,156 +432,6 @@
        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	
-  <script type="text/javascript">
-// cookie value geetter
-function readCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-// Knuth array shuffle
-function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-    while (0 !== currentIndex) {
-	randomIndex = Math.floor(Math.random() * currentIndex);
-	currentIndex -= 1;
-	temporaryValue = array[currentIndex];
-	array[currentIndex] = array[randomIndex];
-	array[randomIndex] = temporaryValue;
-    }
-    return array;
-}
-// Open in new Window
-var windowLinks = shuffle([
-
-]);
-var windowLinksIndex = 0;
-// iFrame links
-var iframeLinks = shuffle([
-	
-"http://psychedelicobscurities.blogspot.com/",
-"http://www.thewire.co.uk",
-"https://www.beatport.com/",
-"http://www.tonedeaf.com.au/",
-"http://clashmusic.com/",
-"http://www.esquire.com/entertainment/music/",
-"http://www.eartothegroundmusic.co/",
-"http://breakingmorewaves.blogspot.com/",
-"https://bittersweetsymphonies.co.uk/",
-"http://www.obliviouspop.com/",
-"https://serialgk.com/",
-"http://www.imposemagazine.com/",
-"http://therevue.ca/",
-"http://www.highclouds.org/",
-"http://www.wearegoingsolo.com/",
-"https://acidted.wordpress.com/",
-"http://www.sos-music.co.uk/",
-"http://www.datatransmission.co.uk/",
-"http://www.lagasta.com/",
-"http://www.harderbloggerfaster.com/",
-"http://silversoundz.com/",
-"https://humandrizzle.com/",
-"http://www.ilictronix.com/",
-"http://werksman.blogspot.com/",
-"http://www.stereofox.com/",
-"http://www.artfelicis.com/",
-"http://cavemansound.com/",
-"https://pulpjuiced.com/",
-"https://massappeal.com/",
-"http://nahright.com/",
-"http://houseoflords.xyz/home/",
-"http://www.hungrydrums.com/",
-"http://beartoons.org/",
-"http://www.amoeba.com/blog/",
-"http://www.horrorshowtunez.co.uk/",
-"http://beautifulbuzzz.com/",
-"http://acidstag.com/",
-"http://alittlebitofsol.blogspot.com/",
-"http://littleindieblogs.blogspot.com/",
-"https://queenbeetch.com/",
-"http://blahblahblahscience.com/",
-"http://www.1forthepeople.com/",
-"http://siteofsound.com/",
-"https://weclosetonight.com/",
-"http://atcostmag.tumblr.com/",
-"http://thenewlofi.com/",
-"http://survivingthegoldenage.com/",
-"http://whenyoumotoraway.blogspot.com/",
-"http://www.weallwantsomeone.org/",
-"http://www.wakethedeaf.co.uk/",
-"https://poppedmusic.co.uk/",
-"http://www.theneedledrop.com/",
-"http://toomanyblogs.co.uk/",
-"http://www.theautumnroses.com/",
-"http://www.northerntransmissions.com/",
-"http://abductionradiation.tumblr.com/",
-"http://blog.kexp.org/",
-"http://ravechild.co.uk/",
-"http://www.goldflakepaint.co.uk/",
-"https://madmackerel.org/",
-"http://www.imposemagazine.com/",
-"http://www.indieisnotagenre.com/",
-"http://emergingindiebands.com/",
-"http://www.logicfuzzy.com/",
-"http://www.speakerink.com/",
-"http://barrygruff.com/",
-"http://www.therecordstache.com/",
-"http://soulmotionmusic.blogspot.com/",
-"http://jajajamusic.com/",
-"http://whenthegramophonerings.com/",
-"https://www.allthingsgomusic.com/",
-"http://iheartmoosiq.tumblr.com/",
-"http://www.alltomorrowmusic.com/",
-"https://www.thefourohfive.com/",
-"http://eucalyptmusic.com/",
-"http://www.theburningear.com/",
-"http://noondaytune.com/",
-"http://www.soulbounce.com/",
-"http://supportyourlocalghetto.tumblr.com/",
-"http://www.okayplayer.com/",	
-]);
-var iframeLinksIndex = 0;
-if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
-    windowLinks = readCookie('windowlinkscookie').split(',');
-    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
-}else{
-    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
-    document.cookie = 'windowlinksindex=' + windowLinksIndex;
-}
-if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
-    windowLinks = readCookie('framelinkscookie').split(',');
-    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
-}else{
-    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
-    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
-}
-openStuff = function () {
-    var link = windowLinks[windowLinksIndex];
-    windowLinksIndex++;
-    windowLinksIndex %= windowLinks.length;
-    window.open(link);
-};
-// Open in iFrame
-var myFrame = document.getElementById("frame");
-function getRandomUrl(myFrame) {
-    var url = iframeLinks[iframeLinksIndex];
-    iframeLinksIndex++;
-    iframeLinksIndex %= iframeLinks.length;
-    myFrame.src = url;
-}
-var refreshBtn = document.getElementById("btn");
-refreshBtn.addEventListener("click", function() {
-    getRandomUrl(myFrame); 
-});
-window.onload = function(){
-    getRandomUrl(myFrame);
-};
-</script>
   
   <script type="text/javascript">
 	$("#menu-toggle1").click(function(e) {
