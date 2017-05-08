@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <title>Men</title>
+
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <script src="https://use.fontawesome.com/1204df7688.js"></script>
+
+
+    <!-- Custom CSS -->
+   
+    <style>
+        
+                /*!
+         * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
+         * Copyright 2013-2016 Start Bootstrap
+         * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+         */
+         body {
+            overflow-x: hidden;
+            padding-top: 50px;
+         };
+	    a.navbar-brand {
+    text-shadow: none;
+    color: #474747;
+    margin-left: 0px;
+    margin-right: 0px;
+		    padding: 0px;
+	    }
+        /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 617px;
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+	    @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.glyphicon-refresh {
+    fill: #fff;
+    -webkit-animation: animation-button 20000ms infinite;
+    -moz-animation: animation-button 20000ms infinite;
+    -o-animation: animation-button 20000ms infinite;
+    animation: animation-button 20000ms infinite;
+}
+@-webkit-keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+@keyframes animation-button {
+    0%   {color:red; }
+    25%  {color:yellow; }
+    50%  {color:blue; }
+    75%  {color:green; }
+    100% {color:red; }
+}
+
+
+.sidebar1 .sidebar-two {
+	display: none;
+}
+.sidebar2 .sidebar-one {
+	display: none;
+}
+    </style>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-61948197-1', 'auto');
+  ga('send', 'pageview');
+
+
+</script>
+
+
+</head>
+
+
+<body>
+   <!-- <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+        <div>
+            <div class="navbar-header">
+
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+		    
+                <a class="navbar-brand" href="#"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="#"><object data="/favicon.ico" style="width:20px;height:20px;"></object>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+
+
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#">
+                    <span id="btn" class="glyphicon glyphicon-home"></span>
+                </a>
+
+
+			</div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a href="#"><strong>Men</strong></a>
+                        </li>
+                       
+		    </ul>
+		</div>
+	</nav>
+
+
+                  <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Messages </a></li>
+             	<li><a href="#"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Help</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log Out</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>
+        </div>
+    </div>
+</nav>
+-->
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>  
+		<a class="navbar-brand"></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><object data="/favicon.ico" style="width:20px;height:20px;"></object></a>
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#"><span id="btn" class="glyphicon glyphicon-refresh"></span></a>
+</div>
+	    
+	    
+	    <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+			<li class="#"><a><strong>Men</strong></a>
+                        </li>
+                       
+		    </ul>
+		
+	    
+	    
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="#"><span class="fa fa-thumbs-up" aria-hidden="false"></span></a></li>
+		<li><a href="#"><span class="fa fa-thumbs-down" aria-hidden="false"></span></a></li>-->
+            </ul>
+            <!--<form class="navbar-form navbar-right" action="#" method="GET">
+           		<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                  	<div class="input-group-btn">
+                    	<button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                  	</div>
+				</div>
+            </form>-->
+        </div>
+    </div>
+	    </div>
+</nav>
+    <div id="wrapper" class="toggled">
+
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+		    <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+		    </li>
+		  <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+		     <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+		    <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+		     <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+		     <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+		     <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+		     <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+		    <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+		    <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+		    <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+		    <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+		    <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+		    <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+		    <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+		    <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+		    <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+		    <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+		    <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+		    <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+		    <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+		    <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+		    <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+		    <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+		    <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+		    <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+		    <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+		    <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+		    <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+		    
+		    <br>
+		    <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+		     <li><a href="#"><h5 style="color: #d7d7d7">MEN</h5></a>
+		    </li>
+		   <li><a href="http://acquiremag.com/" target="myIframe">Acquire</a>
+                                </li>
+				<li><a href="http://alden-tan.com/" target="myIframe">Alden-tan</a>
+                                </li>
+				<li><a href="http://artofmanliness.com/" target="myIframe">The Art of Manliness</a>
+                                </li>
+				<li><a href="http://articlesofstyle.com" target="myIframe">Articles of Style</a>
+                                </li>
+				<li><a href="http://askmen.com/" target="myIframe">AskMen</a>
+                                </li>
+				<li><a href="http://autoblog.com/" target="myIframe">Autoblog</a>
+                                </li>
+				<li><a href="http://theawesomer.com/" target="myIframe">The Awesomer</a>
+                                </li>
+				<li><a href="http://badassoftheweek.com/" target="myIframe">Badass of the Week</a>
+                                </li>
+				<li><a href="http://blessthisstuff.com/" target="myIframe">Bless This Stuff</a>
+                                </li>
+				<li><a href="http://brobible.com/" target="myIframe">Bro Bible</a>
+                                </li>
+				<li><a href="http://brodojo.net/" target="myIframe">Bro-Dojo</a>
+                                </li>
+				<li><a href="http://bromygod.com/" target="myIframe">Bro My God</a>
+                                </li>
+				<li><a href="http://mademan.com/chickipedia/" target="myIframe">Chickipedia</a>
+                                </li>
+				<li><a href="http://classybro.com" target="myIframe">Classy Bro</a>
+                                </li>
+				<li><a href="http://coolmaterial.com/" target="myIframe">Cool Material</a>
+                                </li>
+				<li><a href="http://dappered.com/" target="myIframe">Dappered</a>
+                                </li>
+				<li><a href="http://uncrate.com/tv/" target="myIframe">Devour</a>
+                                </li>
+				<li><a href="http://thedistilledman.com/" target="myIframe">The Distilled Man</a>
+                                </li>
+				<li><a href="http://doityourself.com/" target="myIframe">Do it Yourself</a>
+                                </li>
+		    		<li><a href="http://dudeiwantthat.com/" target="myIframe">Dude I Want That</a>
+                                </li>
+				<li><a href="http://dudepins.com/" target="myIframe">Dudepins</a>
+                                </li>
+				<li><a href="http://effortlessgent.com/" target="myIframe">Effortless Gent</a>
+                                </li>
+				<li><a href="http://esquire.com/" target="myIframe">Esquire</a>
+                                </li>
+				<li><a href="http://everyguyed.com/" target="myIframe">Everyguyed</a>
+                                </li>
+				<li><a href="http://fashionbeans.com/" target="myIframe">Fashion Beans</a>
+                                </li>
+				<li><a href="http://fearlessmen.com/" target="myIframe">Fearless Men</a>
+                                </li>
+				<li><a href="http://gallivant.com/" target="myIframe">Gallivant</a>
+                                </li>
+				<li><a href="http://gearculture.com/" target="myIframe">Gear Culture</a>
+                                </li>
+				<li><a href="http://gearpatrol.com/" target="myIframe">Gear Patrol</a>
+                                </li>
+				<li><a href="http://goodmenproject.com/" target="myIframe">The Good Men Project</a>
+                                </li>
+				<li><a href="http://gq.com/" target="myIframe">GQ</a>
+                                </li>
+				<li><a href="http://greatestmanblog.com/" target="myIframe">Greatest Man Blog</a>
+                                </li>
+				<li><a href="http://highsnobiety.com/" target="myIframe">Highsnobiety</a>
+                                </li>
+				<li><a href="http://hispotion.com/" target="myIframe">His Potion</a>
+                                </li>
+				<li><a href="http://hodinkee.com/" target="myIframe">Hodinkee</a>
+                                </li>
+				<li><a href="http://huckberry.com/" target="myIframe">Huckberry</a>
+                                </li>
+				<li><a href="http://iamalpham.com/" target="myIframe">I Am Alpha M.</a>
+                                </li>
+				<li><a href="http://instructables.com/" target="myIframe">Instructables</a>
+                                </li>
+				<li><a href="http://ironandtweed.com/" target="myIframe">Iron and Tweed </a>
+                                </li>
+				<li><a href="http://mademan.com/" target="myIframe">Made Man</a>
+                                </li>
+				<li><a href="http://malestandard.com/" target="myIframe">Male Standard</a>
+                                </li>
+				<li><a href="http://mandatory.com/" target="myIframe">Mandatory</a>
+                                </li>
+				<li><a href="http://manhelper.com/" target="myIframe">MANHELPER</a>
+                                </li>
+				<li><a href="http://manmadediy.com/" target="myIframe">Man Made DIY</a>
+                                </li>
+				<li><a href="http://manoftheworld.com/" target="myIframe">Man of the World</a>
+                                </li>
+				<li><a href="http://mantelligence.com/" target="myIframe">Mantelligence</a>
+                                </li>
+				<li><a href="http://manteresting.com/" target="myIframe">Manteresting</a>
+                                </li>
+				<li><a href="http://maxim.com" target="myIframe">Maxim</a>
+                                </li>
+				<li><a href="http://menprovement.com/" target="myIframe">Menprovement</a>
+                                </li>
+				<li><a href="http://mensfitness.com/" target="myIframe">Men's Fitness</a>
+                                </li>
+				<li><a href="http://menshealth.com/" target="myIframe">Men's Health</a>
+                                </li>
+				<li><a href="http://mensjournal.com/" target="myIframe">Men's Journal</a>
+                                </li>
+				<li><a href="http://menslifestyles.com/" target="myIframe">Men's Lifestyles</a>
+                                </li>
+				<li><a href="http://modernman.com/" target="myIframe">Modern Man</a>
+                                </li>
+				<li><a href="http://themodestman.com/" target="myIframe">The Modest Man</a>
+                                </li>
+				<li><a href="http://muscleandfitness.com/" target="myIframe">Muscle &amp; Fitness</a>
+                                </li>
+				<li><a href="http://muted.com/" target="myIframe">Muted</a>
+                                </li>
+				<li><a href="http://mysupremacy.com/" target="myIframe">My Supremacy</a>
+                                </li>
+				<li><a href="http://nextluxury.com/" target="myIframe">Next Luxury</a>
+                                </li>
+				<li><a href="http://orderofman.com/" target="myIframe">Order of Man</a>
+                                </li>
+				<li><a href="http://playboy.com/" target="myIframe">Playboy</a>
+                                </li>
+				<li><a href="http://popularmechanics.com/" target="myIframe">Popular Mechanics</a>
+                                </li>
+				<li><a href="http://porhomme.com/" target="myIframe">Por Homme</a>
+                                </li>
+				<li><a href="http://preferredmagazine.ca/" target="myIframe">Preferred</a>
+                                </li>
+				<li><a href="http://primermagazine.com/" target="myIframe">Primer</a>
+                                </li>
+				<li><a href="http://radass.com/" target="myIframe">Radass</a>
+                                </li>
+				<li><a href="http://realmenrealstyle.com/" target="myIframe">Real Men Real Style</a>
+                                </li>
+				<li><a href="http://sharpmagazine.com/" target="myIframe">Sharp</a>
+                                </li>
+				<li><a href="http://spotmebro.com/" target="myIframe">Spot Me Bro</a>
+                                </li>
+				<li><a href="http://stuff.tv/" target="myIframe">Stuff</a>
+                                </li>
+				<li><a href="http://stylegirlfriend.com/" target="myIframe">Style Girlfriend</a>
+                                </li>
+				<li><a href="http://thrillist.com/supercompressor" target="myIframe">Supercompressor</a>
+                                </li>
+				<li><a href="http://t3.com/" target="myIframe">T3</a>
+                                </li>
+				<li><a href="http://urbandaddy.com/" target="myIframe">UrbanDaddy</a>
+                                </li>
+				<li><a href="http://urbasm.com/" target="myIframe">Urbasm</a>
+                                </li>
+				<li><a href="http://valetmag.com/" target="myIframe">Valet</a>
+                                </li>
+				<li><a href="http://webmd.com/men/default.htm" target="myIframe">WebMD Men's Health</a>
+                                </li>
+				<li><a href="http://werd.com/" target="myIframe">Werd</a>
+                                </li>
+				<li><a href="http://wrgmag.com/" target="myIframe">WRG</a>
+                                </li>
+
+
+
+              
+		    <br>
+		    <br>
+               <br>
+		   
+            </ul>
+        </div>
+
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+
+                <iframe id="frame" name="myIframe" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
+
+
+            </div>
+        <!-- /#page-content-wrapper -->
+
+
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+  <script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+
+
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"http://www.manmadediy.com/",
+      "http://www.menshealth.com/",
+         "http://www.manoftheworld.com/",
+"http://www.primermagazine.com/",
+	"http://www.classybro.com",
+      "http://www.stylegirlfriend.com/",
+      "http://www.blessthisstuff.com/",
+      "http://www.menprovement.com/",
+      "http://www.orderofman.com/",
+      "http://www.maxim.com",
+      "http://coolmaterial.com/",
+      "http://www.playboy.com/",
+      "http://www.bromygod.com/",
+	"http://www.articlesofstyle.com",
+      "http://www.manhelper.com/",
+"https://www.thrillist.com/supercompressor",
+      "http://menslifestyles.com/",
+      "https://goodmenproject.com/",
+      "http://www.askmen.com/",
+      "http://www.mademan.com/chickipedia/",
+      "http://www.mademan.com/",
+      "http://www.hispotion.com/",
+      "http://uncrate.com/tv/",
+      "https://www.iamalpham.com/",
+      "http://wrgmag.com/",
+      "http://www.gearculture.com/",
+      "http://preferredmagazine.ca/",
+      "http://www.radass.com/",
+      "http://www.artofmanliness.com/",
+      "http://everyguyed.com/",
+      "http://www.mantelligence.com/",
+      "http://gearpatrol.com/",
+      "http://greatestmanblog.com/",
+      "http://www.thedistilledman.com/",
+      "http://www.dudepins.com/",
+      "http://ironandtweed.com/",
+      "https://www.malestandard.com/",
+      "http://www.mysupremacy.com/",
+      "http://fearlessmen.com/",
+      "http://brodojo.net/",
+      "http://www.valetmag.com/",
+      "http://www.popularmechanics.com/",
+      "http://alden-tan.com/",
+      "http://www.doityourself.com/",
+      "http://www.badassoftheweek.com/",
+      "http://www.mandatory.com/",
+      "http://www.mensjournal.com/",
+      "http://manteresting.com/",
+      "http://www.t3.com/",
+      "http://effortlessgent.com/",
+      "http://brobible.com/",
+      "http://www.urbandaddy.com/",
+      "http://www.esquire.com/",
+      "http://www.mensfitness.com/",
+      "http://www.modernman.com/",
+      "http://porhomme.com/",
+      "http://www.themodestman.com/",
+     "http://www.webmd.com/men/default.htm",
+      "https://dappered.com/",
+	"http://www.dudeiwantthat.com",
+      "http://www.acquiremag.com/",
+      "http://spotmebro.com/",
+      "http://theawesomer.com/",
+      "http://www.realmenrealstyle.com/",
+      "http://www.gq.com/",
+      "http://www.urbasm.com/",
+      "http://nextluxury.com/",
+      "http://www.highsnobiety.com/",
+      "http://sharpmagazine.com/",
+      "http://gallivant.com/",
+      "http://www.werd.com/",
+      "http://www.autoblog.com/",
+      "http://muted.com/",
+      "http://www.instructables.com/",
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+  
+  <script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>	
+
+
+
+
+</body>
+</html>
+
+
+
