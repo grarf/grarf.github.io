@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Spanish</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+        }
+         .scrollable-menu {
+    height: auto;
+    max-height: 500px;
+    overflow-x: hidden;
+}
+
+    </style>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+   
+    
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      
+      uncooperative links:      "http://www.bloomberg.com/",
+                                "https://news.google.com/",
+
+
+    <![endif]-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81679041-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+    
+</head>
+<body>
+  <!-- Wrap all page content here -->
+    <div id="wrap">
+        <iframe id="frame" style="position: absolute; height: 100%; width: 100%; frameBorder: 0;" src=""></iframe>
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+    <a class="navbar-brand" href="/index.html" style="color: #EBEBEB">
+<span style="color:#E8E8E8" class="glyphicon glyphicon-home"></span>
+</a>
+<!--
+<a class="navbar-brand" href="#"  onclick="openStuff();">
+<span style="color:#CCCCCC" class="glyphicon glyphicon-new-window"></span>
+</a>-->
+                    <a class="navbar-brand" href="#">
+    <span id="btn" class="glyphicon glyphicon-random"></span>
+    </a>
+
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="#"><a href="/spanish-beginner.html"><strong>Beginner</strong></a>
+                        </li>
+                        <li><a href="/spanish-intermediate.html">Intermediate</a>
+                        </li>
+                        <li><a href="/spanish-advanced.html">Advanced</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/.nav-collapse -->
+    
+            </div>
+        </div>
+    <!-- /.container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript">
+   
+ // PopOut links
+var links = [
+       
+    ];
+
+openStuff = function () {
+    // get a random number between 0 and the number of links
+    var randIdx = Math.random() * links.length;
+    // round it, so it can be used as array index
+    randIdx = parseInt(randIdx, 10);
+    // construct the link to be opened
+     var link = links[randIdx];
+    // open it in a new window
+    window.open(link);
+};
+
+
+        var cat1 = [
+
+         "http://www.wordreference.com/es/en/translation.asp?spen=contrariar",
+        "http://es.euronews.com/2017/06/05/trump-critica-al-alcalde-de-londres-tras-el-ataque-terrorista", 
+        
+        ];
+        
+        var myFrame = document.getElementById("frame");
+        function getRandomUrl(myFrame) {
+           var index = Math.floor(Math.random()*cat1.length);
+           var url = cat1[index];
+           myFrame.src = url;
+        }
+        var refreshBtn = document.getElementById("btn");
+        refreshBtn.addEventListener("click", function() {
+            
+           getRandomUrl(myFrame); 
+            
+        });
+        
+    window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+        
+
+
+</body>
+</html>
