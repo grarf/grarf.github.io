@@ -7,9 +7,23 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.css" rel="stylesheet">
 	
+	
+	
 <title>Test</title>
 
     	<style>
+		/* Large desktop */
+@media (min-width: 1200px) { ... }
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { ... }
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) { ... }
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) { ... }
+		
 	</style>
 
    
@@ -27,8 +41,25 @@
 </head>
 
 <body>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+  		<div class="span12">
+    		Fluid 12
+    	<div class="row-fluid">
+      		<div class="span6">
+        	Fluid 6
+        <div class="row-fluid">
+          	<div class="span6">Fluid 6</div>
+          	<div class="span6">Fluid 6</div>
+        </div>
+      	</div>
+      	<div class="span6">Fluid 6</div>
+    	</div>
+  	</div>
+</div>
+	
+	</div>
  
-	
-	
 </body>
 </html>
