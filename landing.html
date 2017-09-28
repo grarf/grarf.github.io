@@ -11,10 +11,51 @@
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
-  body{
-background: #ec008c;  /* fallback for old browsers */
+  
+body {
+  -webkit-animation: background 500s cubic-bezier(1,0,0,1) infinite;
+  animation: background 500s cubic-bezier(1,0,0,1) infinite;  
+  transition: background 4s;
+}
+
+
+@-webkit-keyframes background {
+  0% { background: #ec008c;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+  33% { background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }  
+  67% { background: #EECDA3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+  100% { background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+}
+
+@keyframes background {
+  0% { background: #ec008c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+  33% { background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }  
+  67% { background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+  100% { background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
   };
   body
 {
@@ -55,11 +96,8 @@ background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, F
 <div class="bootstrap-demo">
  <div class="btn-group">
  
-   <button type="button" class="btn"style="background-color: white; color: black">&nbsp;&nbsp;&nbsp;&nbsp;Test Drive&nbsp;&nbsp;&nbsp;&nbsp; </button>
-      <button type="button" class="btn dropdown-toggle" style="background-color: background: #00d2ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #928DAB, #00d2ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-" data-toggle="dropdown">&nbsp;
+   <button type="button" class="btn"style="background-color: #da344d; color: white">&nbsp;&nbsp;&nbsp;&nbsp;Sample playlists&nbsp;&nbsp;&nbsp;&nbsp; </button>
+      <button type="button" class="btn dropdown-toggle" style="background-color: white" data-toggle="dropdown">&nbsp;
         <span class="">Sports</span>  <!-- caret -->
         &nbsp;|&nbsp;
         <span class="">News</span>
@@ -86,7 +124,7 @@ background: linear-gradient(to right, #928DAB, #00d2ff); /* W3C, IE 10+/ Edge, F
 <br>
 <br>
 These are the controls
-
+  
 </div>
 </div>
   
