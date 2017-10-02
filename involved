@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chopping Onions</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+<style>
+* {
+    box-sizing: border-box;
+}
+.header {
+    border: 0px solid;
+    padding: 15px;
+}
+.side {
+    width: 70%;
+    float: left;
+    padding: 15px;
+    border: 0px solid ;
+}
+.main {
+    width: 30%;
+    float: left;
+    padding: 15px;
+    border: px solid ;
+}
+      h3 {
+        font-family: 'Arvo', serif;
+      };
+     
+      
+</style>
+</head>
+<body>
+
+<div class="header">
+<center>
+  <img src="/Design.png"
+  </center>
+</div>
+
+<div class="side">
+  <ul>
+  <h3><a href="http://www.foxsports.com/college-football/video/1058261059694" target="_blank" style="text-decoration: none; color:#7d387d">70,000 football fans and a wave</a></h3>
+<a href="https://uichildrens.org/ways-give" target="_blank" style="text-decoration: none;"><font style="color:#696969">University of Iowa Children's Hospital</font></a>
+<br />
+<img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/grayonion.png">
+<br>
+<br>
+<br>
+</p>
+  </ul>
+
+  <ul>
+  <p>
+<h3><a href="http://www.espn.com" target="_blank" style="text-decoration:none; color: #ff495c">Soldier surprises father at office<a/></h3>
+<font style="color:#696969">TroopsHome</font>
+<br />
+<img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/grayonion.png"><img src="http://grarf.github.io/grayonion.png">
+<br>
+<br>
+<br>
+</p>
+</ul>
+
+ <ul>
+   <p>
+<h3><a href="http://www.espn.com" target="_blank" style="text-decoration:none; color: #56798c">And the jets win it<a/></h3>
+<font style="color:#696969">TakeOver</font>
+<br />
+<img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/onion.png"><img src="http://grarf.github.io/grayonion.png"><img src="http://grarf.github.io/grayonion.png">
+<br>
+<br>
+<br>
+</p>
+ </ul>
+  
+  
+  
+  
+</div>
+
+<div class="main">
+  <h1>The City</h1>
+  <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+  <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+
+</body>
+</html>
