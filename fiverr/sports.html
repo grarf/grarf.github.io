@@ -104,7 +104,12 @@ function shuffle(array) {
 }
 // Open in new Window
 var windowLinks = shuffle([
-    	"http://www.bbc.com/sport",
+    	
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	"http://www.bbc.com/sport",
         "http://www.foxsports.com/",
 "http://www.bleacherreport.com/",
 "http://www.sportingnews.com/",
@@ -113,11 +118,6 @@ var windowLinks = shuffle([
         "http://espn.go.com/",
         "http://www.usatoday.com/sports/",
         "http://www.huffingtonpost.com/sports/",
-]);
-var windowLinksIndex = 0;
-// iFrame links
-var iframeLinks = shuffle([
-	
 ]);
 var iframeLinksIndex = 0;
 if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
