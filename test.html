@@ -9,13 +9,25 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>News</title>
+    <title>testing</title>
 
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Custom CSS -->
    
     <style>
+	    .element	{ 
+		position:fixed; 
+		bottom:0%; 
+		left:0%; 
+    width: 180px;
+    height: 50px;
+    background-color: white;
+		 padding: 10px;
+		text-align: center;
+		opacity: 0.85;
+	
+	};
         
                 /*!
          * Start Bootstrap - Simple Sidebar (http://startbootstrap.com/)
@@ -132,7 +144,7 @@
                 margin-right: 0;
             }
         }
-        #page-content-wrapper embed{
+        #page-content-wrapper iframe{
             position: absolute;
             top: 0;
             left: 0;
@@ -233,217 +245,16 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+   <div class="element">
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-plus"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-thumbs-down"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-th-large"></span></a>&nbsp;&nbsp;
+	<a href="#menu-toggle2" id="menu-toggle2" style="color: #2E2E2E"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp;
+	<a href="#menu-toggle1" id="menu-toggle1" style="color: #2E2E2E"><span class="glyphicon glyphicon-triangle-left"  onclick="goBack()"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span id="btn" class="glyphicon glyphicon-triangle-right"></span></a>
+		</div>  
+            
 		    
-                <a class="navbar-brand"></a>
-                <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><object data="/favicon.ico" style="width:20px;height:20px;"></object></a>
-                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
-                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
-                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#"><span id="btn" class="glyphicon glyphicon-refresh"></span></a>
-               
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-			<li class="#"><a><strong>Front Page</strong></a>
-                        </li>
-                        <!--<li class="dropdown">
-                            <a href="/newspaper-us.html" class="dropdown-toggle" data-toggle="dropdown"><strong>U.S. </strong><b class="caret"></b></a>
-                            <ul class="dropdown-menu scrollable-menu">
-                            <li><a href="/newspaper-us-alabama.html">Alabama</a>
-                            </li>
-                            <li><a href="/newspaper-us-alaska.html">Alaska</a>
-                            </li>
-                            <li><a href="/newspaper-us-arizona.html">Arizona</a>
-                            </li>
-                            <li><a href="/newspaper-us-arkansas.html">Arkansas</a>
-                            </li>
-                            <li><a href="/newspaper-us-california.html">California</a>
-                            </li>
-                            <li><a href="/newspaper-us-colorado.html">Colorado</a>
-                            </li>
-                            <li><a href="/newspaper-us-connecticut.html">Connecticut</a>
-                            </li>
-                            <li><a href="/newspaper-us-delaware.html">Delaware</a>
-                            </li>
-                            <li><a href="/newspaper-us-florida.html">Florida</a>
-                            </li>
-                            <li><a href="/newspaper-us-georgia.html">Georgia</a>
-                            </li>
-                            <li><a href="/newspaper-us-hawaii.html">Hawaii</a>
-                            </li>
-                            <li><a href="/newspaper-us-idaho.html">Idaho</a>
-                            </li>
-                            <li><a href="/newspaper-us-illinois.html">Illinois</a>
-                            </li>
-                            <li><a href="/newspaper-us-indiana.html">Indiana</a>
-                            </li>
-                            <li><a href="/newspaper-us-iowa.html">Iowa</a>
-                            </li>
-                            <li><a href="/newspaper-us-kansas.html">Kansas</a>
-                            </li>
-                            <li><a href="/newspaper-us-kentucky.html">Kentucky</a>
-                            </li>
-                            <li><a href="/newspaper-us-louisiana.html">Louisiana</a>
-                            </li>
-                            <li><a href="/newspaper-us-maine.html">Maine</a>
-                            </li>
-                            <li><a href="/newspaper-us-maryland.html">Maryland</a>
-                            </li>
-                            <li><a href="/newspaper-us-massachusetts.html">Massachusetts</a>
-                            </li>
-                            <li><a href="/newspaper-us-michigan.html">Michigan</a>
-                            </li>
-                            <li><a href="/newspaper-us-minnesota.html">Minnesota</a>
-                            </li>
-                            <li><a href="/newspaper-us-mississippi.html">Mississippi</a>
-                            </li>
-                            <li><a href="/newspaper-us-missouri.html">Missouri</a>
-                            </li>
-                            <li><a href="/newspaper-us-montana.html">Montana</a>
-                            </li>
-                            <li><a href="/newspaper-us-nebraska.html">Nebraska</a>
-                            </li>
-                            <li><a href="/newspaper-us-nevada.html">Nevada</a>
-                            </li>
-                            <li><a href="/newspaper-us-new-hampshire.html">New Hampshire</a>
-                            </li>
-                            <li><a href="/newspaper-us-new-jersey.html">New Jersey</a>
-                            </li>
-                            <li><a href="/newspaper-us-new-mexico.html">New Mexico</a>
-                            </li>
-                            <li><a href="/newspaper-us-new-york.html">New York</a>
-                            </li>
-                            <li><a href="/newspaper-us-north-carolina.html">North Carolina</a>
-                            </li>
-                            <li><a href="/newspaper-us-north-dakota.html">North Dakota</a>
-                            </li>
-                            <li><a href="/newspaper-us-ohio.html">Ohio</a>
-                            </li>
-                            <li><a href="/newspaper-us-oklahoma.html">Oklahoma</a>
-                            </li>
-                            <li><a href="/newspaper-us-oregon.html">Oregon</a>
-                            </li>
-                            <li><a href="/newspaper-us-pennsylvania.html">Pennsylvania</a>
-                            </li>
-                            <li><a href="/newspaper-us-rhode-island.html">Rhode Island</a>
-                            </li>
-                            <li><a href="/newspaper-us-south-carolina.html">South Carolina</a>
-                            </li>
-                            <li><a href="/newspaper-us-south-dakota.html">South Dakota</a>
-                            </li>
-                            <li><a href="/newspaper-us-tennessee.html">Tennessee</a>
-                            </li>
-                            <li><a href="/newspaper-us-texas.html">Texas</a>
-                            </li>
-                            <li><a href="/newspaper-us-utah.html">Utah</a>
-                            </li>
-                            <li><a href="/newspaper-us-vermont.html">Vermont</a>
-                            </li>
-                            <li><a href="/newspaper-us-virginia.html">Virginia</a>
-                            </li>
-                            <li><a href="/newspaper-us-washington.html">Washington</a>
-                            </li>
-                            <li><a href="/newspaper-us-west-virginia.html">West Virginia</a>
-                            </li>
-                            <li><a href="/newspaper-us-wisconsin.html">Wisconsin</a>
-                            </li>
-                            <li><a href="/newspaper-us-wyoming.html">Wyoming</a>
-                            </li>
-                            </ul>
-                        </li>
-                        -->
-                        <li class="#"><a href="/newspaper-us.html">U.S.</a>
-                        </li>
-                        <li class="#"><a href="/newspaper-world.html">World</a>
-                        </li>
-                    <!--
-                        <li><a href="/newspaper-metro.html">Metro</a>
-                        </li>-->
-                        
-                        <li><a href="/newspaper-sports.html">Sports</a>
-                        </li>
-                        
-                         <li><a href="/newspaper-economy.html">Economy</a>
-                        </li>
-			
-                       <!--
-                        <li><a href="/newspaper-entertainment.html">Entertainment</a>
-                        </li>
-                        <li><a href="/newspaper-opinion.html">Opinion</a>
-                        </li>
-                    
-                        <li><a href="/newspaper-politics.html">Politics</a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">More <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="/newspaper-travel.html">Travel</a>
-                                </li>
-                                <li><a href="/newspaper-arts.html">Arts</a>
-                                </li>
-                                <li><a href="/newspaper-tech.html">Tech</a>
-                                </li>
-                                <li><a href="/newspaper-food.html">Food</a>
-                                </li>
-                                <li><a href="/newspaper-science.html">Science</a>
-                                </li>
-                                <li><a href="/newspaper-health.html">Health</a>
-                                </li>
-                                <li><a href="/newspaper-fashion.html">Fashion</a>
-                                </li>
-                                <li><a href="/newspaper-living.html">Living</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="/newspaper-comics.html">Comics</a>
-                                </li>
-                                <li><a href="/newspaper-crossword.html">Crossword</a>
-                                </li>
-                                <li><a href="/newspaper-jobs.html">Jobs</a>
-                                </li>
-                                <li><a href="/newspaper-classifieds.html">Classifieds</a>
-                                </li>
-                                <li><a href="/newspaper-obituaries.html">Obituaries</a>
-                                </li>
-                                <li><a href="/newspaper-realestate.html">Real Estate</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="/newspaper-magazine.html">Magazine</a>
-                                </li>
-                                <li><a href="/newspaper-independentjournalism.html">Independent Journalism</a>
-                                </li>
-                           
-                            </ul>
-			</li>-->
-		    </ul>
-		</div>
-
-            <!--<div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-thumbs-up" aria-hidden="false"></span></a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-thumbs-down" aria-hidden="false"></span></a></li>
-        </ul>
-        </div>
-            <form class="navbar-form navbar-right" action="#" method="GET">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
-                    <div class="input-group-btn">
-                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
-                    </div>
-                </div>
-            </form>
--->
-        </div>
-
-    </nav>
     <div id="wrapper" class="toggled">
 
         <!-- Sidebar 1 -->
@@ -678,7 +489,7 @@
         <!-- Page Content -->
         <div id="page-content-wrapper">
 
-                <embed id="frame" name="myIframe" sandbox="allow-same-origin allow-scripts allow-forms" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></embed>
+                <iframe id="frame" name="myIframe" sandbox="allow-same-origin allow-scripts allow-forms" style="position: absolute; height: 100%; width: 100%;border: none;overflow:hidden;" src=""></iframe>
 
             </div>
         <!-- /#page-content-wrapper -->
@@ -721,11 +532,58 @@ var windowLinks = shuffle([
 var windowLinksIndex = 0;
 // iFrame links
 var iframeLinks = shuffle([
-	
+	 "http://www.thetimes.co.uk/",
+        "http://www.economist.com/",
         "http://abcnews.go.com/",
+        "http://www.theepochtimes.com/",
+        "http://www.pri.org/",
+        "http://www.cbsnews.com/",
+        "http://www.bbc.com/news",
+        "http://www.nydailynews.com/",
+        "http://nypost.com/news/",
+        "http://www.huffingtonpost.com/",
+        "https://www.washingtonpost.com/",
+        "http://qz.com/",
+        "http://theweek.com/",
+        "http://fortune.com/",
+        "http://www.dailydot.com/",
+        "http://townhall.com/",
+        "http://www.fark.com/",
+        "http://www.alternet.org/",
+   	 "http://www.irishtimes.com/",
+        "http://www.breitbart.com/",
+        "http://www.newsvine.com/",
+        "http://www.newsmax.com/",
+        "http://www.upi.com/",
+        "http://www.pbs.org/newshour/",
+        "http://www.wsj.com/",
+        "http://usatoday.com",
+        "http://www.newser.com/",
+        "http://www.drudgereport.com/",
+        "http://www.dw.com/",
+        "http://www.chinadaily.com.cn/",
+        "http://www.mercurynews.com/",
+        "http://www.voanews.com/",
+        "http://news.sky.com/",
+        "http://www.nationalpost.com/index.html",
+        "http://www.rawstory.com/",
+        "http://www.france24.com/en/",
+        "http://www.csmonitor.com/",
+        "http://thehill.com/",
+        "http://latimes.com",
+        "http://observer.com/",
+        "http://www.usnews.com/",
+        "http://www.cbc.ca/news",
+        "http://www.npr.org/",       
+        "http://www.cnn.com/",
+        "http://www.aljazeera.com/news/",
+	"http://en.people.cn/",
         "http://wn.com/",
+        "http://www.arcamax.com/",
         "http://www.reuters.com/",
         "http://www.nbcnews.com/",
+	"http://www.belfasttelegraph.co.uk",
+	"http://www.ibtimes.com/business",
 ]);
 var iframeLinksIndex = 0;
 if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
