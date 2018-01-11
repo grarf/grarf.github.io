@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>fixed</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">  
+
+	<style> 
+		
+	.element	{ 
+		position:fixed;  
+		position: absolute;
+
+  bottom: 0;
+  left: 0;
+    width: 250px;
+    height: 50px;
+    background-color: white;
+		 padding: 14px;
+		text-align: center;
+		opacity: 0.85;
+	
+	};
+	
+	
+.center {
+	border-radius: 100px;
+    width: 320px;
+    height: 440px;
+    background-color: white;
+    box-shadow: 0 0 1em #888888;
+   
+    position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+};
+	body
+	{
+		background: #642B73;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	};
+</style>
+</head>
+
+	<body>
+		<!--
+<body background="http://grarf.github.io/fiverr/crimsontide.jpg" style="background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center; max-height: 100%; max-width: 100%; overflow: hidden">
+-->
+
+
+		
+<div id="page-content-wrapper">
+   <iframe id="frame" name="myIframe" sandbox="allow-same-origin allow-scripts allow-forms" style="position: absolute; height: 100%; width: 100%; border: none; overflow:hidden;" src=""></iframe>
+
+<div class="element">
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-plus"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-thumbs-up"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-thumbs-down"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-th-large"></span></a>&nbsp;&nbsp;
+	<a href="#menu-toggle2" id="menu-toggle2" style="color: #2E2E2E"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-triangle-left"  onclick="goBack()"></span></a>&nbsp;&nbsp;
+	<a href="#" style="color: #2E2E2E"><span id="btn" class="glyphicon glyphicon-triangle-right"></span></a>
+		</div>
+	
+	
+
+
+            </div>
+
+	 <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+       <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript">
+// cookie value geetter
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+// Knuth array shuffle
+function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {
+	randomIndex = Math.floor(Math.random() * currentIndex);
+	currentIndex -= 1;
+	temporaryValue = array[currentIndex];
+	array[currentIndex] = array[randomIndex];
+	array[randomIndex] = temporaryValue;
+    }
+    return array;
+}
+// Open in new Window
+var windowLinks = shuffle([
+    "https://www.dailyworth.com/",
+]);
+var windowLinksIndex = 0;
+// iFrame links
+var iframeLinks = shuffle([
+	 "http://www.gorillavsbear.net",
+   "http://www.pitchfork.com",
+   "http://www.stereogum.com",
+   "http://www.residentadvisor.net",
+   "http://www.fakeshoredrive.com",
+   "http://www.edmsauce.com",
+   
+]);
+var iframeLinksIndex = 0;
+if(!!readCookie('windowlinkscookie')&&!!readCookie('windowlinkscookieindex')){
+    windowLinks = readCookie('windowlinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('windowlinkscookieindex'));
+}else{
+    document.cookie = 'windowlinkscookie=' + windowLinks.join(',');
+    document.cookie = 'windowlinksindex=' + windowLinksIndex;
+}
+if(!!readCookie('framelinkscookie')&&!!readCookie('framelinkscookieindex')){
+    windowLinks = readCookie('framelinkscookie').split(',');
+    windowLinksIndex = parseInt(readCookie('framelinkscookieindex'));
+}else{
+    document.cookie = 'framelinkscookie=' + windowLinks.join(',');
+    document.cookie = 'framelinkscookieindex=' + windowLinksIndex;
+}
+openStuff = function () {
+    var link = windowLinks[windowLinksIndex];
+    windowLinksIndex++;
+    windowLinksIndex %= windowLinks.length;
+    window.open(link);
+};
+// Open in iFrame
+var myFrame = document.getElementById("frame");
+function getRandomUrl(myFrame) {
+    var url = iframeLinks[iframeLinksIndex];
+    iframeLinksIndex++;
+    iframeLinksIndex %= iframeLinks.length;
+    myFrame.src = url;
+}
+var refreshBtn = document.getElementById("btn");
+refreshBtn.addEventListener("click", function() {
+    getRandomUrl(myFrame); 
+});
+window.onload = function(){
+    getRandomUrl(myFrame);
+};
+</script>
+	<script type="text/javascript">
+	$("#menu-toggle1").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+		$("#wrapper").addClass("sidebar1");
+		$("#wrapper").removeClass("sidebar2");
+    });
+	$("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        $("#wrapper").addClass("sidebar2");
+        $("#wrapper").removeClass("sidebar1");
+    });
+	</script>
+		
+		<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+		
+</body>
+</html>
