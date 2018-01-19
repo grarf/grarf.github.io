@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,6 @@
 	.element	{ 
 		position:fixed;  
 		position: absolute;
-
   bottom: 0;
   left: 0;
     width: 250px;
@@ -40,7 +40,6 @@
   right: 0;
   bottom: 0;
   left: 0;
-
 };
 	body
 	{
@@ -48,6 +47,166 @@
 background: -webkit-linear-gradient(to top, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	};
+
+	 /* Toggle Styles */
+        #wrapper {
+            padding-left: 0;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+        #wrapper.toggled {
+            padding-left: 250px;
+        }
+        .navbar-default{width: 250px;opacity: 0.85; border: none;}
+        #sidebar-wrapper {
+            z-index: 1000;
+            position: fixed;
+            left: 250px;
+            width: 0;
+            height: 100%;
+            color: #000;
+            margin-left: -250px;
+            overflow-y: auto;
+            background: #fff;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            top:0px;
+                overflow-x: hidden;
+        }
+        #wrapper.toggled #sidebar-wrapper {
+            width: 250px;
+        }
+        #page-content-wrapper {
+            width: 100%;
+            position: absolute;
+            padding: 15px;
+        }
+        #wrapper.toggled #page-content-wrapper {
+            position: absolute;
+            margin-right: -250px;
+        }
+        /* Sidebar Styles */
+        .sidebar-nav {
+            position: absolute;
+            top: 0;
+            width: 250px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .sidebar-nav li {
+            text-indent: 20px;
+            line-height: 40px;
+        }
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #777777;
+        }
+        .sidebar-nav li a:hover {
+            text-decoration: none;
+            color: #323232;
+            background: rgba(255,255,255,0.2);
+        }
+        .sidebar-nav li a:active,
+        .sidebar-nav li a:focus {
+            text-decoration: none;
+        }
+        .sidebar-nav > .sidebar-brand {
+            height: 65px;
+            font-size: 18px;
+            line-height: 60px;
+        }
+        .sidebar-nav > .sidebar-brand a {
+            color: #999999;
+        }
+        .sidebar-nav > .sidebar-brand a:hover {
+            color: #fff;
+            background: none;
+        }
+        @media(min-width:768px) {
+            #wrapper {
+                padding-left: 250px;
+            }
+            #wrapper.toggled {
+                padding-left: 0;
+            }
+            #sidebar-wrapper {
+                width: 250px;
+            }
+            #wrapper.toggled #sidebar-wrapper {
+                width: 0;
+            }
+            #page-content-wrapper {
+                padding: 20px;
+                position: relative;
+            }
+            #wrapper.toggled #page-content-wrapper {
+                position: relative;
+                margin-right: 0;
+            }
+        }
+        #page-content-wrapper iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100% !important;
+            height: 100% !important;
+            min-height: 100vh;  
+        }
+        @-webkit-keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+    @keyframes animation-button {
+        0% {
+            color: red;
+        }
+        
+        25% {
+            color: yellow;
+        }
+        
+        50% {
+            color: blue;
+        }
+        
+        75% {
+            color: green;
+        }
+        
+        100% {
+            color: red;
+        }
+    }
+        @import url('http://getbootstrap.com/dist/css/bootstrap.css');
+.sidebar1 .sidebar-two {
+    display: none;
+}
+.sidebar2 .sidebar-one {
+    display: none;
+}
 </style>
 </head>
 
@@ -58,23 +217,269 @@ background: linear-gradient(to top, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Fir
 
 
 		
-<div id="page-content-wrapper">
+
+
+            <nav class="navbar navbar-default navbar-fixed-bottom" style="background-color:#ffffff;bottom-border: 0px #ffffff;" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand"></a>
+         <a class="navbar-brand" data-toggle="tooltip" title="GRARF" href="/index.html"><object data="" style="width:20px;height:20px"></object></a>
+
+ 
+                <a class="navbar-brand" href="#menu-toggle1" id="menu-toggle1"><span class="glyphicon glyphicon-th" data-toggle="tooltip" title="Playlists"></span></a>
+                <a class="navbar-brand" href="#menu-toggle2" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" data-toggle="tooltip" title="Sites"></span></a>
+                <a class="navbar-brand" data-toggle="tooltip" title="Load new site" href="#"><span id="btn" class="glyphicon glyphicon-refresh" style="color: white"></span></a>
+</div>
+        
+        
+        <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+            <li class="#"><a><strong></strong></a>
+                        </li>
+                       
+            </ul>
+        
+        
+        
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <!--<li><a href="#"><span class="fa fa-thumbs-up" aria-hidden="false"></span></a></li>
+        <li><a href="#"><span class="fa fa-thumbs-down" aria-hidden="false"></span></a></li>-->
+            </ul>
+            <!--<form class="navbar-form navbar-right" action="#" method="GET">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." id="query" name="search" value="">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </form>-->
+        </div>
+    </div>
+        </div>
+</nav>
+
+            <div id="wrapper" class="toggled">
+
+
+        <!-- Sidebar 1 -->
+        <div id="sidebar-wrapper" class="sidebar-one">
+            <ul class="sidebar-nav"><br>
+            <li><a href="#"><h5 style="color: #d7d7d7">PLAYLISTS</h5></a>
+            </li>
+          <li><a href="/celebrity.html"><h4><strong>Celebrity</strong></h4></a>
+                                </li>
+             <li><a href="/cooking.html"><h4><strong>Cooking</strong></h4></a>
+                                </li>
+            <li><a href="/design.html"><h4><strong>Design</strong></h4></a>
+                                </li>
+             <li><a href="/dictionary.html"><h4><strong>Dictionary</strong></h4></a>
+                                </li>
+             <li><a href="/entrepreneurship.html"><h4><strong>Entrepreneurship</strong></h4></a>
+                                </li>
+             <li><a href="/fitness.html"><h4><strong>Fitness</strong></h4></a>
+                                </li>
+             <li><a href="/gaming.html"><h4><strong>Gaming</strong></h4></a>
+                                </li>
+            <li><a href="/home.html"><h4><strong>Home Design</strong></h4></a>
+                                </li>
+            <li><a href="/intelligentsia.html"><h4><strong>Intelligentsia</strong></h4></a>
+                                </li>
+            <li><a href="/kids.html"><h4><strong>Kids</strong></h4></a>
+                                </li>
+            <li><a href="/literature.html"><h4><strong>Literature</strong></h4></a>
+                                </li>
+            <li><a href="/men.html"><h4><strong>Men</strong></h4></a>
+                                </li>
+            <li><a href="/music.html"><h4><strong>Music</strong></h4></a>
+                                </li>
+            <li><a href="/newspaper.html"><h4><strong>News</strong></h4></a>
+                                </li>
+            <li><a href="/games.html"><h4><strong>Online Games</strong></h4></a>
+                                </li>
+            <li><a href="/parents.html"><h4><strong>Parents</strong></h4></a>
+                                </li>
+            <li><a href="/self-help.html"><h4><strong>Personal Development</strong></h4></a>
+                                </li>
+            <li><a href="/politics.html"><h4><strong>Politics</strong></h4></a>
+                                </li>
+            <li><a href="/realestate.html"><h4><strong>Real Estate</strong></h4></a>
+                                </li>
+            <li><a href="/science.html"><h4><strong>Science</strong></h4></a>
+                                </li>
+            <li><a href="/mens-style-shops.html"><h4><strong>Shop Men's Style</strong></h4></a>
+                                </li>
+            <li><a href="/style.html"><h4><strong>Shop Women's Style</strong></h4></a>
+                                </li>
+            <li><a href="/sports.html"><h4><strong>Sports</strong></h4></a>
+                                </li>
+            <li><a href="/tech.html"><h4><strong>Tech</strong></h4></a>
+                                </li>
+            <li><a href="/travel.html"><h4><strong>Travel</strong></h4></a>
+                                </li>
+            <li><a href="/viral.html"><h4><strong>Viral</strong></h4></a>
+                                </li>
+            <li><a href="/wedding.html"><h4><strong>Wedding</strong></h4></a>
+                                </li>
+            <li><a href="/women.html"><h4><strong>Women</strong></h4></a>
+                                </li>
+            <li><a href="/womens-fashion.html"><h4><strong>Women's Fashion</strong></h4></a>
+                                </li>
+            
+            <br>
+            <br>
+               <br>
+            </ul>
+        </div>
+        <!-- Sidebar 2 -->
+        <div id="sidebar-wrapper" class="sidebar-two">
+            <ul class="sidebar-nav"><br>
+             <li><a href="#"><h5 style="color: #d7d7d7">VIRAL</h5></a>
+            </li>
+            
+           <li><a href="http://twentytwowords.com/" target="myIframe">22 Words</a>
+        </li>
+                <li><a href="http://4chan.org/" target="myIframe">4chan</a>
+        </li>
+                <li><a href="http://9gag.com/" target="myIframe">9GAG</a>
+        </li>
+                <li><a href="http://acidcow.com/" target="myIframe">Acid Cow</a>
+        </li>
+                <li><a href="http://awkwardfamilyphotos.com/" target="myIframe">Awkward Family Photos</a>
+        </li>
+                <li><a href="http://break.com/" target="myIframe">Break</a>
+        </li>
+                <li><a href="http://brobible.com/" target="myIframe">Bro Bible</a>
+        </li>
+                <li><a href="http://bromygod.com/" target="myIframe">Bro My God</a>
+        </li>
+                <li><a href="http://buzzfeed.com/" target="myIframe">Buzzfeed</a>
+        </li>
+                <li><a href="http://cheezburger.com/" target="myIframe">Cheezburger</a>
+        </li>
+                <li><a href="http://thechive.com/" target="myIframe">theCHIVE</a>
+        </li>
+                <li><a href="http://classybro.com/" target="myIframe">Classy Bro</a>
+        </li>
+                <li><a href="http://theclearlydope.tumblr.com/" target="myIframe">The Clearly Dope</a>
+        </li>
+                <li><a href="http://clickhole.com/" target="myIframe">Clickhole</a>
+        </li>
+                <li><a href="http://coed.com/" target="myIframe">COED</a>
+        </li>
+                <li><a href="http://collegehumor.com/" target="myIframe">CollegeHumor</a>
+        </li>
+                <li><a href="http://jokes.cc.com/" target="myIframe">Comedy Central Jokes</a>
+        </li>
+                <li><a href="http://cracked.com/" target="myIframe">Cracked</a>
+        </li>
+                <li><a href="http://dailydot.com/" target="myIframe">The Daily Dot</a>
+        </li>
+                <li><a href="http://damnyouautocorrect.com/" target="myIframe">Damn You Autocorrect</a>
+        </li>
+                <li><a href="http://uncrate.com/tv/" target="myIframe">Devour</a>
+        </li>
+                <li><a href="http://digg.com/" target="myIframe">Digg</a>
+        </li>
+                <li><a href="http://distractify.com/" target="myIframe">Distractify</a>
+        </li>
+                <li><a href="http://ebaumsworld.com/" target="myIframe">eBaum's World</a>
+        </li>
+                <li><a href="http://engrish.com/" target="myIframe">Engrish</a>
+        </li>
+                <li><a href="http://epicfail.com/" target="myIframe">Epic Fail</a>
+        </li>
+                <li><a href="http://foundmagazine.com/" target="myIframe">Found</a>
+        </li>
+                <li><a href="http://funnyordie.com/" target="myIframe">Funny or Die</a>
+        </li>
+                <li><a href="http://giphy.com/" target="myIframe">GIPHY</a>
+        </li>
+                <li><a href="http://knowyourmeme.com/" target="myIframe">Know Your Meme</a>
+        </li>
+                <li><a href="http://lamebook.com/" target="myIframe">Lamebook</a>
+        </li>
+                <li><a href="http://listverse.com/" target="myIframe">Listverse</a>
+        </li>
+                <li><a href="http://literallyunbelievable.org/" target="myIframe">Literally Unbelievable</a>
+        </li>
+                <li><a href="http://littlethings.com/" target="myIframe">Little Things</a>
+        </li>
+                <li><a href="http://craveonline.com/mandatory" target="myIframe">Mandatory</a>
+        </li>
+                <li><a href="http://mashable.com/" target="myIframe">Mashable</a>
+        </li>
+                <li><a href="http://theoatmeal.com/" target="myIframe">The Oatmeal</a>
+        </li>
+                <li><a href="http://oddee.com/" target="myIframe">Oddee</a>
+        </li>
+                <li><a href="http://theonion.com/" target="myIframe">The Onion</a>
+        </li>
+                <li><a href="http://overheardinnewyork.com/" target="myIframe">Overheard in New York</a>
+        </li>
+                <li><a href="http://peopleofwalmart.com/" target="myIframe">People of Wal-Mart</a>
+        </li>
+                <li><a href="http://playbuzz.com/" target="myIframe">Playbuzz</a>
+        </li>
+                <li><a href="http://popscreen.com/" target="myIframe">Popscreen</a>
+        </li>
+                <li><a href="http://radass.com/" target="myIframe">Radass</a>
+        </li>
+                <li><a href="http://ranker.com/" target="myIframe">Ranker</a>
+        </li>
+                <li><a href="http://rsvlts.com/" target="myIframe">The Roosevelts</a>
+        </li>
+                <li><a href="http://saduseless.com/" target="myIframe">SadUseless</a>
+        </li>
+                <li><a href="http://sneakhype.com/" target="myIframe">Sneakhype</a>
+        </li>
+                <li><a href="http://teamcoco.com/" target="myIframe">Team Coco</a>
+        </li>
+                <li><a href="http://textsfromlastnight.com/" target="myIframe">Texts from Last Night</a>
+        </li>
+                <li><a href="http://thoughtcatalog.com/" target="myIframe">Thought Catalog</a>
+        </li>
+                <li><a href="http://twistedsifter.com/" target="myIframe">Twisted Sifter</a>
+        </li>
+                <li><a href="http://unilad.co.uk/" target="myIframe">UNILAD</a>
+        </li>
+                <li><a href="http://uproxx.com/" target="myIframe">UPROXX</a>
+        </li>
+                <li><a href="http://upworthy.com/" target="myIframe">Upworthy</a>
+        </li>
+                <li><a href="http://theverge.com/" target="myIframe">The Verge</a>
+        </li>
+                <li><a href="http://viralnova.com/" target="myIframe">ViralNova</a>
+        </li>
+                <li><a href="http://zergnet.com/" target="myIframe">ZergNet</a>
+        </li>
+
+
+            <br>
+            <br>
+               <br>
+           
+            </ul>
+        </div>
+
+
+        <div id="page-content-wrapper">
    <iframe id="frame" name="myIframe" sandbox="allow-same-origin allow-scripts allow-forms" style="position: absolute; height: 100%; width: 100%; border: none; overflow:hidden;" src=""></iframe>
 
-<div class="element">
-	<a href="#" style="color: white"><span class="glyphicon glyphicon-plus"></span></a>&nbsp;&nbsp;&nbsp;
-	<a href="#" style="color: white"><span class="glyphicon glyphicon-thumbs-up"></span></a>&nbsp;&nbsp;&nbsp;
-	<a href="#" style="color: white"><span class="glyphicon glyphicon-thumbs-down"></span></a>&nbsp;&nbsp;&nbsp;
-	<a href="#" style="color: #2E2E2E"><span class="glyphicon glyphicon-th-large"></span></a>&nbsp;&nbsp;&nbsp;
-	<a href="#menu-toggle2" id="menu-toggle2" style="color: #2E2E2E"><span class="glyphicon glyphicon-menu-hamburger"></span></a>&nbsp;&nbsp;&nbsp;
-	<a href="#" style="color: white"><span class="glyphicon glyphicon-triangle-left"  onclick="goBack()"></span></a>&nbsp;&nbsp;&nbsp;
-	<a href="#" style="color: white"><span id="btn" class="glyphicon glyphicon-triangle-right"></span></a>
-		</div>
-	
-	
+
+    
 
 
             </div>
+
+
+    </div>
 
 	 <!-- Bootstrap core JavaScript
     ================================================== -->
