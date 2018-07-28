@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GRARF</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poppins:800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:500" rel="stylesheet">
+<style>
+
+
+  
+body {
+  
+  -webkit-animation: background 500s cubic-bezier(1,0,0,1) infinite;
+  animation: background 500s cubic-bezier(1,0,0,1) infinite;  
+  transition: background 4s;
+}
+
+
+@-webkit-keyframes background {
+  0% { background: #ec008c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+  33% { background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }  
+  67% { background: #EECDA3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EF629F, #EECDA3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EF629F, #EECDA3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+  100% { background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+}
+
+@keyframes background {
+  0% { background: #ec008c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fc6767, #ec008c);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fc6767, #ec008c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+  33% { background: #B24592;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F15F79, #B24592);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F15F79, #B24592); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }  
+  67% { background: #00C9FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #92FE9D, #00C9FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #92FE9D, #00C9FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+  100% { background: #fc00ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #00dbde, #fc00ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #00dbde, #fc00ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
+  };
+  body
+{
+  padding: 30px;
+  background-color: #fcfcfc;  
+
+
+}
+.outer-div
+{
+  padding: 30px;
+  background-color: #f3f3f3;
+}
+.inner-div
+{
+  margin: 0 auto;
+  max-width: 700px;
+  height: 100px;
+  background-color: none;
+  border-radius: 3px;
+}
+
+h1, h2{
+  font-family: 'Poppins', sans-serif;
+   color:  #ff5a60;
+
+}
+h4 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #3f3f3f;
+ 
+
+}
+
+  </style>
+</head>
+<body>
+<div class="outer-div">
+<br><br>
+  <center><img src="/grarf.png"></center>
+<br>
+  <center>
+    <h1>The internet<br>
+      organized<br>in your playlists
+    </h1>
+  </center>
+  <br>
+   <center>
+    <h4>Try out some of ours...</h4>
+  </center>
+  <br>
+<div class="inner-div">
+<center>
+<div class="bootstrap-demo" style="overflow: hidden; white-space: nowrap; width: 700px; min-width: 500px;">
+ <div class="btn-group" style="overflow: hidden; white-space: nowrap; width: 700px; min-width: 500px;">
+ 
+   &nbsp;<button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/news" target="myIframe"style="text-decoration: none; color: black">News</a></span>&nbsp;  <!-- caret -->
+     
+        
+      </button>
+      
+      <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/sports" target="myIframe"style="text-decoration: none; color: black">Sports</a></span>&nbsp;  <!-- caret -->
+     
+        
+      <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/fashion" target="myIframe"style="text-decoration: none; color: black">Fashion</a></span>&nbsp;  <!-- caret -->
+     
+ <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/viral" target="myIframe"style="text-decoration: none; color: black">Viral</a></span>&nbsp;  <!-- caret -->
+     
+        
+      <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/celebrity" target="myIframe"style="text-decoration: none; color: black">Celeb</a></span>&nbsp;  <!-- caret -->
+     
+        
+      <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/music" target="myIframe"style="text-decoration: none; color: black">Music</a></span>&nbsp;  <!-- caret -->
+     
+        
+     <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/home-design" target="myIframe"style="text-decoration: none; color: black">Home</a></span>&nbsp;  <!-- caret -->
+     
+        
+    <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/politics" target="myIframe"style="text-decoration: none; color: black">Politics</a></span>&nbsp;  <!-- caret -->
+     
+        
+     <button type="button" class="btn" id="btn1" style="background-color: white" data-toggle="dropdown" id="btn1" onclick="boldButton(1)">&nbsp;
+        
+        <span class=""><a href="http://grarf.github.io/fiverr/food" target="myIframe"style="text-decoration: none; color: black">Food</a></span>&nbsp;  <!-- caret -->
+     
+        
+      </button>&nbsp;
+  
+      
+ </div>
+</div>
+
+</center>
+  <iframe id="frame" name="myIframe"  src="http://grarf.github.io/fiverr/fixed" style="width:675px; height:600px; border:10px solid white; border-radius: 8px"></iframe>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQ0NC44MTkgNDQ0LjgxOSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ0LjgxOSA0NDQuODE5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQzNC4yNTIsMjA4LjcwOEwyNDguMzg3LDIyLjg0M2MtNy4wNDItNy4wNDMtMTUuNjkzLTEwLjU2NC0yNS45NzctMTAuNTY0Yy0xMC40NjcsMC0xOS4wMzYsMy41MjEtMjUuNjk3LDEwLjU2NCAgIEwxMC44NDgsMjA4LjcwOEMzLjYxNSwyMTUuOTQsMCwyMjQuNjA0LDAsMjM0LjY5MmMwLDkuODk3LDMuNjE5LDE4LjQ1OSwxMC44NDgsMjUuNjkzbDIxLjQxMSwyMS40MDkgICBjNi44NTQsNy4yMzEsMTUuNDIsMTAuODU1LDI1LjY5NywxMC44NTVjMTAuMjc4LDAsMTguODQyLTMuNjI0LDI1LjY5Ny0xMC44NTVsODMuOTM5LTgzLjY1MXYyMDAuOTk4ICAgYzAsOS44OSwzLjU2NywxNy45MzYsMTAuNzA2LDI0LjEyNmM3LjEzOSw2LjE4NCwxNS43NTIsOS4yNzMsMjUuODM3LDkuMjczaDM2LjU0NWMxMC4wODksMCwxOC42OTgtMy4wOSwyNS44MzctOS4yNzMgICBjNy4xMzktNi4xODgsMTAuNzEyLTE0LjIzNiwxMC43MTItMjQuMTI2VjE5OC4xNDRsODMuOTM4LDgzLjY1MWM2Ljg0OCw3LjIzMSwxNS40MTMsMTAuODU1LDI1LjcsMTAuODU1ICAgYzEwLjA4MiwwLDE4Ljc0Ny0zLjYyNCwyNS45NzUtMTAuODU1bDIxLjQwOS0yMS40MDljNy4wNDMtNy40MjYsMTAuNTY3LTE1Ljk4OCwxMC41NjctMjUuNjkzICAgQzQ0NC44MTksMjI0Ljc5NSw0NDEuMjk1LDIxNi4xMzQsNDM0LjI1MiwyMDguNzA4eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+<br><h4>...using these controls</h4>
+<br>
+<br>
+<br>
+ <br>
+  <center><h2 style=color:white>Create your own web playlists and put the full power of the internet at your fingertips:</h2>
+<br>
+  
+ 
+  <a href="#" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-plus"></span> &nbsp;Add GRARF to your browser</a></center>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
+  
+</div>
+ <script>function boldButton(num){
+    $('#btn'+num).css( 'font-weight', '700' );
+}</script>
+  </body>
+</html>
