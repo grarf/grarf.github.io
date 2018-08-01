@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>m o v v v e</title>
+	<!--<script>
+	
+           
+	 function ChangebackgroundImage()
+            {
+                var bgArray = ['11g.gif', '12g.gif', '13g.gif',];
+                var bg = bgArray[Math.floor(Math.random() * bgArray.length)];
+                document.body.background = 'https://jabzoo.github.io/jabzoo/images/jumbotron/' + bg;
+            }
+	</script>-->
+	<link rel="icon" href="http://jabzoo.github.io/jabzoo/favicon-circle-o-notch.ico" type="image/icon">
+<script src="https://use.fontawesome.com/0003867fec.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/0003867fec.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Abel|Lato:900i" rel="stylesheet">
+	 <audio style="hidden" id="myLoopingAudioPlayer">
+        <source src="http://cd.textfiles.com/itcontinues/GAMES/CASINO/WAV/BJDEAL.WAV" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <script>
+        /*You have to set below two line*/
+        // If you want to stop the service, just comment below two lines.
+        // You can set any number of minutes in the "window.loopingInterval"
+        // which will cnfirm the alert after each looping..
+        // You should not anything change in the "setInterval(loopingTimerMethod, 1000);"
+        // Because It is doing everthing.
+        window.loopingInterval = 1;
+        var ReloadVal = 0;
+        ReloadValInterset = setInterval(function(){
+            ReloadVal = ReloadVal + 1;
+            console.log(ReloadVal);
+            if(ReloadVal == 2){
+                clearInterval(ReloadValInterset);
+                setInterval(loopingTimerMethod, 1000);
+            }
+        }, 1000);
+        //////////////////////
+        /*START: Core functionality.. shold not be changed.. Else may not work*/
+        window.secondStart = 60;
+        window.loopingMinutes = loopingInterval - 1;
+        window.loopingSecond = secondStart;
+        function loopingStartTime(tim) {
+            var i = tim - 1;
+            return i;
+        }
+        function loopingTimerMethod()
+        {
+            loopingSecond = loopingStartTime(loopingSecond);
+            document.getElementById("timer-minutes").innerHTML = timeWithZero(loopingMinutes);
+            document.getElementById("timer-second").innerHTML = timeWithZero(loopingSecond);
+            if (loopingSecond == 0) {
+                if (loopingMinutes == 0 && loopingSecond == 0) {
+                    var x = document.getElementById("myLoopingAudioPlayer");
+                    LoopingPlayAudio(x);
+                    window.loopingMinutes = loopingInterval;
+                }
+                loopingMinutes = loopingMinutes - 1;
+                loopingSecond = secondStart;
+            }
+        }
+        function LoopingPlayAudio(x) {
+            x.play();
+        }
+        function LoopingPauseAudio(x) {
+            x.pause();
+        }
+        function timeWithZero(i) {
+            if (i < 10) {
+                i = "0" + i
+            }
+            ;  // add zero in front of numbers < 10
+            return i;
+        }
+        /*END Timer Looping functionality*/
+    </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96338653-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-96338653-1');
+</script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(function() {
+    document.getElementById('test').className = 'slideDown';
+  }, 200);
+		}, false);
+	</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style>
+	.GeneratedMarquee {
+font-family:Helvetica, sans-serif;
+line-height:1.3em;
+color:white;
+font-size: 40px;
+padding:0em;
+
+}
+	
+	.bottomdiv
+	{
+		height: 60px;
+		position: fixed;
+		left: 0;
+		bottom: 7%;
+		padding: 1em;
+		width: 100%;
+		text-align: center;
+	}
+
+	body {
+		
+	background-size: cover;
+		background-repeat: no-repeat; 
+		background-attachment: fixed; 
+		background-position: center center
+	}
+
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+.header {
+    background-color: none;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color: #33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: none;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0), 0 0px 0px rgba(0,0,0,0);
+}
+.footer {
+    background-color: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+
+}
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+}
+	#test {
+	width: 400px;
+	padding: 40px;
+	background: none;
+	visibility: hidden;
+}
+
+.slideDown{
+	animation-name: slideDown;
+	-webkit-animation-name: slideDown;	
+
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+
+	visibility: visible !important;						
+}
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-100%);
+	}
+	50%{
+		transform: translateY(8%);
+	}
+	65%{
+		transform: translateY(-4%);
+	}
+	80%{
+		transform: translateY(4%);
+	}
+	95%{
+		transform: translateY(-2%);
+	}			
+	100% {
+		transform: translateY(0%);
+	}		
+}
+
+@-webkit-keyframes slideDown {
+	0% {
+		-webkit-transform: translateY(-100%);
+	}
+	50%{
+		-webkit-transform: translateY(8%);
+	}
+	65%{
+		-webkit-transform: translateY(-4%);
+	}
+	80%{
+		-webkit-transform: translateY(4%);
+	}
+	95%{
+		-webkit-transform: translateY(-2%);
+	}			
+	100% {
+		-webkit-transform: translateY(0%);
+	}	
+}
+</style>
+</head>
+<body background="workout1.gif">
+	<div class="footer">
+<div class="row">
+	<div class="col-1"></div>
+<div class="col-3" style="text-align: center; border-right: 1px solid">
+  <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw" aria-hidden="true" style="color: white; font-size: 22px;"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+  	<a href="https://jabzoo.github.io/jabzoo/index.html" style="text-decoration: none;"><font face="Lato" color="white" style="text-align: right; text-decoration: none; font-size: 24px;">m&nbsp;&nbsp;o&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;v&nbsp;&nbsp;e</font></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+  </div>
+	<div class="col-2" style="text-align: center; font-size: 24px; color: white; font-family: Lato">
+		
+		
+		    <span class="timer-loop" style="font-size: 24px; color: white; font-family: Lato"><span id="timer-minutes"><strong>1</strong></span><strong>:</strong><span id="timer-second"><strong>00</strong></span></a><br />
+
+	</div>
+  
+  <div class="col-2">
+  </div>
+	<div class="col-2">
+
+  </div>
+		<div class="col-2"></div>
+	</div>
+  </div>
+
+		<div class="bottomdiv"><!--
+<marquee class="GeneratedMarquee" direction="left" scrollamount="9" behavior="scroll" loop="1"><font style="font-family: Abel">High knees:  This is the information you need to know.</font></marquee>
+-->
+			
+			 <p style="margin-bottom: 1cm">
+	
+<font style="font-size: 24px; color: black; font-family: Abel">
+				
+			</p>
+			
+			
+			</div>
+	
+							    
+<!--
+<script>
+    ChangebackgroundImage()
+</script>
+	<script>
+    setTimeout(function(){
+       window.location.href = 'https://jabzoo.github.io/jabzoo/timer1office.html';
+    }, 71000);
+</script>-->
+</body>
+</html>
